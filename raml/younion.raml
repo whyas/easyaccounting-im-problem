@@ -138,18 +138,9 @@ traits:
       queryParameters:
         name:
           description: 聊天室名字
-        locCountry:
-          description: 发表位置 国家
-        locCity:
-          description: 发表位置 城市
-        locDistrict:
-          description: 发表位置 区域
-        locAddress:
-          description: 发表位置 位置名称
-        longitude:
-          description: 创建位置经度
-        latitude:
-          description: 创建位置纬度
+        location:
+          description: 位置信息
+          example: !include samples/location.sample
         images:
           example: "['http://website.com/file.jpg', \
             'http://website.com/file2.jpg', \
