@@ -1,0 +1,35 @@
+  [
+    {
+      "id": 1,
+      "creator": 1,
+      "creationTime": 15600030,
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "creator": 1,
+      "creationTime": 15600030,
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "creator": 1,
+      "creationTime": 15600030,
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]

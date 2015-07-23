@@ -120,11 +120,6 @@ traits:
   /chatrooms:
     get:
       description: 获取我的聊天室列表
-      queryParameters:
-        longitude:
-          description: 经度
-        latitude:
-          description: 纬度
       is:
         - responseDesc:
             desc: 返回聊天室列表
@@ -147,20 +142,71 @@ traits:
           example: "[\"http://website.com/file.jpg\", \
             \"http://website.com/file2.jpg\", \
             \"http://website.com/file3.jpg\"]"
-
     get:
       description: 获取聊天室列表
+      queryParameters:
+        longitude:
+          description: 经度
+        latitude:
+          description: 纬度
+      is:
+        - responseDesc:
+            desc: 返回聊天室列表
+        - respWithPayload:
+            payload: !include samples/chatrooms.sample
   /{id}:
     put:
       description: 更新聊天室属性
+      queryParameters:
+        name:
+          description: 聊天室的名字
+      is:
+        - responseDesc:
+            desc: 聊天室更新成功
+        - respWithoutPayload
     delete:
       description: 删除聊天室
+      is:
+        - responseDesc:
+            desc: 删除成功
+        - respWithoutPayload
     get:
       description: 获取聊天室信息
+      is:
+        - responseDesc:
+            desc: 返回聊天室信息
+        - respWithPayload:
+            payload: !include samples/chatroom.sample
   /{id}/messages:
     get:
-      description: 获取聊天室的消息列表
+      description: 获取聊天室的消息列表, TODO 翻页
+      queryParameters:
+        start:
+          description: 返回记录游标开始
+        quantity:
+          description: 返回数量
+      is:
+        - responseDesc:
+            desc: 返回消息列表
+        - respWithPayload:
+            payload: !include samples/messages.sample
     post:
       description: 向聊天室中发一条消息
+      queryParameters:
+        msg:
+          description: 消息内容
+          required: true
+        mentions:
+          description: 消息提到的人
+          example: "[1, 2]"
+      is:
+        - responseDesc:
+            desc: 消息发送成功
+        - respWithoutPayload
+  /{id}/messages/{id}:
     delete:
       description: 删除一条消息
+      is:
+        - responseDesc:
+            desc: 删除成功
+        - respWithoutPayload
