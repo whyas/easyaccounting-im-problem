@@ -1,0 +1,42 @@
+  [
+    {
+      "id": 1,
+      "name": "新生咨询",
+      "location": {
+        "longitude": 1.2334321,
+        "latitude": 3.434212,
+        "country": "中国",
+        "city": "成都",
+        "district": "武侯区",
+        "address": "太古里"
+      },
+      "images": [
+        "http://website.com/file.jpg",
+        "http://website.com/file2.jpg",
+        "http://website.com/file3.jpg"
+      ],
+      "creator": 1,
+      "creationTime": 156000349,
+      "memberCount": 150
+    },
+    {
+      "id": 2,
+      "name": "我有一个旧物要出售",
+      "location": {
+        "longitude": 1.2334321,
+        "latitude": 3.434212,
+        "country": "中国",
+        "city": "成都",
+        "district": "武侯区",
+        "address": "太古里"
+      },
+      "images": [
+        "http://website.com/file.jpg",
+        "http://website.com/file2.jpg",
+        "http://website.com/file3.jpg"
+      ],
+      "creator": 1,
+      "creationTime": 156000349,
+      "memberCount": 150
+    }
+  ]

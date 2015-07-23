@@ -87,6 +87,11 @@ traits:
   /{id}:
     get:
       description: 获取单个用户信息
+      is:
+        - responseDesc:
+            desc: 成功获取用户信息
+        - respWithPayload:
+            payload: !include samples/user.sample
     put:
       description: 更新用户的信息
       queryParameters:
@@ -100,16 +105,44 @@ traits:
           description: 昵称
         sex:
           description: 性别
+      is:
+        - responseDesc:
+            desc: 成功更新用户信息
+        - respWithPayload:
+            payload: !include samples/user.sample
     delete:
       description: 删除用户
+      is:
+        - responseDesc:
+            desc: 删除用户成功
+        - respWithPayload:
+            payload: !include samples/user.sample
   /chatrooms:
     get:
       description: 获取我的聊天室列表
+      queryParameters:
+        longitude:
+          description: 经度
+        latitude:
+          description: 纬度
+      is:
+        - responseDesc:
+            desc: 返回聊天室列表
+        - respWithPayload:
+            payload: !include samples/chatrooms.sample
 /chatrooms:
   displayName: 聊天室
   /:
     post:
       description: 创建聊天室
+      body:
+        application/x-www-form-urlencoded:
+          formParameters:
+            content:
+              type: string
+              required: true
+              description: Markdown content
+              example: !include samples/chatroom.sample
     get:
       description: 获取聊天室列表
   /{id}:
