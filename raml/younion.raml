@@ -34,3 +34,32 @@ mediaType: application/json
   /{id}:
     get:
       description: 获取单个用户信息
+    put:
+      description: 更新用户的信息
+      queryParameters:
+        email:
+          description: 邮箱
+        password:
+          description: 密码
+        avatar:
+          description: 头像
+        nickname:
+          description: 昵称
+        sex:
+          description: 性别
+    delete:
+      description: 删除用户
+/chatrooms:
+  displayName: 聊天室
+  /:
+    post:
+      description: 创建聊天室
+    get:
+      description: 获取一组聊天室
+  /{id}:
+    put:
+      description: 更新聊天室属性
+    delete:
+      description: 删除聊天室
+    get:
+      description: 获取聊天室信息
