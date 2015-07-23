@@ -138,13 +138,15 @@ traits:
       queryParameters:
         name:
           description: 聊天室名字
+          required: true
         location:
           description: 位置信息
+          required: true
           example: !include samples/location.sample
         images:
-          example: "['http://website.com/file.jpg', \
-            'http://website.com/file2.jpg', \
-            'http://website.com/file3.jpg']"
+          example: "[\"http://website.com/file.jpg\", \
+            \"http://website.com/file2.jpg\", \
+            \"http://website.com/file3.jpg\"]"
 
     get:
       description: 获取聊天室列表
