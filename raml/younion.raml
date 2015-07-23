@@ -78,6 +78,10 @@ traits:
         password:
           description: 密码
           required: true
+      is:
+        - responseDesc:
+            desc: 注册成功, 请检查邮箱
+        - respWithoutPayload
 /users:
   displayName: 用户接口
   /{id}:
