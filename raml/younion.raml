@@ -135,14 +135,26 @@ traits:
   /:
     post:
       description: 创建聊天室
-      body:
-        application/x-www-form-urlencoded:
-          formParameters:
-            content:
-              type: string
-              required: true
-              description: Markdown content
-              example: !include samples/chatroom.sample
+      queryParameters:
+        name:
+          description: 聊天室名字
+        locCountry:
+          description: 发表位置 国家
+        locCity:
+          description: 发表位置 城市
+        locDistrict:
+          description: 发表位置 区域
+        locAddress:
+          description: 发表位置 位置名称
+        longitude:
+          description: 创建位置经度
+        latitude:
+          description: 创建位置纬度
+        images:
+          example: "['http://website.com/file.jpg', \
+            'http://website.com/file2.jpg', \
+            'http://website.com/file3.jpg']"
+
     get:
       description: 获取聊天室列表
   /{id}:
