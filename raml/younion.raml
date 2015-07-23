@@ -62,10 +62,10 @@ traits:
           description: 密码
           required: true
       is:
-        responseDesc:
-          description: 登录成功
-        respWithPayload:
-          payload: !include samples/user.sample
+        - responseDesc:
+            desc: 登录成功
+        - respWithPayload:
+            payload: !include samples/user.sample
 /register:
   displayName: 注册接口
   /:
