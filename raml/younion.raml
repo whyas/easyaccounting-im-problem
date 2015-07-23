@@ -49,13 +49,16 @@ mediaType: application/json
           description: 性别
     delete:
       description: 删除用户
+  /chatrooms:
+    get:
+      description: 获取我的聊天室列表
 /chatrooms:
   displayName: 聊天室
   /:
     post:
       description: 创建聊天室
     get:
-      description: 获取一组聊天室
+      description: 获取聊天室列表
   /{id}:
     put:
       description: 更新聊天室属性
@@ -63,3 +66,10 @@ mediaType: application/json
       description: 删除聊天室
     get:
       description: 获取聊天室信息
+  /{id}/messages:
+    get:
+      description: 获取聊天室的消息列表
+    post:
+      description: 向聊天室中发一条消息
+    delete:
+      description: 删除一条消息
