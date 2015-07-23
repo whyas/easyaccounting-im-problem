@@ -1,9 +1,53 @@
 #%RAML 0.8
 ---
-title: Touchat
+title: Younion API
 #version: v0.1
 baseUri: http://api.touchat.cn
 mediaType: application/json
+
+traits:
+  # 写操作成功
+  - respWithoutPayload:
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "code": 1000,
+                  "msg": "正常返回",
+                  "palyoad": null
+                }
+  # 写操作成功
+  - respWithError:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: SimpleResponse
+              example: |
+                {
+                  "code": <<errorCode>>,
+                  "msg": "<<msg>>",
+                  "palyoad": <<payload>>
+                }
+  # 接口响应中包含 data 字段
+  - respWithPayload:
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "code": 1000,
+                  "msg": "正常返回",
+                  "payload": <<payload>>
+                }
+  # 接口响应的描述
+  - responseDesc:
+      responses:
+        200:
+          description: <<desc>>
 
 /login:
   displayName: 登录接口
@@ -17,6 +61,11 @@ mediaType: application/json
         password:
           description: 密码
           required: true
+      is:
+        responseDesc:
+          description: 登录成功
+        respWithPayload:
+          payload: !include samples/user.sample
 /register:
   displayName: 注册接口
   /:

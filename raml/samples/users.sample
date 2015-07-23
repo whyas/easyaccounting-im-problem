@@ -1,0 +1,32 @@
+  [
+    {
+      "id": 1,
+      "nickName": "Michael",
+      "creationTime": 156003404,
+      "email": "michael@college.edu",
+      "avatar": "http://website.com/file.png",
+      "school": "New York State University",
+      "point": 1002,
+      "sex": 1
+    },
+    {
+      "id": 2,
+      "nickName": "Merry",
+      "creationTime": 156003404,
+      "email": "merry@college.edu",
+      "avatar": "http://website.com/file.png",
+      "school": "New York State University",
+      "point": 1003,
+      "sex": 2
+    },
+    {
+      "id": 3,
+      "nickName": "Bob",
+      "creationTime": 156003404,
+      "email": "bob@college.edu",
+      "avatar": "http://website.com/file.png",
+      "school": "New York State University",
+      "point": 1002,
+      "sex": 1
+    }
+  ]

@@ -1,0 +1,10 @@
+  {
+    "id": 1,
+    "nickName": "nickName",
+    "creationTime": 156003404,
+    "email": "email@college.edu",
+    "avatar": "http://website.com/file.png",
+    "school": "New York State University",
+    "point": 1002,
+    "sex": 2
+  }
