@@ -4,4 +4,4 @@
 
 服务器: http://younion.me:3000
 
-> 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 `http://younion.me:3000`
+> Postman 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 `http://younion.me:3000`
