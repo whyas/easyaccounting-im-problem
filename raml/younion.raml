@@ -204,6 +204,13 @@ traits:
             desc: 消息发送成功
         - respWithoutPayload
   /{id}/messages/{id}:
+    get:
+      description: 获取指定 ID 的消息
+      is:
+        - responseDesc:
+            desc: 返回一条消息
+        - respWithPayload:
+            payload: !include samples/message.sample
     delete:
       description: 删除一条消息
       is:
