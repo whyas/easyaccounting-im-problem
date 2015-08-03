@@ -1,6 +1,6 @@
   [
     {
-      "id": 1,
+      "_id": 1,
       "name": "新生咨询",
       "location": {
         "longitude": 1.2334321,
@@ -20,7 +20,7 @@
       "memberCount": 150
     },
     {
-      "id": 2,
+      "_id": 2,
       "name": "我有一个旧物要出售",
       "location": {
         "longitude": 1.2334321,

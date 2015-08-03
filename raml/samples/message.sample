@@ -1,5 +1,5 @@
   {
-    "id": 1,
+    "_id": 1,
     "creator": 1,
     "creationTime": 15600030,
     "msg": "This is a chat message",
