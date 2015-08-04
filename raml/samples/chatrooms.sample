@@ -1,6 +1,6 @@
   [
     {
-      "_id": 1,
+      "_id": "55c071213a2d32da34a3fd09",
       "name": "新生咨询",
       "location": {
         "longitude": 1.2334321,
@@ -15,12 +15,12 @@
         "http://website.com/file2.jpg",
         "http://website.com/file3.jpg"
       ],
-      "creator": 1,
+      "creator": "55c071213a2d32da34a3fd09",
       "creationTime": 156000349,
       "memberCount": 150
     },
     {
-      "_id": 2,
+      "_id": "55c071213a2d32da34a3fd09",
       "name": "我有一个旧物要出售",
       "location": {
         "longitude": 1.2334321,
@@ -35,7 +35,7 @@
         "http://website.com/file2.jpg",
         "http://website.com/file3.jpg"
       ],
-      "creator": 1,
+      "creator": "55c071213a2d32da34a3fd09",
       "creationTime": 156000349,
       "memberCount": 150
     }
