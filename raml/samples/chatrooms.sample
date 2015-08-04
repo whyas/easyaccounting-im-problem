@@ -1,42 +1,39 @@
   [
     {
-      "_id": "55c071213a2d32da34a3fd09",
-      "name": "新生咨询",
-      "location": {
-        "longitude": 1.2334321,
-        "latitude": 3.434212,
-        "country": "中国",
-        "city": "成都",
-        "district": "武侯区",
-        "address": "太古里"
-      },
+      "_id": "55bf2cc6db98cfcf36084851",
+      "creator": null,
+      "__v": 0,
+      "memberCount": 0,
+      "creationTime": "2015-08-03T08:54:44.287Z",
       "images": [
-        "http://website.com/file.jpg",
-        "http://website.com/file2.jpg",
-        "http://website.com/file3.jpg"
+        "http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg",
+        "http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg",
+        "http://img.xiaba.cvimage.cn/4d1856077749ffc57f9a0000.jpg"
       ],
-      "creator": "55c071213a2d32da34a3fd09",
-      "creationTime": 156000349,
-      "memberCount": 150
+      "location": {
+        "geo": [
+          34.234343,
+          23.34323
+        ]
+      },
+      "name": "TestChatroom5"
     },
     {
-      "_id": "55c071213a2d32da34a3fd09",
-      "name": "我有一个旧物要出售",
-      "location": {
-        "longitude": 1.2334321,
-        "latitude": 3.434212,
-        "country": "中国",
-        "city": "成都",
-        "district": "武侯区",
-        "address": "太古里"
-      },
+      "_id": "55bf2cf7db98cfcf36084852",
+      "creator": null,
+      "__v": 0,
+      "memberCount": 0,
+      "creationTime": "2015-08-03T08:54:44.287Z",
       "images": [
-        "http://website.com/file.jpg",
-        "http://website.com/file2.jpg",
-        "http://website.com/file3.jpg"
+        "http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg",
+        "http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg"
       ],
-      "creator": "55c071213a2d32da34a3fd09",
-      "creationTime": 156000349,
-      "memberCount": 150
+      "location": {
+        "geo": [
+          34.234344,
+          23.34324
+        ]
+      },
+      "name": "TestChatroom6"
     }
   ]
