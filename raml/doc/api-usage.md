@@ -1,6 +1,6 @@
 #### API 基本
 
-1. 所有 post body 的参数使用 x-www-form-urlencoded, 而不是 form-data, 内部实现的格式为: `key=value&key2=value2`
+- 所有 post body 的参数使用 x-www-form-urlencoded, 而不是 form-data, 内部实现的格式为: `key=value&key2=value2`
 
 #### 分页规则:
 
@@ -18,3 +18,17 @@
 - 登录的时候, 会返回一个 token.
 - 保存 token, **每次调用 API 的时候, 都要在参数中带上 token=xxxx.xxxxxx.xxxx**
 - 如果 token 失效, 服务器返回状态码: 401(Unauthorized). 客户端重新登录.
+
+#### 返回对象
+
+API 正常请求的情况下, 返回码为 1000, 返回的对象为:
+
+```
+{
+  "code": 1000,
+  "msg": "success",
+  "payload": {}
+}
+```
+
+当请求发生异常的时候, 例如注册时输入的邮箱有误, 或者邮箱已经被注册过, 会返回对应的错误码, 通常为 1001, 1002, 1003 等.
