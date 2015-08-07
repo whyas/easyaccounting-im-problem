@@ -16,7 +16,9 @@
 
 - 使用 jwt{JSON Web Tokens} 样式的 token 进行用户认证, 仍然是 token, 只是 token 里面包含了一些其它信息..
 - 登录的时候, 会返回一个 token.
-- 保存 token, **每次调用 API 的时候, 都要在参数中带上 token=xxxx.xxxxxx.xxxx**
+- 保存 token, **每次调用 API 的时候, 都要在参数中带上 token=xxxx.xxxxxx.xxxx**, token 传递方式有:
+  - HTTP HEADER: `x-access-token`
+  - Request Param: `token`
 - 如果 token 失效, 服务器返回状态码: 401(Unauthorized). 客户端重新登录.
 
 #### 返回对象
