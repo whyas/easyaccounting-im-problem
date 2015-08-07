@@ -36,3 +36,11 @@ API 正常请求的情况下, 返回码为 1000, 返回的对象为:
 当请求发生异常的时候, 例如注册时输入的邮箱有误, 或者邮箱已经被注册过, 会返回对应的错误码, 通常为 1001, 1002, 1003 等.
 
 异常消息保存在 msg 字段中. payload 中会保存异常的详细对象.
+
+#### 上传文件
+
+上传文件使用阿里云的 SDK, [OSS Android](https://docs.aliyun.com/#/pub/oss/sdk/android-sdk&preface), [OSS iOS](https://docs.aliyun.com/#/pub/oss/sdk/ios-sdk&preface)
+
+注意:
+
+- key 统一为: fileuuid/filename.ext (fileuuid 为程序生成的 UUID 字符串, filename 为该文件的名字)
