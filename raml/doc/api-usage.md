@@ -43,4 +43,4 @@ API 正常请求的情况下, 返回码为 1000, 返回的对象为:
 
 注意:
 
-- key 统一为: fileuuid/filename.ext (fileuuid 为程序生成的 UUID 字符串, filename 为该文件的名字)
+- key 统一为: fileuuid/filename.jpg (fileuuid 为程序生成的 UUID 字符串, filename 为该文件的名字, jpg 为演示文件格式)
