@@ -218,6 +218,19 @@ traits:
         - responseDesc:
             desc: 消息发送成功
         - respWithoutPayload
+  /{id}/newMessages:
+    get:
+      description: 获取指定消息之后的新消息, 不提供 limit 属性, 如果消息过多, 仍然会一次获取完所有消息.
+      is:
+        - responseDesc:
+            desc: 返回新消息
+        - respWithPayload:
+            payload: !include samples/messages.sample
+      queryParameters:
+        start:
+          description: 获取消息的起始点, 客户端的最新的那条消息的 ID
+          example: 55c7264db0f4acdd2c4e377c
+          required: true
   /{id}/messages/{id}:
     get:
       description: 获取指定 ID 的消息

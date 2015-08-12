@@ -140,7 +140,7 @@
       .list-group-item:hover {
         background-color: #f5f5f5;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Younion API documentation</h1><p>http://younion.me:3000</p><h3 id="Getting-Started"><a href="#Getting-Started">Getting Started</a></h3><p>可前往 <a href="https://coding.net/u/younion/p/api/git">https://coding.net/u/younion/p/api/git</a> 查看当前 API 文档 的 <strong>源码</strong></p><p>下载最新版本的 Postman 测试用例: <a href="ref/Younion.me.json.postman_collection">Younion.me.json.postman_collection</a></p><p>服务器: <a href="http://younion.me:3000">http://younion.me:3000</a></p><blockquote><p>Postman 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 <code>http://younion.me:3000</code></p></blockquote><h3 id="API-----"><a href="#API-----">API 使用规范</a></h3><h4 id="api-">API 基本</h4><ul><li>所有 post body 的参数使用 x-www-form-urlencoded, 而不是 form-data, 内部实现的格式为: <code>key=value&amp;key2=value2</code></li></ul><h4 id="-">分页规则:</h4><ul><li>start, optional, 默认<code>000000000000000000000000</code>, 下一页查询界限</li><li>limit, optional, 默认<code>10</code>, 本次返回结果的数量</li></ul><p>注意:</p><ul><li>传入<code>start</code>的值, 返回结果中不包含<code>_id</code>为<code>start</code>的条目</li><li><code>start</code>的值应该是上一次返回的 list 的最后一条记录, 服务器端查询的时候, 会查询该 id 之前的数据</li></ul><h4 id="-">参数传递规则</h4><ul><li>POST 请求的参数, 凡是要向服务器增加信息的, 放在 body 里面</li><li>GET 请求的参数, 作为请求的条件, 放在 url 参数里面</li><li>认证 token 因为到处都有, 放哪儿都可以</li></ul><h4 id="-">认证:</h4><ul><li>使用 jwt{JSON Web Tokens} 样式的 token 进行用户认证, 仍然是 token, 只是 token 里面包含了一些其它信息..</li><li>登录的时候, 会返回一个 token.</li><li>保存 token, <strong>每次调用 API 的时候, 都要在参数中带上 token=xxxx.xxxxxx.xxxx</strong>, token 传递方式有:<ul><li>HTTP HEADER: <code>x-access-token</code></li><li>Request Param(GET &amp; POST): <code>token</code></li></ul></li><li>如果 token 失效, 服务器返回状态码: 401(Unauthorized). 客户端重新登录.</li></ul><h4 id="-">返回对象</h4><p>API 正常请求的情况下, 返回码为 1000, 返回的对象为:</p><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Younion API documentation</h1><p>http://younion.me:3000</p><h3 id="Getting-Started"><a href="#Getting-Started">Getting Started</a></h3><p>可前往 <a href="https://coding.net/u/younion/p/api/git">https://coding.net/u/younion/p/api/git</a> 查看当前 API 文档 的 <strong>源码</strong></p><p>下载最新版本的 Postman 测试用例: <a href="ref/Younion.me.json.postman_collection">Younion.me.json.postman_collection</a></p><p>服务器: <a href="http://younion.me:3000">http://younion.me:3000</a></p><blockquote><p>Postman 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 <code>http://younion.me:3000</code></p></blockquote><h3 id="API-----"><a href="#API-----">API 使用规范</a></h3><h4 id="api-">API 基本</h4><ul><li>所有 post body 的参数使用 x-www-form-urlencoded, 而不是 form-data, 内部实现的格式为: <code>key=value&amp;key2=value2</code></li></ul><h4 id="-">分页规则:</h4><ul><li>start, optional, 默认<code>000000000000000000000000</code>, 下一页查询界限, 第一次获取不传</li><li>limit, optional, 默认<code>10</code>, 本次返回结果的数量</li></ul><p>注意:</p><ul><li>传入<code>start</code>的值, 返回结果中不包含<code>_id</code>为<code>start</code>的条目</li><li><code>start</code>的值应该是上一次返回的 list 的最后一条记录, 服务器端查询的时候, 会查询该 id 之前的数据</li></ul><h4 id="-">参数传递规则</h4><ul><li>POST 请求的参数, 凡是要向服务器增加信息的, 放在 body 里面</li><li>GET 请求的参数, 作为请求的条件, 放在 url 参数里面</li><li>认证 token 因为到处都有, 放哪儿都可以</li></ul><h4 id="-">认证:</h4><ul><li>使用 jwt{JSON Web Tokens} 样式的 token 进行用户认证, 仍然是 token, 只是 token 里面包含了一些其它信息..</li><li>登录的时候, 会返回一个 token.</li><li>保存 token, <strong>每次调用 API 的时候, 都要在参数中带上 token=xxxx.xxxxxx.xxxx</strong>, token 传递方式有:<ul><li>HTTP HEADER: <code>x-access-token</code></li><li>Request Param(GET &amp; POST): <code>token</code></li></ul></li><li>如果 token 失效, 服务器返回状态码: 401(Unauthorized). 客户端重新登录.</li></ul><h4 id="-">返回对象</h4><p>API 正常请求的情况下, 返回码为 1000, 返回的对象为:</p><pre><code>{
   "code": 1000,
   "msg": "success",
   "payload": {}
@@ -452,6 +452,46 @@
   "code": 1000,
   "msg": "正常返回",
   "palyoad": null
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_chatrooms__id__newMessages"><span class="parent">/chatrooms</span>/{id}/newMessages</a> <span class="methods"><a href="#chatrooms__id__newMessages_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_chatrooms__id__newMessages" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#chatrooms__id__newMessages_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取指定消息之后的新消息, 不提供 limit 属性, 如果消息过多, 仍然会一次获取完所有消息.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="chatrooms__id__newMessages_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/chatrooms</span>/{id}/newMessages</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取指定消息之后的新消息, 不提供 limit 属性, 如果消息过多, 仍然会一次获取完所有消息.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#chatrooms__id__newMessages_get_request" data-toggle="tab">Request</a></li><li><a href="#chatrooms__id__newMessages_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="chatrooms__id__newMessages_get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>start</strong>: <em>required (string)</em><p>获取消息的起始点, 客户端的最新的那条消息的 ID</p><p><strong>Example</strong>:</p><pre>55c7264db0f4acdd2c4e377c</pre></li></ul></div><div class="tab-pane" id="chatrooms__id__newMessages_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回新消息</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "_id": "55c071213a2d32da34a3fd09",
+      "creator": "55c071213a2d32da34a3fd09",
+      "creationTime": "2014-01-01T23:28:56.782Z",
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "_id": "55c071213a2d32da34a3fd09",
+      "creator": "55c071213a2d32da34a3fd09",
+      "creationTime": "2014-01-01T23:28:56.782Z",
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "_id": "55c071213a2d32da34a3fd09",
+      "creator": "55c071213a2d32da34a3fd09",
+      "creationTime": "2014-01-01T23:28:56.782Z",
+      "msg": "This is a chat message",
+      "mentions": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+
 }
 </code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_chatrooms__id__messages__id_"><span class="parent">/chatrooms</span>/{id}/messages/{id}</a> <span class="methods"><a href="#chatrooms__id__messages__id__get"><span class="badge badge_get">get</span></a> <a href="#chatrooms__id__messages__id__delete"><span class="badge badge_delete">delete</span></a></span></h4></div><div id="panel_chatrooms__id__messages__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#chatrooms__id__messages__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取指定 ID 的消息</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#chatrooms__id__messages__id__delete'" class="list-group-item"><span class="badge badge_delete">delete</span><div class="method_description"><p>删除一条消息</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="chatrooms__id__messages__id__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/chatrooms</span>/{id}/messages/{id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取指定 ID 的消息</p></div><ul class="nav nav-tabs"><li class="active"><a href="#chatrooms__id__messages__id__get_request" data-toggle="tab">Request</a></li><li><a href="#chatrooms__id__messages__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="chatrooms__id__messages__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="chatrooms__id__messages__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回一条消息</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
