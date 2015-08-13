@@ -6,6 +6,6 @@
     "avatar": "http://website.com/file.png",
     "school": "New York State University",
     "point": 1002,
-    "sex": 2,
+    "sex": 'f',
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxY2I2YTIzODMwNzc1MjQ0MzYwMDIiLCJlbWFpbCI6InJhbmt1bjIwM0BnbWFpbC5jb20iLCJzZXgiOiJtIiwicG9pbnQiOjEwMDAsInNjaG9vbCI6IiIsImF2YXRhciI6IiIsInBhc3N3b3JkIjoiJDJhJDA1JHNKbkxMWFN2RURsM0xnaWRiTHplaHU4OUhmVjhISmNOaGgwNGdEdkhXT0REUWNxWlhIRjNlIiwiY3JlYXRpb25UaW1lIjoiMjAxNS0wOC0wNVQwODozODowMi45NjZaIiwibmlja25hbWUiOiIiLCJfX3YiOjAsImlhdCI6MTQzODgzMjI1NywiZXhwIjoxNDcwMzY4MjU3fQ.fOQWxtJYq8Ai-ohzSxi1ekuI6N6pxhWADEsoycQQFXw"
   }
