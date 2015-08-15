@@ -22,6 +22,7 @@
 				"de260178-aeae-a32b-0e88-9b54ba176a9d",
 				"77e12394-e293-96f3-8cbf-dd9934760bab",
 				"9cc97c5e-4f86-f1cb-7d1a-1fb12679a6b6",
+				"685a7613-0adf-c64e-8c81-dbfc94ef9537",
 				"71f243d0-22b9-9426-15e1-1570dc25bbcb",
 				"3ee76f8a-ba9a-68db-2370-f6f93ebde728"
 			],
@@ -84,7 +85,10 @@
 			"name": "users/id",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
-			"responses": []
+			"responses": [],
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "063121aa-f4c0-b3c2-8cb1-0b82a4915f78"
 		},
 		{
 			"id": "0b66f610-1e02-b48e-7145-bb5208656cef",
@@ -116,7 +120,10 @@
 			"name": "register",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
-			"responses": []
+			"responses": [],
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "0b66f610-1e02-b48e-7145-bb5208656cef"
 		},
 		{
 			"id": "1c3a0615-62ca-b078-bebd-d3c23dd509c8",
@@ -137,31 +144,33 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "1c3a0615-62ca-b078-bebd-d3c23dd509c8"
 		},
 		{
 			"id": "38b8e831-3aa8-6411-b571-f81588f0bb60",
 			"headers": "",
-			"url": "{{host}}/chatrooms",
+			"url": "{{host}}/chatrooms?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxY2I2YTIzODMwNzc1MjQ0MzYwMDIiLCJlbWFpbCI6InJhbmt1bjIwM0BnbWFpbC5jb20iLCJzZXgiOiJtIiwicG9pbnQiOjEwMDAsInNjaG9vbCI6IiIsImF2YXRhciI6IiIsImNyZWF0aW9uVGltZSI6IjIwMTUtMDgtMDVUMDg6Mzg6MDIuOTY2WiIsIm5pY2tuYW1lIjoiIiwiX192IjowLCJpYXQiOjE0MzkwMDIwNjAsImV4cCI6MTQ3MDUzODA2MH0.T7wMJuc4OH8x_lfwy_dGyOg_9G7xbjMShvNnZ5F3lPs",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
 			"data": [
 				{
 					"key": "name",
-					"value": "TestChatroom5",
+					"value": "hhhhhhh",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "location",
-					"value": "[34.234343, 23.34323]",
+					"value": "[\"0\",\"0\"]",
 					"type": "text",
 					"enabled": true
 				},
 				{
-					"key": "images",
-					"value": "[\"http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg\", \"http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg\", \"http://img.xiaba.cvimage.cn/4d1856077749ffc57f9a0000.jpg\"]",
+					"key": "desc",
+					"value": "543221",
 					"type": "text",
 					"enabled": true
 				}
@@ -170,15 +179,15 @@
 			"version": 2,
 			"tests": "",
 			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"time": 1438486939604,
+			"helperAttributes": {},
+			"time": 1439362639865,
 			"name": "chatrooms",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
 			"responses": [],
-			"rawModeData": null,
-			"descriptionFormat": "html",
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "38b8e831-3aa8-6411-b571-f81588f0bb60"
 		},
 		{
 			"id": "3ee76f8a-ba9a-68db-2370-f6f93ebde728",
@@ -199,7 +208,9 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "3ee76f8a-ba9a-68db-2370-f6f93ebde728"
 		},
 		{
 			"id": "50d1f07d-99f1-4db7-98fc-b9a926b40c6c",
@@ -211,13 +222,13 @@
 			"data": [
 				{
 					"key": "email",
-					"value": "rankun203@gmail.com",
+					"value": "a@a.edu",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "password",
-					"value": "password",
+					"value": "111111",
 					"type": "text",
 					"enabled": true
 				}
@@ -226,12 +237,17 @@
 			"version": 2,
 			"tests": "",
 			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1438615920693,
+			"helperAttributes": "{}",
+			"time": 1438939118241,
 			"name": "login",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
-			"responses": []
+			"responses": [],
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "50d1f07d-99f1-4db7-98fc-b9a926b40c6c"
 		},
 		{
 			"id": "5aefa368-bfb4-c44c-5565-856793c02133",
@@ -246,8 +262,30 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1438843008794,
+			"time": 1439346678699,
 			"name": "chatrooms",
+			"description": "",
+			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
+			"responses": [],
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "5aefa368-bfb4-c44c-5565-856793c02133"
+		},
+		{
+			"id": "685a7613-0adf-c64e-8c81-dbfc94ef9537",
+			"headers": "",
+			"url": "{{host}}/chatrooms/55c7264db0f4acdd2c4e377c/newMessages?start=55cb138992630da3a4baa895",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1439533592200,
+			"name": "chatrooms/id/newMessages",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
 			"responses": []
@@ -255,7 +293,7 @@
 		{
 			"id": "71f243d0-22b9-9426-15e1-1570dc25bbcb",
 			"headers": "",
-			"url": "{{host}}/chatrooms/55bd91901d5c615b547e233e/messages",
+			"url": "{{host}}/chatrooms/55c7264db0f4acdd2c4e377c/messages",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -271,6 +309,12 @@
 					"value": "[\"55bb7aa662a0c36435ad82ce\"]",
 					"type": "text",
 					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxY2I2YTIzODMwNzc1MjQ0MzYwMDIiLCJlbWFpbCI6InJhbmt1bjIwM0BnbWFpbC5jb20iLCJzZXgiOiJtIiwicG9pbnQiOjEwMDAsInNjaG9vbCI6IiIsImF2YXRhciI6IiIsImNyZWF0aW9uVGltZSI6IjIwMTUtMDgtMDVUMDg6Mzg6MDIuOTY2WiIsIm5pY2tuYW1lIjoiIiwiX192IjowLCJpYXQiOjE0MzkyNzUxNTAsImV4cCI6MTQ3MDgxMTE1MH0.KX4v0D7MXLX4iTEo0fCjmZ3mNVY2y8dPGoAMQoHMOp4",
+					"type": "text",
+					"enabled": true
 				}
 			],
 			"dataMode": "urlencoded",
@@ -278,11 +322,14 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1438500511318,
+			"time": 1439275193457,
 			"name": "chatrooms/id/messages",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
-			"responses": []
+			"responses": [],
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "71f243d0-22b9-9426-15e1-1570dc25bbcb"
 		},
 		{
 			"id": "77e12394-e293-96f3-8cbf-dd9934760bab",
@@ -303,33 +350,33 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "77e12394-e293-96f3-8cbf-dd9934760bab"
 		},
 		{
 			"id": "9cc97c5e-4f86-f1cb-7d1a-1fb12679a6b6",
 			"headers": "",
-			"url": "{{host}}/chatrooms/55bd91901d5c615b547e233e/messages",
-			"pathVariables": {},
+			"url": "{{host}}/chatrooms/55cd5034d4f6c17928d54446/messages",
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
 			"data": [],
 			"dataMode": "params",
-			"name": "chatrooms/id/messages",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1438500231636,
 			"version": 2,
-			"responses": [],
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"time": 1439518925259,
+			"name": "chatrooms/id/messages",
+			"description": "",
+			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
+			"responses": []
 		},
 		{
 			"id": "c19d26ea-e9d0-6214-dceb-49f5020d83ef",
 			"headers": "",
-			"url": "{{host}}/users/55c071213a2d32da34a3fd09",
+			"url": "{{host}}/users/55c1cb6a2383077524436002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -338,12 +385,17 @@
 			"version": 2,
 			"tests": "",
 			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1438758817079,
+			"helperAttributes": "{}",
+			"time": 1438925665471,
 			"name": "users/id",
 			"description": "",
 			"collectionId": "732f83d4-bcc8-f234-7e47-ef24bc359e90",
-			"responses": []
+			"responses": [],
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "c19d26ea-e9d0-6214-dceb-49f5020d83ef"
 		},
 		{
 			"id": "de260178-aeae-a32b-0e88-9b54ba176a9d",
@@ -378,7 +430,9 @@
 			"responses": [],
 			"rawModeData": null,
 			"descriptionFormat": "html",
-			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f"
+			"folder": "018bbc80-ff6c-7c43-fd0f-f8a120cc240f",
+			"isFromCollection": true,
+			"collectionRequestId": "de260178-aeae-a32b-0e88-9b54ba176a9d"
 		},
 		{
 			"id": "f2452d35-2d6d-5f46-2093-4b60ac36d7f0",
