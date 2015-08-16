@@ -292,6 +292,89 @@
   ]
 
 }
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_users__id__starChatrooms"><span class="parent">/users</span>/{id}/starChatrooms</a> <span class="methods"><a href="#users__id__starChatrooms_post"><span class="badge badge_post">post</span></a> <a href="#users__id__starChatrooms_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_users__id__starChatrooms" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#users__id__starChatrooms_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>将聊天室添加到星标列表</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#users__id__starChatrooms_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取加星标的聊天室</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="users__id__starChatrooms_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/users</span>/{id}/starChatrooms</h4></div><div class="modal-body"><div class="alert alert-info"><p>将聊天室添加到星标列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#users__id__starChatrooms_post_request" data-toggle="tab">Request</a></li><li><a href="#users__id__starChatrooms_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="users__id__starChatrooms_post_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>chatroom</strong>: <em>(string)</em><p>要添加的聊天室 ID</p><p><strong>Example</strong>:</p><pre>55c1cb6a2383077524436002</pre></li></ul></div><div class="tab-pane" id="users__id__starChatrooms_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>添加成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "palyoad": null
+}
+</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="users__id__starChatrooms_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/users</span>/{id}/starChatrooms</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取加星标的聊天室</p></div><ul class="nav nav-tabs"><li class="active"><a href="#users__id__starChatrooms_get_request" data-toggle="tab">Request</a></li><li><a href="#users__id__starChatrooms_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="users__id__starChatrooms_get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="users__id__starChatrooms_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回自己收藏的聊天室的列表</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "_id": "55c70216b885773c7e604b0c",
+      "__v": 0,
+      "memberCount": 0,
+      "creationTime": "2015-08-09T07:32:38.076Z",
+      "creator": {
+        "point": 1000,
+        "nickname": "My Name",
+        "_id": "55c6bc9f91d21b45400a7958"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/6b765c7c-6dbc-4558-a87a-603b5e7ca33c/10507293772F22668BA1AE4A459528436BBC19B411.jpg",
+        "http://younion.oss-us-west-1.aliyuncs.com/609798f3-787b-4b66-be3d-e5ddf782aa3e/1050729377FA3302D1FC26F794709A3F16B790D8EE.jpg"
+      ],
+      "location": {
+        "geo": [
+          104.085504,
+          30.652117
+        ]
+      },
+      "desc": "",
+      "name": "开门"
+    },
+    {
+      "_id": "55c427d8e1453af207784a6b",
+      "__v": 0,
+      "memberCount": 0,
+      "creationTime": "2015-08-07T03:36:56.398Z",
+      "creator": {
+        "point": 1000,
+        "nickname": "XML",
+        "_id": "55c3093d9fce22bd5f601db9"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg",
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg",
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d1856077749ffc57f9a0000.jpg"
+      ],
+      "location": {
+        "geo": [
+          34.234343,
+          23.34323
+        ]
+      },
+      "desc": "",
+      "name": "TestChatroom21"
+    },
+    {
+      "_id": "55c427d5e1453af207784a6a",
+      "__v": 0,
+      "memberCount": 0,
+      "creationTime": "2015-08-07T03:36:53.909Z",
+      "creator": {
+        "point": 1000,
+        "nickname": "XML",
+        "_id": "55c3093d9fce22bd5f601db9"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg",
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg",
+        "http://younion.oss-us-west-1.aliyuncs.com/http://img.xiaba.cvimage.cn/4d1856077749ffc57f9a0000.jpg"
+      ],
+      "location": {
+        "geo": [
+          34.234343,
+          23.34323
+        ]
+      },
+      "desc": "",
+      "name": "TestChatroom20"
+    }
+  ]
+
+}
 </code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="chatrooms" class="panel-title">聊天室</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_chatrooms_"><span class="parent">/chatrooms</span>/</a> <span class="methods"><a href="#chatrooms__post"><span class="badge badge_post">post</span></a> <a href="#chatrooms__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_chatrooms_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#chatrooms__post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>创建聊天室</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#chatrooms__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取聊天室列表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="chatrooms__post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/chatrooms</span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>创建聊天室</p></div><ul class="nav nav-tabs"><li class="active"><a href="#chatrooms__post_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="chatrooms__post_request"><h3>Query Parameters</h3><ul><li><strong>name</strong>: <em>required (string)</em><p>聊天室名字</p></li><li><strong>desc</strong>: <em>(string)</em><p>聊天室的描述</p></li><li><strong>location</strong>: <em>required (string)</em><p>位置信息, [longitude, latitude]</p><p><strong>Example</strong>:</p><pre>[
   34.234343,
   23.34323

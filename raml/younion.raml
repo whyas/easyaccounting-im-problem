@@ -132,6 +132,24 @@ traits:
             desc: 返回聊天室列表
         - respWithPayload:
             payload: !include samples/chatrooms.sample
+  /{id}/starChatrooms:
+    post:
+      description: 将聊天室添加到星标列表
+      is:
+        - responseDesc:
+            desc: 添加成功
+        - respWithoutPayload
+      queryParameters:
+        chatroom:
+          description: 要添加的聊天室 ID
+          example: '55c1cb6a2383077524436002'
+    get:
+      description: 获取加星标的聊天室
+      is:
+        - responseDesc:
+            desc: 返回自己收藏的聊天室的列表
+        - respWithPayload:
+            payload: !include samples/chatrooms.sample
 /chatrooms:
   displayName: 聊天室
   /:
