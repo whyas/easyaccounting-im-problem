@@ -124,7 +124,7 @@ traits:
             desc: 删除用户成功
         - respWithPayload:
             payload: !include samples/user.sample
-  /chatrooms:
+  /{id}/chatrooms:
     get:
       description: 获取我的聊天室列表
       is:
