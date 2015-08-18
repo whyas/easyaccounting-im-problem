@@ -150,6 +150,16 @@ traits:
             desc: 返回自己收藏的聊天室的列表
         - respWithPayload:
             payload: !include samples/chatrooms.sample
+    delete:
+      description: 取消关注聊天室
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
+      queryParameters:
+        chatroom:
+          description: 要取消关注的聊天室 ID
+          example: '55c1cb6a2383077524436002'
 /chatrooms:
   displayName: 聊天室
   /:
@@ -252,9 +262,8 @@ traits:
             payload: !include samples/messages.sample
       queryParameters:
         start:
-          description: 获取消息的起始点, 客户端的最新的那条消息的 ID
+          description: 获取消息的起始点, 客户端的最新的那条消息的 ID, 如果不传, 则 302 到 /:id/messages.
           example: 55c7264db0f4acdd2c4e377c
-          required: true
   /{id}/messages/{id}:
     get:
       description: 获取指定 ID 的消息
