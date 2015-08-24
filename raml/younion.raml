@@ -160,6 +160,14 @@ traits:
         chatroom:
           description: 要取消关注的聊天室 ID
           example: '55c1cb6a2383077524436002'
+  /{id}/msgbox:
+    get:
+      description: 获取用户的消息邮箱
+      is:
+        - responseDesc:
+            desc: 返回我收到的消息列表
+        - respWithPayload:
+            payload: !include samples/messages.sample
 /chatrooms:
   displayName: 聊天室
   /:
