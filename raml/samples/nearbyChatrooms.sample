@@ -1,0 +1,104 @@
+  [
+    {
+      "_id": "55e65483f91d41b653f46ef5",
+      "__v": 0,
+      "creationTime": "2015-09-02T01:44:35.932Z",
+      "creator": {
+        "avatar": "http://younion.oss-us-west-1.aliyuncs.com/avatar/avatar.jpg",
+        "nickname": "",
+        "_id": "55dbe20e06bba73b35823d4d"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/609798f3787b4b66be3de5ddf782aa3e/1050729377FA3302D1FC26F794709A3F16B790D8EE.jpg"
+      ],
+      "point": 0,
+      "location": {
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            104.0655733,
+            30.6584759
+          ]
+        }
+      },
+      "desc": "This is a chatroom.",
+      "name": "Jinhai International Garden",
+      "stick": false,
+      "memberCount": 1,
+      "id": "55e65483f91d41b653f46ef5",
+      "stared": false,
+      "distance": 96
+    },
+    {
+      "_id": "55e65483f91d41b653f46ef5",
+      "__v": 0,
+      "creationTime": "2015-09-02T01:44:35.932Z",
+      "creator": {
+        "avatar": "http://younion.oss-us-west-1.aliyuncs.com/avatar/avatar.jpg",
+        "nickname": "",
+        "_id": "55dbe20e06bba73b35823d4d"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/609798f3787b4b66be3de5ddf782aa3e/1050729377FA3302D1FC26F794709A3F16B790D8EE.jpg"
+      ],
+      "point": 0,
+      "loc": {
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            104.0655733,
+            30.6584759
+          ]
+        }
+      },
+      "location": {
+        "geo": [
+          104.0655733,
+          30.6584759
+        ]
+      },
+      "desc": "This is a chatroom.",
+      "name": "Jinhai International Garden",
+      "stick": false,
+      "memberCount": 1,
+      "id": "55e65483f91d41b653f46ef5",
+      "stared": false,
+      "distance": 96
+    },
+    {
+      "_id": "55e65483f91d41b653f46ef5",
+      "__v": 0,
+      "creationTime": "2015-09-02T01:44:35.932Z",
+      "creator": {
+        "avatar": "http://younion.oss-us-west-1.aliyuncs.com/avatar/avatar.jpg",
+        "nickname": "",
+        "_id": "55dbe20e06bba73b35823d4d"
+      },
+      "images": [
+        "http://younion.oss-us-west-1.aliyuncs.com/609798f3787b4b66be3de5ddf782aa3e/1050729377FA3302D1FC26F794709A3F16B790D8EE.jpg"
+      ],
+      "point": 0,
+      "loc": {
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            104.0655733,
+            30.6584759
+          ]
+        }
+      },
+      "location": {
+        "geo": [
+          104.0655733,
+          30.6584759
+        ]
+      },
+      "desc": "This is a chatroom.",
+      "name": "Jinhai International Garden",
+      "stick": false,
+      "memberCount": 1,
+      "id": "55e65483f91d41b653f46ef5",
+      "stared": false,
+      "distance": 96
+    }
+  ]
