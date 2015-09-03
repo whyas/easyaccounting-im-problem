@@ -214,6 +214,9 @@ traits:
         maxDistance:
           description: 最远距离, 单位 米, default 10000 公里 (10000 * 1000) 米
           example: 10000
+        stickOnly:
+          description: 是否获取置顶帖 (帖子一旦置顶, 只能通过调用时追加 stickOnly=true 获取)
+
       is:
         - responseDesc:
             desc: 返回聊天室列表
