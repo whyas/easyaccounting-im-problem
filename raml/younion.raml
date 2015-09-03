@@ -245,6 +245,20 @@ traits:
             desc: 返回聊天室信息
         - respWithPayload:
             payload: !include samples/chatroom.sample
+  /{id}/stick:
+    put:
+      description: 将聊天室置顶
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
+  /{id}/unstick:
+    put:
+      description: 取消聊天室置顶
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
   /{id}/messages:
     get:
       description: 获取聊天室的消息列表, TODO 翻页
