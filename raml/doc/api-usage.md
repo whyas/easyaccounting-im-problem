@@ -66,4 +66,5 @@ API 统一使用 ISO 8601 格式的时间. 解析方式搜索: `parse iso 8601`
 默认男头像 URL: http://younion.oss-us-west-1.aliyuncs.com/9aa89c68cf3c9ecf0ff504f7b0867ef1/avatar_male.png
 
 默认女头像 key: `9da5fe862cf2c202f53929ddae6dcc5a/avatar_female.png`
+
 默认女头像 URL: http://younion.oss-us-west-1.aliyuncs.com/9da5fe862cf2c202f53929ddae6dcc5a/avatar_female.png
