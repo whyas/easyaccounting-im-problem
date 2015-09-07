@@ -56,3 +56,10 @@ API 正常请求的情况下, 返回码为 1000, 返回的对象为:
 示例: `2014-01-01T23:28:56.782Z`
 
 API 统一使用 ISO 8601 格式的时间. 解析方式搜索: `parse iso 8601`
+
+#### 头像
+
+头像的 key 的格式为 `fileuuid/filename.png`
+
+默认男头像: `9aa89c68cf3c9ecf0ff504f7b0867ef1/avatar_male.png`
+默认女头像: `9da5fe862cf2c202f53929ddae6dcc5a/avatar_female.png`
