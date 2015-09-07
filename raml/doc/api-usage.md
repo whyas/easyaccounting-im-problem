@@ -51,6 +51,7 @@ API 正常请求的情况下, 返回码为 1000, 返回的对象为:
 
 - key 统一为: fileuuid/filename.jpg (fileuuid 为程序生成的 UUID 字符串, filename 为该文件的名字, jpg 为演示文件格式)
 - 网络上比较成熟的参考: `https://speakerd.s3.amazonaws.com/presentations/8cc549303fff0130b9ec1231381f54b3/slides.pdf` (来源: http://felixge.de/)
+
 #### 时间解析
 
 示例: `2014-01-01T23:28:56.782Z`
