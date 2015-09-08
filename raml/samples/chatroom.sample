@@ -1,20 +1,35 @@
   {
-    "_id": "55bf2cc6db98cfcf36084851",
-    "creator": null,
     "__v": 0,
-    "memberCount": 0,
-    "creationTime": "2015-08-03T08:54:44.287Z",
-    "images": [
-      "http://img.xiaba.cvimage.cn/4d17f4c59e2ddd9705fa0900.jpg",
-      "http://img.xiaba.cvimage.cn/4d1852fd276cd9927e620500.jpg",
-      "http://img.xiaba.cvimage.cn/4d1856077749ffc57f9a0000.jpg"
+    "_id": "55ed8fd4c97b0dc007775697",
+    "followers": [
+      {
+        "_id": "55ed44b1670b5b296fa61d0b",
+        "avatar": "http://younion.oss-us-west-1.aliyuncs.com/9aa89c68cf3c9ecf0ff504f7b0867ef1/avatar_male.png",
+        "nickname": "笑一笑",
+        "id": "55ed44b1670b5b296fa61d0b"
+      }
     ],
-    "location": {
-      "geo": [
-        34.234343,
-        23.34323
-      ]
+    "creationTime": "2015-09-07T13:23:32.432Z",
+    "creator": {
+      "avatar": "http://younion.oss-us-west-1.aliyuncs.com/9aa89c68cf3c9ecf0ff504f7b0867ef1/avatar_male.png",
+      "nickname": "笑一笑",
+      "_id": "55ed44b1670b5b296fa61d0b"
     },
-    "name": "TestChatroom5",
+    "images": [],
+    "point": 0,
+    "location": {
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          104.085625,
+          30.65226
+        ]
+      }
+    },
+    "desc": "现在好像找不到地方修改头像",
+    "name": "要不要修改头像呢",
+    "stick": false,
+    "memberCount": 1,
+    "id": "55ed8fd4c97b0dc007775697",
     "stared": false
   }
