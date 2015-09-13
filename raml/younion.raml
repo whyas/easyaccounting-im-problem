@@ -10,6 +10,8 @@ documentation:
     content: !include doc/younion-getting-started.md
   - title: API 使用规范
     content: !include doc/api-usage.md
+  - title: 聊天室及时消息 (socket)
+    content: !include doc/socket-messages.md
 
 traits:
   # 写操作成功
@@ -55,9 +57,9 @@ traits:
         200:
           description: <<desc>>
 
-/login:
-  displayName: 登录接口
-  /:
+/entry:
+  displayName: 登录, 注册
+  /login:
     post:
       description: 登录 Younion
       queryParameters:
@@ -72,8 +74,6 @@ traits:
             desc: 登录成功
         - respWithPayload:
             payload: !include samples/user.sample
-/register:
-  displayName: 注册接口
   /:
     post:
       description: 注册 Younion 帐号
