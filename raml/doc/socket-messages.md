@@ -4,7 +4,9 @@
 
 示例(JavaScript):
 
-  socket.on('chatroom.messages.55f03e4728824692a4dcb951', function (data) {
-    console.log(data);
-    socket.emit('received', {received: true});
-  });
+```
+socket.on('chatroom.messages.55f03e4728824692a4dcb951', function (data) {
+  console.log(data);
+  socket.emit('received', {received: true});
+});
+```
