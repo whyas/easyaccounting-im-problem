@@ -127,6 +127,11 @@ traits:
   /{id}/chatrooms:
     get:
       description: 获取我的聊天室列表
+      queryParameters:
+        start:
+          description: 加载更多, 上一次加载的列表的最后一项
+        limit:
+          description: 本次加载的数量
       is:
         - responseDesc:
             desc: 返回聊天室列表
@@ -150,6 +155,11 @@ traits:
             desc: 返回自己收藏的聊天室的列表
         - respWithPayload:
             payload: !include samples/chatrooms.sample
+      queryParameters:
+        skip:
+          description: 跳过的记录数 (加载更多, 值为已经加载的数量)
+        limit:
+          description: 本次加载的数量
     delete:
       description: 取消关注聊天室
       is:
