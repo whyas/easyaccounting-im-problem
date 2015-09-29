@@ -88,6 +88,17 @@ traits:
         - responseDesc:
             desc: 注册成功, 请检查邮箱
         - respWithoutPayload
+  /resetPassword:
+    get:
+      description: 申请重置密码
+      queryParameters:
+        email:
+          description: 邮箱
+          required: true
+      is:
+        - responseDesc:
+            desc: 重置密码的链接已发送至你的邮箱
+        - respWithoutPayload
 /users:
   displayName: 用户接口
   /{id}:
