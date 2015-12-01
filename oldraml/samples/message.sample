@@ -1,0 +1,9 @@
+  {
+    "_id": "55c071213a2d32da34a3fd09",
+    "creator": "55c071213a2d32da34a3fd09",
+    "creationTime": 15600030,
+    "msg": "This is a chat message",
+    "mentions": [
+      1, 2, 3
+    ]
+  }
