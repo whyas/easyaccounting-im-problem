@@ -60,9 +60,10 @@ traits:
           description: <<desc>>
   # 认证信息
   - tokenHeader:
-      X-ACCESS-TOKEN:
-        type: string
-        description: API 请求的认证信息
+      headers:
+        X-ACCESS-TOKEN:
+          type: string
+          description: API 请求的认证信息
 
 
 /books:
@@ -70,8 +71,7 @@ traits:
   /:
     post:
       description: 添加账本
-      headers:
-        - tokenHeader
+      - tokenHeader
       queryParameters:
         name:
           description: 账本名字
