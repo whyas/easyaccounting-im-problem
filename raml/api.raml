@@ -70,7 +70,8 @@ traits:
   /:
     post:
       description: 添加账本
-      headers: [ tokenHeader ]
+      headers:
+        - tokenHeader
       queryParameters:
         name:
           description: 账本名字
