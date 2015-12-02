@@ -99,7 +99,32 @@ traits:
         - responseDesc:
             desc: 删除成功
         - respWithoutPayload
-
+  /{id}/bookkeeping:
+    displayName: 记账
+    /income:
+      post:
+        description: 记收入
+        queryParameters:
+          inoutTypeId:
+            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+    /expense:
+      post:
+        description: 记支出
+    /transfer:
+      post:
+        description: 记转账，资金调拨
+    /begin:
+      post:
+        description: 记初始
+    /headging:
+      post:
+        description: 记对冲
+    /refund:
+      post:
+        description: 记退款
+    /reconciliation:
+      post:
+        description: 对账
 /entry:
   displayName: 登录, 注册
   /login:
