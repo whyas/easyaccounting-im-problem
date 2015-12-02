@@ -466,5 +466,53 @@ traits:
         post:
           description: 新增货品
       /{id}:
+        get:
+          description: 获取货品信息
         put:
           description: 货物调拨
+    /storage:
+      /:
+        get:
+          description: 获取库房列表
+        post:
+          description: 添加库房
+      /{id}:
+        get:
+          description: 获取库房信息
+        delete:
+          description: 删除库房
+        put:
+          description: 更新库房信息
+    /assemble:
+      post:
+        description: 组装货物
+    /disassemble:
+      post:
+        description: 拆分货物
+    /purchase:
+      post:
+        description: 采购进货
+    /purchaseReturn:
+      post:
+        description: 采购退货
+    /sell:
+      post:
+        description: 销售出货
+    /sellReturn:
+      post:
+        description: 销售退货
+    /borrowingSale:
+      post:
+        description: 借货销售
+    /transferItem:
+      post:
+        description: 货物调拨
+    /adjustPrice:
+      put:
+        description: 货物调价
+    /review:
+      get:
+        description: 盘点库存
+    /costTransfer:
+      post:
+        description: 成本结转
