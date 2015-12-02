@@ -365,7 +365,14 @@ traits:
         description: 获取收入报表
         queryParameters:
           start:
-            description: 
+            description: 统计开始日期
+          until:
+            description: 统计截至日期
+        is:
+          - responseDesc:
+              desc: 返回收入报表
+          - respWithPayload:
+              payload: test
     /expense:
       get:
         description: 获取支出报表
