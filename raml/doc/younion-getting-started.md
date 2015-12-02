@@ -1,7 +1,9 @@
-可前往 https://coding.net/u/younion/p/api/git 查看当前 API 文档 的 **源码**
+可前往 [rankun203/simple-accounting-apidoc](https://coding.net/u/rankun203/p/simple-accounting-apidoc) 查看当前 API 文档 的 **源码**
 
-下载最新版本的 Postman 测试用例: [Younion.me.json.postman_collection](ref/Younion.me.json.postman_collection)
+本文档使用 raml2html 生成：[raml2html/raml2html](https://github.com/raml2html/raml2html)
 
-服务器: http://younion.me:3000
+x 下载最新版本的 Postman 测试用例: [Younion.me.json.postman_collection](ref/Younion.me.json.postman_collection)
 
-> Postman 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 `http://younion.me:3000`
+x 服务器: http://younion.me:3000
+
+> x Postman 配置方式: 在 Postman 中添加 host 变量, 将其值设置为 `http://younion.me:3000`
