@@ -70,7 +70,10 @@ traits:
           description: 账本币种，CNY, USD 等
         financialYear:
           description: 财务年度，年份数字，2015、2016等
+          default: 当前年份
           required: false
+        comment:
+          description: 备注，支持
 /entry:
   displayName: 登录, 注册
   /login:
