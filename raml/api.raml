@@ -57,6 +57,20 @@ traits:
         200:
           description: <<desc>>
 
+/books:
+  displayName: 账本操作
+  /:
+    post:
+      description: 添加账本
+      queryParameters:
+        name:
+          description: 账本名字
+          required: true
+        nativeCurrency:
+          description: 账本币种，CNY, USD 等
+        financialYear:
+          description: 财务年度，年份数字，2015、2016等
+          required: false
 /entry:
   displayName: 登录, 注册
   /login:
