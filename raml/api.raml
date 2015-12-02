@@ -115,6 +115,7 @@ traits:
             required: true
           amount:
             description: 收入的金额
+            type: number
           tradeTime:
             description: 交易日期
             type: date
@@ -126,7 +127,89 @@ traits:
             description: 相关项目 ID
             type: number
           staffId: 
-            description: 员工 ID
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 备注内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
+    /expense:
+      post:
+        description: 记支出
+        queryParameters:
+          inoutTypeId:
+            type: number
+            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+            required: true
+          expenseAccountId:
+            description: 支出账户
+            type: number
+            required: true
+          amount:
+            description: 支出的金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 备注内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
+    /transfer:
+      post:
+        description: 记转账，资金调拨
+        queryParameters:
+          inoutTypeId:
+            type: number
+            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+            required: true
+          incomeAccountId:
+            description: 转入账户
+            type: number
+            required: true
+          expenseAccountId:
+            description: 转出账户
+            type: number
+            required: true
+          amount:
+            description: 转账金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
             type: number
           departmentId:
             description: 部门 ID
@@ -135,24 +218,151 @@ traits:
             description: 评论内容
           attachmentUrl:
             description: 附件URL, 相对地址，文件的 Key
-    /expense:
-      post:
-        description: 记支出
-    /transfer:
-      post:
-        description: 记转账，资金调拨
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
     /begin:
       post:
         description: 记初始
+        queryParameters:
+          incomeAccountId:
+            description: 要初始化的账户
+            type: number
+            required: true
+          amount:
+            description: 初始化的金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 评论内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
     /headging:
       post:
         description: 记对冲
+        queryParameters:
+          amount:
+            description: 支出的金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          payableId:
+            description: 应付条目 ID
+            type: number
+          receivableid:
+            description: 应收条目 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 备注内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
     /refund:
       post:
         description: 记退款
+        queryParameters:
+          inoutTypeId:
+            type: number
+            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+            required: true
+          amount:
+            description: 交易金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 备注内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
     /reconciliation:
       post:
-        description: 对账
+        description: x - 对账
+        queryParameters:
+          inoutTypeId:
+            type: number
+            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+            required: true
+          amount:
+            description: 交易金额
+            type: number
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 备注内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
+        is:
+          - responseDesc:
+              desc: 记录成功
+          - respWithoutPayload
+  /{id}/report:
+    displayName: 报表
+    /income:
+      get:
+        description: 获取收入的报表
 /entry:
   displayName: 登录, 注册
   /login:
