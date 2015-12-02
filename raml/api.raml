@@ -71,8 +71,8 @@ traits:
   /:
     post:
       description: 添加账本
-      headers: [ tokenHeader ]
       queryParameters:
+        headers: [ tokenHeader ]
         name:
           description: 账本名字
           required: true
