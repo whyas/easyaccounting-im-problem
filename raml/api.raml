@@ -106,7 +106,35 @@ traits:
         description: 记收入
         queryParameters:
           inoutTypeId:
+            type: number
             description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+            required: true
+          incomeAccountId:
+            description: 收入账户
+            type: number
+            required: true
+          amount:
+            description: 收入的金额
+          tradeTime:
+            description: 交易日期
+            type: date
+            required: true
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          projectId:
+            description: 相关项目 ID
+            type: number
+          staffId: 
+            description: 员工 ID
+            type: number
+          departmentId:
+            description: 部门 ID
+            type: number
+          comment:
+            description: 评论内容
+          attachmentUrl:
+            description: 附件URL, 相对地址，文件的 Key
     /expense:
       post:
         description: 记支出
