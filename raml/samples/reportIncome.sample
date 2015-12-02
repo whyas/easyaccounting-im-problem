@@ -1,6 +1,7 @@
   {
     "totalAmount": 600,
-    "month": 10,
+    "start": 1449060138150,
+    "until": 1449060438150,
     "income": [
       {
         "typeId": 4,
