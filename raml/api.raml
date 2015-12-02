@@ -424,7 +424,7 @@ traits:
             type: number
         is:
           - responseDesc:
-              desc: 返回利润报表
+              desc: 返回现金流量报表
           - respWithPayload:
               payload: !include samples/reportCash.sample
     /debit:
@@ -439,10 +439,22 @@ traits:
             type: number
         is:
           - responseDesc:
-              desc: 返回利润报表
+              desc: 返回负债报表
           - respWithPayload:
               payload: !include samples/reportCash.sample
     /accountBalance:
       get:
         description: 获取账户余额报表
-
+        queryParameters:
+          start:
+            description: 统计开始日期
+            type: number
+          until:
+            description: 统计截至日期
+            type: number
+        is:
+          - responseDesc:
+              desc: 返回账户余额报表
+          - respWithPayload:
+              payload: !include samples/reportAccountBalance.sample
+              
