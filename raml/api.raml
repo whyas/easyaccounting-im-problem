@@ -59,16 +59,17 @@ traits:
         200:
           description: <<desc>>
   # 认证信息
-
+  - tokenHeader:
+      x-access-token:
+        type: string
+        description: API 请求认证 Header
 /books:
   displayName: 账本操作
   /:
     post:
       description: 添加账本
       headers:
-        x-access-token:
-          type: string
-          description: API 请求认证 Header
+        - tokenHeader
       queryParameters:
         name:
           description: 账本名字
