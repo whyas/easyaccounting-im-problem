@@ -58,12 +58,19 @@ traits:
       responses:
         200:
           description: <<desc>>
+  # 认证信息
+  - tokenHeader:
+      X-ACCESS-TOKEN:
+        type: string
+        description: API 请求的认证信息
+
 
 /books:
   displayName: 账本操作
   /:
     post:
       description: 添加账本
+      headers: [ tokenHeader ]
       queryParameters:
         name:
           description: 账本名字
@@ -362,7 +369,22 @@ traits:
     displayName: 报表
     /income:
       get:
-        description: 获取收入的报表
+        description: 获取收入报表
+        queryParameters:
+          start:
+            description: 
+    /expense:
+      get:
+        description: 获取支出报表
+    /profit:
+      get:
+        description: 获取利润报表
+    /cash:
+      get:
+        description: 获取现金流量报表
+    /debit:
+      get:
+        description: 资产负债表
 /entry:
   displayName: 登录, 注册
   /login:
