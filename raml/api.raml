@@ -457,4 +457,14 @@ traits:
               desc: 返回账户余额报表
           - respWithPayload:
               payload: !include samples/reportAccountBalance.sample
-              
+  /{id}/inventory:
+    displayName: 库存
+    /items:
+      /:
+        get:
+          description: 获取货品列表
+        post:
+          description: 新增货品
+      /{id}
+        put:
+          description: 货物调拨

@@ -1,5 +1,7 @@
   {
     "netAsset": 210000,
+    "asset": 250000,
+    "debit": 40000,
     "accounts": [
       {
         "accountId": 1,
