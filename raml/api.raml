@@ -59,20 +59,19 @@ traits:
         200:
           description: <<desc>>
   # 认证信息
-  - tokenHeader:
-      headers:
-        X-ACCESS-TOKEN:
-          type: string
-          description: API 请求的认证信息
-
 
 /books:
   displayName: 账本操作
   /:
     post:
       description: 添加账本
+      headers:
+        Authorization:
+          type: string
+          description: Basic authentication header
+          example: |
+            Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
       queryParameters:
-        headers: [ tokenHeader ]
         name:
           description: 账本名字
           required: true
