@@ -1,0 +1,10 @@
+  {
+    "id": 1,
+    "uid": 2,
+    "name": "2015年度账本",
+    "nativeCurrency": "CNY",
+    "financialYear": 2015,
+    "comment": "账本描述信息",
+    "creationTime": 1449060138150,
+    "updateTime": 1449060138150
+  }

@@ -82,6 +82,13 @@ traits:
             desc: 添加成功
         - respWithoutPayload
   /{id}:
+    get:
+      description: 获取当前账本
+      is:
+        - responseDesc:
+            desc:  返回账本信息
+        - respWithPayload:
+            payload: !include samples/book.sample
     put:
       description: 修改账本信息
       queryParameters:
@@ -118,7 +125,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -157,7 +164,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -200,7 +207,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -235,7 +242,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -266,7 +273,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -307,7 +314,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           businessUnitId:
             description: 往来单位 ID
@@ -342,7 +349,7 @@ traits:
             type: number
           tradeTime:
             description: 交易日期
-            type: date
+            type: long
             required: true
           staffId: 
             description: 经办人、员工 ID
@@ -366,10 +373,10 @@ traits:
         queryParameters:
           start:
             description: 统计开始日期
-            type: date
+            type: long
           until:
             description: 统计截至日期
-            type: date
+            type: long
         is:
           - responseDesc:
               desc: 返回收入报表
@@ -381,10 +388,10 @@ traits:
         queryParameters:
           start:
             description: 统计开始日期
-            type: date
+            type: number
           until:
             description: 统计截至日期
-            type: date
+            type: number
         is:
           - responseDesc:
               desc: 返回支出报表
@@ -396,10 +403,10 @@ traits:
         queryParameters:
           start:
             description: 统计开始日期
-            type: date
+            type: long
           until:
             description: 统计截至日期
-            type: date
+            type: long
         is:
           - responseDesc:
               desc: 返回利润报表
@@ -408,281 +415,34 @@ traits:
     /cash:
       get:
         description: 获取现金流量报表
+        queryParameters:
+          start:
+            description: 统计开始日期
+            type: long
+          until:
+            description: 统计截至日期
+            type: long
+        is:
+          - responseDesc:
+              desc: 返回利润报表
+          - respWithPayload:
+              payload: !include samples/reportCash.sample
     /debit:
       get:
-        description: 资产负债表
-/entry:
-  displayName: 登录, 注册
-  /login:
-    post:
-      description: 登录 Younion
-      queryParameters:
-        email:
-          description: 邮箱
-          required: true
-        password:
-          description: 密码
-          required: true
-      is:
-        - responseDesc:
-            desc: 登录成功
-        - respWithPayload:
-            payload: !include samples/user.sample
-  /register:
-    post:
-      description: 注册 Younion 帐号
-      queryParameters:
-        email:
-          description: 邮箱
-          required: true
-        password:
-          description: 密码
-          required: true
-      is:
-        - responseDesc:
-            desc: 注册成功, 请检查邮箱
-        - respWithoutPayload
-  /resetPassword:
-    get:
-      description: 申请重置密码
-      queryParameters:
-        email:
-          description: 邮箱
-          required: true
-      is:
-        - responseDesc:
-            desc: 重置密码的链接已发送至你的邮箱
-        - respWithoutPayload
-/users:
-  displayName: 用户接口
-  /{id}:
-    get:
-      description: 获取单个用户信息
-      is:
-        - responseDesc:
-            desc: 成功获取用户信息
-        - respWithPayload:
-            payload: !include samples/user.sample
-    put:
-      description: 更新用户的信息
-      queryParameters:
-        email:
-          description: 邮箱
-        password:
-          description: 密码
-        avatar:
-          description: 头像
-        nickname:
-          description: 昵称
-        sex:
-          description: 性别
-          enum: [ 'm', 'f' ]
-      is:
-        - responseDesc:
-            desc: 成功更新用户信息
-        - respWithPayload:
-            payload: !include samples/user.sample
-    delete:
-      description: 删除用户
-      is:
-        - responseDesc:
-            desc: 删除用户成功
-        - respWithPayload:
-            payload: !include samples/user.sample
-  /{id}/chatrooms:
-    get:
-      description: 获取我的聊天室列表
-      queryParameters:
-        start:
-          description: 加载更多, 上一次加载的列表的最后一项
-        limit:
-          description: 本次加载的数量
-      is:
-        - responseDesc:
-            desc: 返回聊天室列表
-        - respWithPayload:
-            payload: !include samples/chatrooms.sample
-  /{id}/starChatrooms:
-    post:
-      description: 将聊天室添加到星标列表
-      is:
-        - responseDesc:
-            desc: 添加成功
-        - respWithoutPayload
-      queryParameters:
-        chatroom:
-          description: 要添加的聊天室 ID
-          example: '55c1cb6a2383077524436002'
-    get:
-      description: 获取加星标的聊天室
-      is:
-        - responseDesc:
-            desc: 返回自己收藏的聊天室的列表
-        - respWithPayload:
-            payload: !include samples/chatrooms.sample
-      queryParameters:
-        skip:
-          description: 跳过的记录数 (加载更多, 值为已经加载的数量)
-        limit:
-          description: 本次加载的数量
-    delete:
-      description: 取消关注聊天室
-      is:
-        - responseDesc:
-            desc: 操作成功
-        - respWithoutPayload
-      queryParameters:
-        chatroom:
-          description: 要取消关注的聊天室 ID
-          example: '55c1cb6a2383077524436002'
-  /{id}/msgbox:
-    get:
-      description: 获取用户的消息邮箱
-      is:
-        - responseDesc:
-            desc: 返回我收到的消息列表
-        - respWithPayload:
-            payload: !include samples/messages.sample
-/chatrooms:
-  displayName: 聊天室
-  /:
-    post:
-      description: 创建聊天室
-      queryParameters:
-        name:
-          description: 聊天室名字
-          required: true
-        desc:
-          description: 聊天室的描述
-          required: false
-        location:
-          description: 位置信息, [longitude, latitude]
-          required: true
-          example: !include samples/location.sample
-        country:
-          description: 发表位置国家
-        city:
-          description: 发表位置城市
-        district:
-          description: 发表位置区域
-        address:
-          description: 发表位置地址
-        images:
-          example: "[\"http://website.com/file.jpg\", \
-            \"http://website.com/file2.jpg\", \
-            \"http://website.com/file3.jpg\"]"
-    get:
-      description: 获取聊天室列表
-      queryParameters:
-        longitude:
-          description: 经度
-        latitude:
-          description: 纬度
-        start:
-          description: DEPRECATED, 加载 start 之后的条目, 是一个 ID
-          example: 55c427d8e1453af207784a6b
-        skip:
-          description: 要跳过的记录数, 传入已经加载的记录数
-          example: 20 // 如果第一次加载了 20 条, 第二次加载的时候, 就传入 skip=20
-        limit:
-          description: 本次加载的条目数量
-        maxDistance:
-          description: 最远距离, 单位 米, default 10000 公里 (10000 * 1000) 米
-          example: 10000
-        stickOnly:
-          description: 是否获取置顶帖 (帖子一旦置顶, 只能通过调用时追加 stickOnly=true 获取)
+        description: 资产负债报表
+        queryParameters:
+          start:
+            description: 统计开始日期
+            type: long
+          until:
+            description: 统计截至日期
+            type: long
+        is:
+          - responseDesc:
+              desc: 返回利润报表
+          - respWithPayload:
+              payload: !include samples/reportCash.sample
+    /accountBalance:
+      get:
+        description: 获取账户余额报表
 
-      is:
-        - responseDesc:
-            desc: 返回聊天室列表
-        - respWithPayload:
-            payload: !include samples/nearbyChatrooms.sample
-  /{id}:
-    put:
-      description: 更新聊天室属性
-      queryParameters:
-        name:
-          description: 聊天室的名字
-      is:
-        - responseDesc:
-            desc: 聊天室更新成功
-        - respWithoutPayload
-    delete:
-      description: 删除聊天室
-      is:
-        - responseDesc:
-            desc: 删除成功
-        - respWithoutPayload
-    get:
-      description: 获取聊天室信息
-      is:
-        - responseDesc:
-            desc: 返回聊天室信息
-        - respWithPayload:
-            payload: !include samples/chatroom.sample
-  /{id}/stick:
-    put:
-      description: 将聊天室置顶
-      is:
-        - responseDesc:
-            desc: 操作成功
-        - respWithoutPayload
-  /{id}/unstick:
-    put:
-      description: 取消聊天室置顶
-      is:
-        - responseDesc:
-            desc: 操作成功
-        - respWithoutPayload
-  /{id}/messages:
-    get:
-      description: 获取聊天室的消息列表, TODO 翻页
-      queryParameters:
-        start:
-          description: 返回记录游标开始
-        quantity:
-          description: 返回数量
-      is:
-        - responseDesc:
-            desc: 返回消息列表
-        - respWithPayload:
-            payload: !include samples/messages.sample
-    post:
-      description: 向聊天室中发一条消息
-      queryParameters:
-        msg:
-          description: 消息内容
-          required: true
-        mentions:
-          description: 消息提到的人
-          example: "[1, 2]"
-      is:
-        - responseDesc:
-            desc: 消息发送成功
-        - respWithoutPayload
-  /{id}/newMessages:
-    get:
-      description: 获取指定消息之后的新消息, 不提供 limit 属性, 如果消息过多, 仍然会一次获取完所有消息.
-      is:
-        - responseDesc:
-            desc: 返回新消息
-        - respWithPayload:
-            payload: !include samples/messages.sample
-      queryParameters:
-        start:
-          description: 获取消息的起始点, 客户端的最新的那条消息的 ID, 如果不传, 则 302 到 /:id/messages.
-          example: 55c7264db0f4acdd2c4e377c
-  /{id}/messages/{id}:
-    get:
-      description: 获取指定 ID 的消息
-      is:
-        - responseDesc:
-            desc: 返回一条消息
-        - respWithPayload:
-            payload: !include samples/message.sample
-    delete:
-      description: 删除一条消息
-      is:
-        - responseDesc:
-            desc: 删除成功
-        - respWithoutPayload
