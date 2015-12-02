@@ -77,6 +77,29 @@ traits:
           required: false
         comment:
           description: 备注，支持
+      is:
+        - responseDesc:
+            desc: 添加成功
+        - respWithoutPayload
+  /{id}:
+    put:
+      description: 修改账本信息
+      queryParameters:
+        name:
+          description: 账本名字
+        comment:
+          description: 备注，支持
+      is:
+        - responseDesc:
+            desc: 更新成功
+        - respWithoutPayload
+    delete:
+      description: 删除账本
+      is:
+        - responseDesc:
+            desc: 删除成功
+        - respWithoutPayload
+
 /entry:
   displayName: 登录, 注册
   /login:
