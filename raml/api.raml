@@ -728,6 +728,13 @@ traits:
               desc: 添加成功
           - respWithoutPayload
     /{id}:
+      get:
+        description: 获取员工、酷虎、供应商等记录
+        is:
+          - responseDesc:
+              desc: 返回该对象
+          - respWithPayload:
+              payload: !include samples/generalPeoplePerson.sample
       put:
         description: 修改员工、酷虎、供应商等记录
         queryParameters:
