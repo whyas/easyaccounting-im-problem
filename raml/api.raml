@@ -614,16 +614,37 @@ traits:
         comment:
           description: 备注
         items:
-          description: 调价的货物列表, JSON 数组
+          description: 调价的货物列表, JSON 数组, itemPrice 即该物品的新价格
           type: string
           example: !include samples/itemListAdjustPrice.sample
       is:
         - responseDesc:
             desc: 操作成功
         - respWithoutPayload
-  /review:
+  /stockTaking:
     get:
       description: 盘点库存
+      queryParameters:
+        activityTime:
+          description: 活动发生的时间
+        storageId:
+          description: 仓库 ID
+        staffId:
+          description: 经办人、员工 ID
+        departmentId:
+          description: 部门 ID
+        totalAmount:
+          description: 总价，合计
+        comment:
+          description: 备注
+        items:
+          description: 库存盘点的货物列表, JSON 数组, itemCount 即该物品的现有数量
+          type: string
+          example: !include samples/itemListStockTaking.sample
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
   /costTransfer:
     post:
       description: 成本结转
