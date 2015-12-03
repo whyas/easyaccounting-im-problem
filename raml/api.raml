@@ -713,10 +713,16 @@ traits:
       queryParameters:
         activityTime:
           description: 活动发生的时间
+        locationType:
+          description: 货物的位置类型，1：库房，2：项目，关联 from 和 to
         fromStorageId:
           description: 调出库房
+        fromProjectId:
+          description: 调出项目
         toStorageId:
           description: 调入库房
+        toProjectId:
+          description: 掉入项目
         staffId:
           description: 经办人、员工 ID
         departmentId:
