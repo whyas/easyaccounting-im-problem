@@ -4,6 +4,7 @@
     "wechat": "sdf678",
     "email": "ex@example.com",
     "phone": "18754678900",
+    "avatarUrl": "/uuid/avatar.jpg",
     "name": "用户一号",
     "sex": 1,
     "birthday": 456789876,
