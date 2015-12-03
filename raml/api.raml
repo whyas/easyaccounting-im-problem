@@ -888,34 +888,15 @@ traits:
           - respWithPayload:
               payload: !include samples/generalRateList.sample
       post:
-        description: 添加收入支出分类等记录
+        description: 设置最新的汇率
         queryParameters:
-          type:
-            description: 收入支出分类，1：收入，2：支出
-          name: 
-            description: 收入支出的名字，进货支出、设备损坏等
-          comment: 
-            description: 备注
+          thisCurrency:
+            description: 本币
+          oppositeCurrency:
+            description: 外币
+          startTime:
+            description: 生效起始时间
         is:
           - responseDesc:
               desc: 添加成功
-          - respWithoutPayload
-    /{id}:
-      get:
-        description: 获取收入支出分类等记录
-        is:
-          - responseDesc:
-              desc: 返回该对象
-          - respWithPayload:
-              payload: !include samples/generalInoutType.sample
-      put:
-        description: 修改收入支出分类等记录
-        queryParameters:
-          name: 
-            description: 收入支出的名字，进货支出、设备损坏等
-          comment: 
-            description: 备注
-        is:
-          - responseDesc:
-              desc: 修改成功
           - respWithoutPayload
