@@ -756,6 +756,12 @@ traits:
           - responseDesc:
               desc: 修改成功
           - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
+          - respWithoutPayload
   /departments:
     /:
       get:
@@ -795,6 +801,12 @@ traits:
           - responseDesc:
               desc: 更新成功
           - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
+          - respWithoutPayload
   /projects:
     /:
       get:
@@ -833,6 +845,12 @@ traits:
         is:
           - responseDesc:
               desc: 更新成功
+          - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
           - respWithoutPayload
   /inoutTypes:
     /:
@@ -877,6 +895,12 @@ traits:
         is:
           - responseDesc:
               desc: 修改成功
+          - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
           - respWithoutPayload
   /currencyRate:
     /:
@@ -937,4 +961,10 @@ traits:
         is:
           - responseDesc:
               desc: 更新成功
+          - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
           - respWithoutPayload
