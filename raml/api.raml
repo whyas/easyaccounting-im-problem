@@ -545,6 +545,34 @@ traits:
           description: 活动发生的时间
         storageId:
           description: 库房 ID
+  /inout:
+    post:
+      description: 进货出货
+      queryParameters:
+        businessUnitId:
+          description: 往来单位
+        activityTime:
+          description: 活动发生的时间
+        incomeAccountId:
+          description: 收款账户
+        expenseAccountId:
+          description: 付款账户
+        storageId:
+          description: 仓库 ID
+        projectId:
+          description: 项目 ID
+        staffId:
+          description: 经办人、员工 ID
+        departmentId:
+          description: 部门 ID
+        totalAmount:
+          description: 总价
+        comment:
+          description: 备注
+        items:
+          description: 货物列表, JSON 数组
+          type: string
+          example: !include samples/assembleItemList.sample
   /purchase:
     post:
       description: 采购进货
