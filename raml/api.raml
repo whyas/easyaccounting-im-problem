@@ -756,3 +756,23 @@ traits:
           - responseDesc:
               desc: 修改成功
           - respWithoutPayload
+  /departments:
+    /:
+      get:
+        description: 获取部门列表
+        is:
+          - responseDesc:
+              desc: 返回部门列表
+          - respWithPayload:
+              payload: !include samples/departmentList.sample
+      post:
+        description: 增加部门
+        queryParameters:
+          name:
+            description: 部门名称
+          comment:
+            description: 部门备注
+        is:
+          - responseDesc: 
+              desc: 增加成功
+          - respWithoutPayload
