@@ -528,11 +528,11 @@ traits:
         fromItems:
           description: 输入货物列表, JSON 数组，在 JSON 中传的时候不用封装成字符串
           type: string
-          example: !include samples/assembleItemList.sample
+          example: !include samples/itemList.sample
         toItems:
           description: 输出货物列表, JSON 数组，在 JSON 中传的时候不用封装成字符串
           type: string
-          example: !include samples/assembleItemList.sample
+          example: !include samples/itemList.sample
         comment:
           description: 备注
         activityTime:
@@ -543,6 +543,8 @@ traits:
     post:
       description: 进货出货
       queryParameters:
+        type:
+          description: 1：销售出货、2：采购进货、3：销售退货、4：采购退货、5：借货销售
         businessUnitId:
           description: 往来单位
         activityTime:
@@ -566,29 +568,31 @@ traits:
         items:
           description: 货物列表, JSON 数组
           type: string
-          example: !include samples/assembleItemList.sample
+          example: !include samples/itemList.sample
       is:
         - responseDesc:
             desc: 操作成功
         - respWithoutPayload
-  /purchase:
-    post:
-      description: 采购进货
-  /purchaseReturn:
-    post:
-      description: 采购退货
-  /sell:
-    post:
-      description: 销售出货
-  /sellReturn:
-    post:
-      description: 销售退货
-  /borrowingSale:
-    post:
-      description: 借货销售
-  /transferItem:
+  /relocate:
     post:
       description: 货物调拨
+      queryParameters:
+        activityTime:
+          description: 活动发生的时间
+        fromStorageId:
+          description: 调出库房
+        toStorageId:
+          description: 调入库房
+        staffId:
+          description: 经办人、员工 ID
+        departmentId:
+          description: 部门 ID
+        comment:
+          description: 备注
+        items:
+          description: 货物列表，JSON 数组
+          type: string
+          example: !include samples/itemList.sample
   /adjustPrice:
     put:
       description: 货物调价
