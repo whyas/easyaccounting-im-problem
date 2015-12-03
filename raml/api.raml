@@ -692,8 +692,8 @@ traits:
             desc: 返回成本转结历史记录
         - respWithPayload:
             payload: !include samples/costTransferLog.sample
-/books/{id}/general:
-  displayName: 其它数据
+/books/{id}/settings:
+  displayName: 其它设置相关的数据
   /people:
     /:
       get:
@@ -968,3 +968,24 @@ traits:
           - responseDesc:
               desc: 删除成功
           - respWithoutPayload
+  /actionHistory:
+    get:
+      description: 获取操作历史
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+        uid:
+          description: 指定用户的操作历史
+          type: number
+        action:
+          description: 操作类型，
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回我的汇率列表
+        - respWithPayload:
+            payload: !include samples/generalActionHistory.sample

@@ -1,0 +1,14 @@
+  [
+    {
+      "id": 1,
+      "actionType": 2,
+      "actionName": 5,
+      "details": "销售了一笔货物"
+    },
+    {
+      "id": 1,
+      "actionType": 2,
+      "actionName": 5,
+      "details": "销售了一笔货物"
+    }
+  ]
