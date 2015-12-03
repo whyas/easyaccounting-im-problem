@@ -106,7 +106,7 @@ traits:
         - responseDesc:
             desc: 删除成功
         - respWithoutPayload
-/{id}/bookkeeping:
+/books/{id}/bookkeeping:
   displayName: 记账
   /income:
     post:
@@ -365,7 +365,7 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
-/{id}/report:
+/books/{id}/report:
   displayName: 报表
   /income:
     get:
@@ -457,7 +457,7 @@ traits:
             desc: 返回账户余额报表
         - respWithPayload:
             payload: !include samples/reportAccountBalance.sample
-/{id}/inventory:
+/books/{id}/inventory:
   displayName: 库存
   /items:
     /:
