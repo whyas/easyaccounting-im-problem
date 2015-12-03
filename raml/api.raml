@@ -106,413 +106,416 @@ traits:
         - responseDesc:
             desc: 删除成功
         - respWithoutPayload
-  /{id}/bookkeeping:
-    displayName: 记账
-    /income:
-      post:
-        description: 记收入
-        queryParameters:
-          inoutTypeId:
-            type: number
-            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
-            required: true
-          incomeAccountId:
-            description: 收入账户
-            type: number
-            required: true
-          amount:
-            description: 收入的金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 备注内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /expense:
-      post:
-        description: 记支出
-        queryParameters:
-          inoutTypeId:
-            type: number
-            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
-            required: true
-          expenseAccountId:
-            description: 支出账户
-            type: number
-            required: true
-          amount:
-            description: 支出的金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 备注内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /transfer:
-      post:
-        description: 记转账，资金调拨
-        queryParameters:
-          inoutTypeId:
-            type: number
-            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
-            required: true
-          incomeAccountId:
-            description: 转入账户
-            type: number
-            required: true
-          expenseAccountId:
-            description: 转出账户
-            type: number
-            required: true
-          amount:
-            description: 转账金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 评论内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /begin:
-      post:
-        description: 记初始
-        queryParameters:
-          incomeAccountId:
-            description: 要初始化的账户
-            type: number
-            required: true
-          amount:
-            description: 初始化的金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 评论内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /headging:
-      post:
-        description: 记对冲
-        queryParameters:
-          amount:
-            description: 支出的金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          payableId:
-            description: 应付条目 ID
-            type: number
-          receivableid:
-            description: 应收条目 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 备注内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /refund:
-      post:
-        description: 记退款
-        queryParameters:
-          inoutTypeId:
-            type: number
-            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
-            required: true
-          amount:
-            description: 交易金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          businessUnitId:
-            description: 往来单位 ID
-            type: number
-          projectId:
-            description: 相关项目 ID
-            type: number
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 备注内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-    /reconciliation:
-      post:
-        description: x - 对账
-        queryParameters:
-          inoutTypeId:
-            type: number
-            description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
-            required: true
-          amount:
-            description: 交易金额
-            type: number
-          tradeTime:
-            description: 交易日期
-            type: number
-            required: true
-          staffId: 
-            description: 经办人、员工 ID
-            type: number
-          departmentId:
-            description: 部门 ID
-            type: number
-          comment:
-            description: 备注内容
-          attachmentUrl:
-            description: 附件URL, 相对地址，文件的 Key
-        is:
-          - responseDesc:
-              desc: 记录成功
-          - respWithoutPayload
-  /{id}/report:
-    displayName: 报表
-    /income:
+/{id}/bookkeeping:
+  displayName: 记账
+  /income:
+    post:
+      description: 记收入
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+          required: true
+        incomeAccountId:
+          description: 收入账户
+          type: number
+          required: true
+        amount:
+          description: 收入的金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 备注内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /expense:
+    post:
+      description: 记支出
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+          required: true
+        expenseAccountId:
+          description: 支出账户
+          type: number
+          required: true
+        amount:
+          description: 支出的金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 备注内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /transfer:
+    post:
+      description: 记转账，资金调拨
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+          required: true
+        incomeAccountId:
+          description: 转入账户
+          type: number
+          required: true
+        expenseAccountId:
+          description: 转出账户
+          type: number
+          required: true
+        amount:
+          description: 转账金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 评论内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /begin:
+    post:
+      description: 记初始
+      queryParameters:
+        incomeAccountId:
+          description: 要初始化的账户
+          type: number
+          required: true
+        amount:
+          description: 初始化的金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 评论内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /headging:
+    post:
+      description: 记对冲
+      queryParameters:
+        amount:
+          description: 支出的金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        payableId:
+          description: 应付条目 ID
+          type: number
+        receivableid:
+          description: 应收条目 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 备注内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /refund:
+    post:
+      description: 记退款
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+          required: true
+        amount:
+          description: 交易金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        projectId:
+          description: 相关项目 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 备注内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+  /reconciliation:
+    post:
+      description: x - 对账
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
+          required: true
+        amount:
+          description: 交易金额
+          type: number
+        tradeTime:
+          description: 交易日期
+          type: number
+          required: true
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+        departmentId:
+          description: 部门 ID
+          type: number
+        comment:
+          description: 备注内容
+        attachmentUrl:
+          description: 附件URL, 相对地址，文件的 Key
+      is:
+        - responseDesc:
+            desc: 记录成功
+        - respWithoutPayload
+/{id}/report:
+  displayName: 报表
+  /income:
+    get:
+      description: 获取收入报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回收入报表
+        - respWithPayload:
+            payload: !include samples/reportIncome.sample
+  /expense:
+    get:
+      description: 获取支出报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回支出报表
+        - respWithPayload:
+            payload: !include samples/reportExpense.sample
+  /profit:
+    get:
+      description: 获取利润报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回利润报表
+        - respWithPayload:
+            payload: !include samples/reportProfit.sample
+  /cash:
+    get:
+      description: 获取现金流量报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回现金流量报表
+        - respWithPayload:
+            payload: !include samples/reportCash.sample
+  /debit:
+    get:
+      description: 资产负债报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回负债报表
+        - respWithPayload:
+            payload: !include samples/reportCash.sample
+  /accountBalance:
+    get:
+      description: 获取账户余额报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回账户余额报表
+        - respWithPayload:
+            payload: !include samples/reportAccountBalance.sample
+/{id}/inventory:
+  displayName: 库存
+  /items:
+    /:
       get:
-        description: 获取收入报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回收入报表
-          - respWithPayload:
-              payload: !include samples/reportIncome.sample
-    /expense:
+        description: 获取货品列表
+      post:
+        description: 新增货品
+    /{id}:
       get:
-        description: 获取支出报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回支出报表
-          - respWithPayload:
-              payload: !include samples/reportExpense.sample
-    /profit:
-      get:
-        description: 获取利润报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回利润报表
-          - respWithPayload:
-              payload: !include samples/reportProfit.sample
-    /cash:
-      get:
-        description: 获取现金流量报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回现金流量报表
-          - respWithPayload:
-              payload: !include samples/reportCash.sample
-    /debit:
-      get:
-        description: 资产负债报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回负债报表
-          - respWithPayload:
-              payload: !include samples/reportCash.sample
-    /accountBalance:
-      get:
-        description: 获取账户余额报表
-        queryParameters:
-          start:
-            description: 统计开始日期
-            type: number
-          until:
-            description: 统计截至日期
-            type: number
-        is:
-          - responseDesc:
-              desc: 返回账户余额报表
-          - respWithPayload:
-              payload: !include samples/reportAccountBalance.sample
-  /{id}/inventory:
-    displayName: 库存
-    /items:
-      /:
-        get:
-          description: 获取货品列表
-        post:
-          description: 新增货品
-      /{id}:
-        get:
-          description: 获取货品信息
-        put:
-          description: 货物调拨
-    /storage:
-      /:
-        get:
-          description: 获取库房列表
-        post:
-          description: 添加库房
-      /{id}:
-        get:
-          description: 获取库房信息
-        delete:
-          description: 删除库房
-        put:
-          description: 更新库房信息
-    /assemble:
-      post:
-        description: 组装货物
-    /disassemble:
-      post:
-        description: 拆分货物
-    /purchase:
-      post:
-        description: 采购进货
-    /purchaseReturn:
-      post:
-        description: 采购退货
-    /sell:
-      post:
-        description: 销售出货
-    /sellReturn:
-      post:
-        description: 销售退货
-    /borrowingSale:
-      post:
-        description: 借货销售
-    /transferItem:
-      post:
-        description: 货物调拨
-    /adjustPrice:
+        description: 获取货品信息
       put:
-        description: 货物调价
-    /review:
+        description: 货物调拨
+  /storage:
+    /:
       get:
-        description: 盘点库存
-    /costTransfer:
+        description: 获取库房列表
       post:
-        description: 成本结转
+        description: 添加库房
+    /{id}:
+      get:
+        description: 获取库房信息
+      delete:
+        description: 删除库房
+      put:
+        description: 更新库房信息
+  /manifest:
+    get:
+      description: 出货单、明细单
+  /assemble:
+    post:
+      description: 组装货物
+  /disassemble:
+    post:
+      description: 拆分货物
+  /purchase:
+    post:
+      description: 采购进货
+  /purchaseReturn:
+    post:
+      description: 采购退货
+  /sell:
+    post:
+      description: 销售出货
+  /sellReturn:
+    post:
+      description: 销售退货
+  /borrowingSale:
+    post:
+      description: 借货销售
+  /transferItem:
+    post:
+      description: 货物调拨
+  /adjustPrice:
+    put:
+      description: 货物调价
+  /review:
+    get:
+      description: 盘点库存
+  /costTransfer:
+    post:
+      description: 成本结转
