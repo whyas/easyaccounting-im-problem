@@ -363,7 +363,7 @@ traits:
   displayName: 报表
   /income:
     get:
-      description: 获取收入报表
+      description: 获取收入报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -378,7 +378,7 @@ traits:
             payload: !include samples/reportIncome.sample
   /expense:
     get:
-      description: 获取支出报表
+      description: 获取支出报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -393,7 +393,7 @@ traits:
             payload: !include samples/reportExpense.sample
   /profit:
     get:
-      description: 获取利润报表
+      description: 获取利润报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -408,7 +408,7 @@ traits:
             payload: !include samples/reportProfit.sample
   /cash:
     get:
-      description: 获取现金流量报表
+      description: 获取现金流量报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -423,7 +423,7 @@ traits:
             payload: !include samples/reportCash.sample
   /debit:
     get:
-      description: 资产负债报表
+      description: 资产负债报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -438,7 +438,7 @@ traits:
             payload: !include samples/reportCash.sample
   /accountBalance:
     get:
-      description: 获取账户余额报表
+      description: 获取账户余额报表，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -479,7 +479,7 @@ traits:
         description: 更新库房信息
   /deliveryManifest:
     get:
-      description: 出货单
+      description: 出货单，参数为筛选条件
       queryParameters:
         start:
           description: 统计开始日期
@@ -500,7 +500,7 @@ traits:
             payload: !include samples/inventoryDeliveryManifest.sample
   /itemsManifest:
     get:
-      description: 明细单
+      description: 明细单，参数为筛选条件
       queryParameters:
         start:
           description: 指定统计开始日期
@@ -670,7 +670,7 @@ traits:
             desc: 操作成功
         - respWithoutPayload
     get:
-      description: 获取成本结转历史记录
+      description: 获取成本结转历史记录，参数为筛选条件
       queryParameters:
         start:
           description: 记录获取开始日期
