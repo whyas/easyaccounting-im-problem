@@ -1,0 +1,36 @@
+  [
+    {
+      "id": 1,
+      "uid": 2,
+      "bookId": 3,
+      "orderNo": "A15101201",
+      "businessUnitId": 4,
+      "businessUnitName": "往来对象1",
+      "itemId": 49,
+      "itemName": "充电宝",
+      "itemCount": 10,
+      "itemPrice": 120,
+      "totalAmount": 1200,
+      "activityTime", 234567876,
+      "comment": "出货备注",
+      "attachmentUrl": "/uuid/a.jpg",
+      "creationTime": 2345678567
+    },
+    {
+      "id": 1,
+      "uid": 2,
+      "bookId": 3,
+      "orderNo": "A15101201",
+      "businessUnitId": 4,
+      "businessUnitName": "往来对象1",
+      "itemId": 49,
+      "itemName": "充电宝",
+      "itemCount": 10,
+      "itemPrice": 120,
+      "totalAmount": 1200,
+      "activityTime", 234567876,
+      "comment": "出货备注",
+      "attachmentUrl": "/uuid/a.jpg",
+      "creationTime": 2345678567
+    }
+  ]
