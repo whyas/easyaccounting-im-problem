@@ -526,7 +526,6 @@ traits:
         type:
           description: 1：组装货物、2：拆分货物
           type: number
-          enum: [1, 2]
         fromItems:
           description: 输入货物列表, JSON 数组，在 JSON 中传的时候不用封装成字符串
           type: string
@@ -548,7 +547,6 @@ traits:
         type:
           description: 1：销售出货、2：采购进货、3：销售退货、4：采购退货、5：借货销售
           type: number
-          enum: [1, 2, 3, 4, 5]
         businessUnitId:
           description: 往来单位
         activityTime:
@@ -706,7 +704,6 @@ traits:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
-            enum: [1, 2, 3]
         is:
           - responseDesc:
               desc: 返回人员列表
@@ -718,7 +715,6 @@ traits:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
-            enum: [1, 2, 3]
           name: 
             description: 姓名，张三
           phone: 
@@ -749,7 +745,6 @@ traits:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
-            enum: [1, 2, 3]
           name: 
             description: 姓名，张三
           phone: 
@@ -870,7 +865,6 @@ traits:
           type:
             description: 收入支出分类，1：收入，2：支出
             type: number
-            enum: [1, 2]
         is:
           - responseDesc:
               desc: 返回收入支出分类列表
@@ -882,7 +876,6 @@ traits:
           type:
             description: 收入支出分类，1：收入，2：支出
             type: number
-            enum: [1, 2]
           name: 
             description: 收入支出的名字，进货支出、设备损坏等
           comment: 
@@ -957,7 +950,6 @@ traits:
           job: 
             description: 职务类别，1：财务，2：库管
             type: number
-            enum: [1, 2]
         is:
           - responseDesc:
               desc: 添加成功
@@ -973,7 +965,6 @@ traits:
           job: 
             description: 职务类别，1：财务，2：库管
             type: number
-            enum: [1, 2]
         is:
           - responseDesc:
               desc: 更新成功
@@ -1027,7 +1018,6 @@ traits:
         queryParameters:
           action:
             description: 操作，1：恢复，2：彻底删除
-            enum: [1, 2]
             type: number
         is:
           - responseDesc:
