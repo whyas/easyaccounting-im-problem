@@ -692,7 +692,7 @@ traits:
             desc: 返回成本转结历史记录
         - respWithPayload:
             payload: !include samples/costTransferLog.sample
-/general:
+/books/{id}/general:
   displayName: 其它数据
   /people:
     /:
@@ -882,6 +882,28 @@ traits:
     /:
       get:
         description: 获取我的汇率列表，分页接口
+        is:
+          - responseDesc:
+              desc: 返回我的汇率列表
+          - respWithPayload:
+              payload: !include samples/generalRateList.sample
+      post:
+        description: 设置最新的汇率
+        queryParameters:
+          thisCurrency:
+            description: 本币
+          oppositeCurrency:
+            description: 外币
+          startTime:
+            description: 生效起始时间
+        is:
+          - responseDesc:
+              desc: 添加成功
+          - respWithoutPayload
+  /userPermission:
+    /:
+      get:
+        description: 获取
         is:
           - responseDesc:
               desc: 返回我的汇率列表
