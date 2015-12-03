@@ -53,6 +53,54 @@ traits:
         200:
           description: <<desc>>
 
+/entry:
+  displayName: 登录注册
+  /login:
+    post:
+      description: 登录
+      queryParameters:
+        phone:
+          description: 手机号码，18166662727
+        password:
+          description: 密码
+  /register:
+    post:
+      description: 注册
+      queryParameters:
+        phone:
+          description: 手机号码，18166662727
+        password:
+          description: 密码
+      is:
+        - responseDesc:
+            desc: 删除成功
+        - respWithoutPayload
+  /sendVerifyCode:
+    post:
+      description: 发送验证码，SMS
+      queryParameters:
+        phone:
+          description: 手机号码，18166662727
+      is:
+        - responseDesc:
+            desc: 删除成功
+        - respWithoutPayload
+  /resetPassword:
+    post:
+      description: 重置密码
+      queryParameters:
+        phone:
+          description: 手机号码，18166662727
+          required: true
+          type: string
+        newPassword:
+          description: 新密码
+          required: true
+          type: string
+      is:
+        - responseDesc:
+            desc: 重置密码成功
+        - respWithoutPayload
 /books:
   displayName: 账本操作
   /:
