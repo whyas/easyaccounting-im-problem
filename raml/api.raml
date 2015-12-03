@@ -185,6 +185,13 @@ traits:
         - responseDesc:
             desc: 添加成功
         - respWithoutPayload
+    get:
+      description: 获取当前用户的账本列表
+      is:
+        - responseDesc:
+            desc: 返回用户信息
+        - respWithPayload:
+            payload: !include samples/myBooks.sample
   /{id}:
     get:
       description: 获取该账本
