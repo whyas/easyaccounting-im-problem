@@ -705,3 +705,45 @@ traits:
             desc: 返回人员对象
         - respWithPayload:
             payload: !include samples/generalPeople.sample
+    post:
+      description: 添加员工、酷虎、供应商等记录
+      queryParameters:
+        type:
+          description: 人员类别，1：客户、2：员工、3：供应商
+        name: 
+          description: 姓名，张三
+        phone: 
+          description: 手机号码，18166662727
+        email: 
+          description: 邮箱，san@gmail.com
+        qq: 
+          description: QQ 号，56789765
+        address: 
+          description: 地址，四川，广州，上海
+        comment: 
+          description: 备注
+      is:
+        - responseDesc:
+            desc: 添加成功
+        - respWithoutPayload
+    put:
+      description: 修改员工、酷虎、供应商等记录
+      queryParameters:
+        type:
+          description: 人员类别，1：客户、2：员工、3：供应商
+        name: 
+          description: 姓名，张三
+        phone: 
+          description: 手机号码，18166662727
+        email: 
+          description: 邮箱，san@gmail.com
+        qq: 
+          description: QQ 号，56789765
+        address: 
+          description: 地址，四川，广州，上海
+        comment: 
+          description: 备注
+      is:
+        - responseDesc:
+            desc: 修改成功
+        - respWithoutPayload
