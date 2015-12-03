@@ -532,11 +532,13 @@ traits:
         type:
           description: 1：组装货物、2：拆分货物
         fromItems:
-          description: 输入货物列表, JSON 的一部分
+          description: 输入货物列表, JSON 数组，在 JSON 中传的时候不用封装成字符串
           type: string
           example: !include samples/assembleItemList.sample
         toItems:
-          description: 输出货物列表
+          description: 输出货物列表, JSON 数组，在 JSON 中传的时候不用封装成字符串
+          type: string
+          example: !include samples/assembleItemList.sample
         comment:
           description: 备注
         activityTime:
