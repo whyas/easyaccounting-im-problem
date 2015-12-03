@@ -593,9 +593,33 @@ traits:
           description: 货物列表，JSON 数组
           type: string
           example: !include samples/itemList.sample
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
   /adjustPrice:
     put:
       description: 货物调价
+        activityTime:
+          description: 活动发生的时间
+        storageId:
+          description: 仓库 ID
+        staffId:
+          description: 经办人、员工 ID
+        departmentId:
+          description: 部门 ID
+        totalAmount:
+          description: 总价
+        comment:
+          description: 备注
+        items:
+          description: 调价的货物列表, JSON 数组
+          type: string
+          example: !include samples/itemListAdjustPrice.sample
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
   /review:
     get:
       description: 盘点库存
