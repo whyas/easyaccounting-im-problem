@@ -764,7 +764,7 @@ traits:
           - responseDesc:
               desc: 返回部门列表
           - respWithPayload:
-              payload: !include samples/departmentList.sample
+              payload: !include samples/generalDepartmentList.sample
       post:
         description: 增加部门
         queryParameters:
@@ -776,3 +776,11 @@ traits:
           - responseDesc: 
               desc: 增加成功
           - respWithoutPayload
+    /{id}:
+      get:
+        description: 获取部门详情
+        is:
+          - responseDesc:
+              desc: 返回部门信息
+          - respWithPayload:
+              payload: !include samples/generalDepartment.sample
