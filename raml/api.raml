@@ -53,7 +53,7 @@ traits:
         200:
           description: <<desc>>
 
-/entry:
+/uc:
   displayName: 登录注册
   /login:
     post:
@@ -90,7 +90,7 @@ traits:
       description: 重置密码
       queryParameters:
         phone:
-          description: 手机号码，18166662727
+          description: 手机号码，系统将重置该手机号的密码，18166662727
           required: true
           type: string
         verifyCode:
@@ -104,6 +104,35 @@ traits:
       is:
         - responseDesc:
             desc: 重置密码成功
+        - respWithoutPayload
+  /users/{id}:
+    get:
+      description: 获取用户信息
+      is:
+        - responseDesc:
+            desc: 返回用户信息
+        - respWithPayload:
+            payload: !include samples/userInfo.sample
+    put:
+      description: 更新用户信息
+      queryParameters:
+        qq: 
+          description: 67890
+        wechat: 
+          description: sdf678
+        email: 
+          description: ex@gmail.com
+        phone: 
+          description: 18754678900
+        name: 
+          description: 用户一号
+        sex: 
+          description: 
+        birthday: 
+          description: 56789876
+      is:
+        - responseDesc:
+            desc: 记录成功
         - respWithoutPayload
 /books:
   displayName: 账本操作
