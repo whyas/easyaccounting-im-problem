@@ -703,7 +703,7 @@ traits:
             description: 人员类别，1：客户、2：员工、3：供应商
         is:
           - responseDesc:
-              desc: 返回人员对象
+              desc: 返回人员列表
           - respWithPayload:
               payload: !include samples/generalPeople.sample
       post:
@@ -833,4 +833,48 @@ traits:
         is:
           - responseDesc:
               desc: 更新成功
+          - respWithoutPayload
+  /inoutTypes:
+    /:
+      get:
+        description: 获取收入支出分类列表
+        queryParameters:
+          type:
+            description: 收入支出分类，1：收入，2：支出
+        is:
+          - responseDesc:
+              desc: 返回收入支出分类列表
+          - respWithPayload:
+              payload: !include samples/generalInoutTypes.sample
+      post:
+        description: 添加收入支出分类等记录
+        queryParameters:
+          type:
+            description: 收入支出分类，1：收入，2：支出
+          name: 
+            description: 收入支出的名字，进货支出、设备损坏等
+          comment: 
+            description: 备注
+        is:
+          - responseDesc:
+              desc: 添加成功
+          - respWithoutPayload
+    /{id}:
+      get:
+        description: 获取收入支出分类等记录
+        is:
+          - responseDesc:
+              desc: 返回该对象
+          - respWithPayload:
+              payload: !include samples/generalInoutType.sample
+      put:
+        description: 修改收入支出分类等记录
+        queryParameters:
+          name: 
+            description: 收入支出的名字，进货支出、设备损坏等
+          comment: 
+            description: 备注
+        is:
+          - responseDesc:
+              desc: 修改成功
           - respWithoutPayload
