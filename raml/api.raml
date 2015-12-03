@@ -567,6 +567,10 @@ traits:
           description: 货物列表, JSON 数组
           type: string
           example: !include samples/assembleItemList.sample
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
   /purchase:
     post:
       description: 采购进货
