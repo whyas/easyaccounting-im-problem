@@ -731,7 +731,7 @@ traits:
           - responseDesc:
               desc: 添加成功
           - respWithoutPayload
-    /{id}:
+    /{uid}:
       get:
         description: 获取员工、酷虎、供应商等记录
         is:
@@ -787,7 +787,7 @@ traits:
           - responseDesc: 
               desc: 增加成功
           - respWithoutPayload
-    /{id}:
+    /{departmentId}:
       get:
         description: 获取部门详情
         is:
@@ -832,7 +832,7 @@ traits:
           - responseDesc: 
               desc: 增加成功
           - respWithoutPayload
-    /{id}:
+    /{projectId}:
       get:
         description: 获取项目详情
         is:
@@ -884,7 +884,7 @@ traits:
           - responseDesc:
               desc: 添加成功
           - respWithoutPayload
-    /{id}:
+    /{typeId}:
       get:
         description: 获取收入支出分类等记录
         is:
@@ -954,7 +954,7 @@ traits:
           - responseDesc:
               desc: 添加成功
           - respWithoutPayload
-    /{id}:
+    /{uid}:
       put:
         description: 更新用户权限
         queryParameters:
@@ -1012,7 +1012,7 @@ traits:
               desc: 返回回收站的条目列表
           - respWithPayload:
               payload: !include samples/generalRecycleBinItems.sample
-    /{id}:
+    /{binId}:
       put:
         description: 更新回收站条目
         queryParameters:
