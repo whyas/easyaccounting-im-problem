@@ -648,3 +648,24 @@ traits:
   /costTransfer:
     post:
       description: 成本结转
+      queryParameters:
+        activityTime:
+          description: 活动发生的时间
+        storageId:
+          description: 仓库 ID
+        staffId:
+          description: 经办人、员工 ID
+        departmentId:
+          description: 部门 ID
+        totalAmount:
+          description: 总价，合计
+        comment:
+          description: 备注
+        items:
+          description: 成本结转的货物列表, JSON 数组, itemCount 即该物品的现有数量，itemPrice 即成本价，totalAmount 即核算成本，将会增加到成本支出里面
+          type: string
+          example: !include samples/itemListCostTransfer.samples
+      is:
+        - responseDesc:
+            desc: 操作成功
+        - respWithoutPayload
