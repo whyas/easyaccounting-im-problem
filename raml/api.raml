@@ -795,3 +795,42 @@ traits:
           - responseDesc:
               desc: 更新成功
           - respWithoutPayload
+  /projects:
+    /:
+      get:
+        description: 获取 项目列表
+        is:
+          - responseDesc:
+              desc: 返回项目列表
+          - respWithPayload:
+              payload: !include samples/generalProjectList.sample
+      post:
+        description: 增加项目
+        queryParameters:
+          name:
+            description: 项目名称
+          comment:
+            description: 项目备注
+        is:
+          - responseDesc: 
+              desc: 增加成功
+          - respWithoutPayload
+    /{id}:
+      get:
+        description: 获取项目详情
+        is:
+          - responseDesc:
+              desc: 返回项目信息
+          - respWithPayload:
+              payload: !include samples/generalProject.sample
+      put:
+        description: 更新项目详情
+        queryParameters:
+          name:
+            description: 项目名称
+          comment:
+            description: 项目描述
+        is:
+          - responseDesc:
+              desc: 更新成功
+          - respWithoutPayload
