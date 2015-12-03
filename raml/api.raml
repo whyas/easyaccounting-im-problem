@@ -483,9 +483,38 @@ traits:
         description: 删除库房
       put:
         description: 更新库房信息
-  /manifest:
+  /deliveryManifest:
     get:
-      description: 出货单、明细单
+      description: 出货单
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+        inventoryId:
+          description: 指定仓库 ID
+          type: number
+        clientId:
+          description: 客户 ID
+          type: number
+  /itemsManifest:
+    get:
+      description: 明细单
+      queryParameters:
+        start:
+          description: 指定统计开始日期
+          type: number
+        until:
+          description: 指定统计截至日期
+          type: number
+        inventoryId:
+          description: 指定仓库 ID
+          type: number
+        clientId:
+          description: 客户 ID
+          type: number
   /assemble:
     post:
       description: 组装货物
