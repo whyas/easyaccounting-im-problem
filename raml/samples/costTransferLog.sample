@@ -1,0 +1,16 @@
+  [
+    {
+      "activityTime": 2345678912,
+      "storageId": 67,
+      "storageName": "仓库1",
+      "totalAmount": 4500,
+      "creationTime": 4567898765
+    },
+    {
+      "activityTime": 2345678912,
+      "storageId": 67,
+      "storageName": "仓库1",
+      "totalAmount": 4500,
+      "creationTime": 4567898765
+    }
+  ]

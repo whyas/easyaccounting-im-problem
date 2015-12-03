@@ -459,7 +459,7 @@ traits:
         description: 获取货品列表
       post:
         description: 新增货品
-    /{id}:
+    /{itemId}:
       get:
         description: 获取货品信息
       put:
@@ -470,7 +470,7 @@ traits:
         description: 获取库房列表
       post:
         description: 添加库房
-    /{id}:
+    /{storageId}:
       get:
         description: 获取库房信息
       delete:
@@ -669,3 +669,26 @@ traits:
         - responseDesc:
             desc: 操作成功
         - respWithoutPayload
+    get:
+      description: 获取成本结转历史记录
+      queryParameters:
+        start:
+          description: 记录获取开始日期
+          type: number
+        until:
+          description: 记录获取截至日期
+          type: number
+        storageId:
+          description: 指定仓库 ID
+          type: number
+        clientId:
+          description: 客户 ID
+          type: number
+        orderNo:
+          description: 订单号码
+
+      is:
+        - responseDesc:
+            desc: 返回成本转结历史记录
+        - respWithPayload:
+            payload: !include samples/costTransferLog.sample
