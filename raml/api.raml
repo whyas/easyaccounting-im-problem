@@ -501,9 +501,9 @@ traits:
           type: number
       is:
         - responseDesc:
-            - desc: 返回出货单
+            desc: 返回出货单
         - respWithPayload:
-            - payload: !include samples/inventoryDeliveryManifest.sample
+            payload: !include samples/inventoryDeliveryManifest.sample
   /itemsManifest:
     get:
       description: 明细单
@@ -522,9 +522,9 @@ traits:
           type: number
       is:
         - responseDesc:
-            - desc: 返回详情单
+            desc: 返回详情单
         - respWithPayload:
-            - payload: !include samples/inventoryItemsManifest.sample
+            payload: !include samples/inventoryItemsManifest.sample
   /assemble:
     post:
       description: 组装货物，拆分货物
