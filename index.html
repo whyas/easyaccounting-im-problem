@@ -618,4 +618,30 @@
     }
   ]
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#books">账本操作</a></li><li><a href="#books__id__bookkeeping">记账</a></li><li><a href="#books__id__report">报表</a></li><li><a href="#books__id__inventory">库存</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="general" class="panel-title">其它数据</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_general_people"><span class="parent">/general</span>/people</a> <span class="methods"><a href="#general_people_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_general_people" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#general_people_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取员工、客户、供应商等列表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="general_people_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/general</span>/people</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取员工、客户、供应商等列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#general_people_get_request" data-toggle="tab">Request</a></li><li><a href="#general_people_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="general_people_get_request"><h3>Query Parameters</h3><ul><li><strong>type</strong>: <em>(string)</em><p>人员类别，1：客户、2：员工、3：供应商</p></li></ul></div><div class="tab-pane" id="general_people_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回人员对象</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "id": 1,
+      "type": 2,
+      "name": "张三",
+      "phone": "18166662727",
+      "email": "san@example.com",
+      "qq": 456789765,
+      "address": "四川，广州，上海",
+      "comment": "备注"
+    },
+    {
+      "id": 1,
+      "type": 2,
+      "name": "张四",
+      "phone": "18166662727",
+      "email": "san@example.com",
+      "qq": 456789765,
+      "address": "四川，广州，上海",
+      "comment": "备注"
+    }
+  ]
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#books">账本操作</a></li><li><a href="#books__id__bookkeeping">记账</a></li><li><a href="#books__id__report">报表</a></li><li><a href="#books__id__inventory">库存</a></li><li><a href="#general">其它数据</a></li></ul></div></div></div></div></body></html>

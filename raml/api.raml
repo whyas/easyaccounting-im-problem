@@ -692,3 +692,16 @@ traits:
             desc: 返回成本转结历史记录
         - respWithPayload:
             payload: !include samples/costTransferLog.sample
+/general:
+  displayName: 其它数据
+  /people:
+    get:
+      description: 获取员工、客户、供应商等列表
+      queryParameters:
+        type:
+          description: 人员类别，1：客户、2：员工、3：供应商
+      is:
+        - responseDesc:
+            desc: 返回人员对象
+        - respWithPayload:
+            payload: !include samples/generalPeople.sample
