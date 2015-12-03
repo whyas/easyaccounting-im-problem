@@ -784,3 +784,14 @@ traits:
               desc: 返回部门信息
           - respWithPayload:
               payload: !include samples/generalDepartment.sample
+      put:
+        description: 更新部门详情
+        queryParameters:
+          name:
+            description: 部门名称
+          comment:
+            description: 部门描述
+        is:
+          - responseDesc:
+              desc: 更新成功
+          - respWithoutPayload
