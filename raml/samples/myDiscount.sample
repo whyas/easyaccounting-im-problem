@@ -1,0 +1,13 @@
+  {
+    "id": 2,
+    "uid": 2,
+    "code": "U201501",
+    "value": 20,
+    "ownerRole": 1,
+    "type": 1,
+    "usedCount": 4,
+    "startTime": 456788765,
+    "endTime": 567876567,
+    "limitPerOrder": 1,
+    "minOrderPrice": 50
+  }

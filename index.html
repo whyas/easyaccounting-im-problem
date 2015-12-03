@@ -198,7 +198,62 @@
     ]
   }
 }
-</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_users__id__put"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_put">put</span> <span class="parent">/uc</span>/users/{id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>更新用户信息</p></div><ul class="nav nav-tabs"><li class="active"><a href="#uc_users__id__put_request" data-toggle="tab">Request</a></li><li><a href="#uc_users__id__put_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="uc_users__id__put_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>qq</strong>: <em>(string)</em><p>67890</p></li><li><strong>wechat</strong>: <em>(string)</em><p>sdf678</p></li><li><strong>email</strong>: <em>(string)</em><p>ex@gmail.com</p></li><li><strong>phone</strong>: <em>(string)</em><p>18754678900</p></li><li><strong>name</strong>: <em>(string)</em><p>用户一号</p></li><li><strong>sex</strong>: <em>(string)</em></li><li><strong>birthday</strong>: <em>(string)</em><p>56789876</p></li></ul></div><div class="tab-pane" id="uc_users__id__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>记录成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_users__id__put"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_put">put</span> <span class="parent">/uc</span>/users/{id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>更新用户信息</p></div><ul class="nav nav-tabs"><li class="active"><a href="#uc_users__id__put_request" data-toggle="tab">Request</a></li><li><a href="#uc_users__id__put_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="uc_users__id__put_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>qq</strong>: <em>(string)</em><p>67890</p></li><li><strong>wechat</strong>: <em>(string)</em><p>sdf678</p></li><li><strong>email</strong>: <em>(string)</em><p>ex@gmail.com</p></li><li><strong>phone</strong>: <em>(string)</em><p>18754678900</p></li><li><strong>avatarUrl</strong>: <em>(string)</em><p>头像的 URL，UUID/avatar.jpg</p></li><li><strong>name</strong>: <em>(string)</em><p>用户一号</p></li><li><strong>sex</strong>: <em>(string)</em></li><li><strong>birthday</strong>: <em>(string)</em><p>56789876</p></li></ul></div><div class="tab-pane" id="uc_users__id__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>记录成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "palyoad": null
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_uc_myDiscountCode"><span class="parent">/uc</span>/myDiscountCode</a> <span class="methods"><a href="#uc_myDiscountCode_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_uc_myDiscountCode" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#uc_myDiscountCode_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取我的优惠码</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_myDiscountCode_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/uc</span>/myDiscountCode</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取我的优惠码</p></div><ul class="nav nav-tabs"><li><a href="#uc_myDiscountCode_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="uc_myDiscountCode_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回我的优惠码</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   {
+    "id": 2,
+    "uid": 2,
+    "code": "U201501",
+    "value": 20,
+    "ownerRole": 1,
+    "type": 1,
+    "usedCount": 4,
+    "startTime": 456788765,
+    "endTime": 567876567,
+    "limitPerOrder": 1,
+    "minOrderPrice": 50
+  }
+
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_uc_discounts"><span class="parent">/uc</span>/discounts</a> <span class="methods"><a href="#uc_discounts_get"><span class="badge badge_get">get</span></a> <a href="#uc_discounts_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_uc_discounts" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#uc_discounts_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取我的代金券列表</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#uc_discounts_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>输入优惠券</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_discounts_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/uc</span>/discounts</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取我的代金券列表</p></div><ul class="nav nav-tabs"><li><a href="#uc_discounts_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="uc_discounts_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回我的代金券列表</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "id": 1,
+      "uid": 2,
+      "code": "U201501",
+      "value": 20,
+      "ownerRole": 1,
+      "type": 1,
+      "usedCount": 4,
+      "startTime": 456788765,
+      "endTime": 567876567,
+      "limitPerOrder": 1,
+      "minOrderPrice": 50
+    },
+    {
+      "id": 2,
+      "uid": 2,
+      "code": "U201501",
+      "value": 20,
+      "ownerRole": 1,
+      "type": 1,
+      "usedCount": 4,
+      "startTime": 456788765,
+      "endTime": 567876567,
+      "limitPerOrder": 1,
+      "minOrderPrice": 50
+    }
+  ]
+}
+</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_discounts_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/uc</span>/discounts</h4></div><div class="modal-body"><div class="alert alert-info"><p>输入优惠券</p></div><ul class="nav nav-tabs"><li class="active"><a href="#uc_discounts_post_request" data-toggle="tab">Request</a></li><li><a href="#uc_discounts_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="uc_discounts_post_request"><h3>Query Parameters</h3><ul><li><strong>code</strong>: <em>(string)</em><p>优惠码</p><p><strong>Example</strong>:</p><pre>U201501</pre></li></ul></div><div class="tab-pane" id="uc_discounts_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>添加成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
   "palyoad": null

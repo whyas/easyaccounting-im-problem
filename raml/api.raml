@@ -124,6 +124,8 @@ traits:
           description: ex@gmail.com
         phone: 
           description: 18754678900
+        avatarUrl:
+          description: 头像的 URL，UUID/avatar.jpg
         name: 
           description: 用户一号
         sex: 
@@ -133,6 +135,33 @@ traits:
       is:
         - responseDesc:
             desc: 记录成功
+        - respWithoutPayload
+  /myDiscountCode:
+    get:
+      description: 获取我的优惠码
+      is:
+        - responseDesc:
+            desc: 返回我的优惠码
+        - respWithPayload:
+            payload: !include samples/myDiscount.sample
+  /discounts:
+    get:
+      description: 获取我的代金券列表
+      is:
+        - responseDesc:
+            desc: 返回我的代金券列表
+        - respWithPayload:
+            payload: !include samples/discounts.sample
+    post:
+      description: 输入优惠券
+      queryParameters:
+        code:
+          description: 优惠码
+          type: string
+          example: U201501
+      is:
+        - responseDesc:
+            desc: 添加成功
         - respWithoutPayload
 /books:
   displayName: 账本操作
