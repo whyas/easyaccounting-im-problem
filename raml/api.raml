@@ -878,3 +878,44 @@ traits:
           - responseDesc:
               desc: 修改成功
           - respWithoutPayload
+  /currencyRate:
+    /:
+      get:
+        description: 获取我的汇率列表，分页接口
+        is:
+          - responseDesc:
+              desc: 返回我的汇率列表
+          - respWithPayload:
+              payload: !include samples/generalRateList.sample
+      post:
+        description: 添加收入支出分类等记录
+        queryParameters:
+          type:
+            description: 收入支出分类，1：收入，2：支出
+          name: 
+            description: 收入支出的名字，进货支出、设备损坏等
+          comment: 
+            description: 备注
+        is:
+          - responseDesc:
+              desc: 添加成功
+          - respWithoutPayload
+    /{id}:
+      get:
+        description: 获取收入支出分类等记录
+        is:
+          - responseDesc:
+              desc: 返回该对象
+          - respWithPayload:
+              payload: !include samples/generalInoutType.sample
+      put:
+        description: 修改收入支出分类等记录
+        queryParameters:
+          name: 
+            description: 收入支出的名字，进货支出、设备损坏等
+          comment: 
+            description: 备注
+        is:
+          - responseDesc:
+              desc: 修改成功
+          - respWithoutPayload

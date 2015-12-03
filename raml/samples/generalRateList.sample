@@ -1,0 +1,14 @@
+  [
+    {
+      "id": 1,
+      "thisCurrency": "CNY",
+      "oppositeCurrency": "USD",
+      "startTime": 456787654
+    },
+    {
+      "id": 1,
+      "thisCurrency": "CNY",
+      "oppositeCurrency": "USD",
+      "startTime": 456787654
+    }
+  ]
