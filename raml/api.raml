@@ -600,24 +600,33 @@ traits:
           description: 货品的编号，A15101200
         storageId:
           description: 仓库ID
+          type: number
         projectId:
           description: 项目 ID
+          type: number
         locationType:
           description: 货物的位置类型，1：库房，2：项目，关联 storageId，projectId
+          required: true
+          type: number
         name:
           description: 货物的名字：充电宝
         model:
           description: 货物的型号，手动输入型号
         unit:
           description: 货物的单位，个
+          type: number
         inCount:
           description: 进库存，货品现有多少个
+          type: number
         cost:
           description: 货物的成本
+          type: number
         referencePrice:
           description: 货物的参考售价
+          type: number
         itemType:
           description: 货物的类别
+          type: number
         comment:
           description: 货品备注
       is:
@@ -627,21 +636,73 @@ traits:
   /storage/items/{itemId}:
     get:
       description: 获取货品信息
+      is:
+        - responseDesc:
+            desc: 返回该货物的信息
+        - respWithPayload:
+            payload: !include samples/inventoryItem.sample
     put:
       description: 货物调拨
+      queryParameters:
+        storageId:
+          description: 仓库ID
+          type: number
+        projectId:
+          description: 项目 ID
+          type: number
+        locationType:
+          description: 货物的位置类型，1：库房，2：项目，关联 storageId，projectId
+          required: true
+          type: number
+      is:
+        - responseDesc:
+            desc: 货物调拨成功
+        - respWithoutPayload
   /storage:
     /:
       get:
         description: 获取库房列表
+      is:
+        - responseDesc:
+            desc: 返回该仓库的货物列表
+        - respWithPayload:
+            payload: !include samples/inventoryStorageList.sample
       post:
         description: 添加库房
+        queryParameters:
+          name:
+            description: 库房的名称，一号库房
+          comment:
+            description: 库房备注
+      is:
+        - responseDesc:
+            desc: 库房创建成功
+        - respWithoutPayload
     /{storageId}:
       get:
         description: 获取库房信息
+        is:
+          - responseDesc:
+              desc: 返回该仓库的货物列表
+          - respWithPayload:
+              payload: !include samples/inventoryStorage.sample
       delete:
         description: 删除库房
+        is:
+          - responseDesc:
+              desc: 库房删除成功
+          - respWithoutPayload
       put:
         description: 更新库房信息
+        queryParameters:
+          name:
+            description: 库房的名称，一号库房
+          comment:
+            description: 库房备注
+        is:
+          - responseDesc:
+              desc: 库房信息更新成功
+          - respWithoutPayload
   /deliveryManifest:
     get:
       description: 出货单，参数为筛选条件

@@ -1,0 +1,8 @@
+  {
+    "id": 1,
+    "uid": 2,
+    "bookId": 3,
+    "name": "一号库房",
+    "comment": "库房备注",
+    "creationTime": 2345678567
+  }
