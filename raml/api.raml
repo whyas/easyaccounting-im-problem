@@ -998,7 +998,7 @@ traits:
               desc: 修改成功
           - respWithoutPayload
       delete:
-        description: 删除用户权限
+        description: 删除用户
         is:
           - responseDesc:
               desc: 删除成功
@@ -1043,7 +1043,7 @@ traits:
               desc: 更新成功
           - respWithoutPayload
       delete:
-        description: 删除用户权限
+        description: 删除部门
         is:
           - responseDesc:
               desc: 删除成功
@@ -1088,7 +1088,7 @@ traits:
               desc: 更新成功
           - respWithoutPayload
       delete:
-        description: 删除用户权限
+        description: 删除项目
         is:
           - responseDesc:
               desc: 删除成功
@@ -1105,35 +1105,55 @@ traits:
       post:
         description: 新增账户
         queryParameters:
+          typeProperty:
+            description: 资产负债分类，1：资产，2：负债
+          typeBasic:
+            description: 基础分类：1.往来；2.资金；3.固定资产；4.库存；5.项目
+          typeDetail:
+            description: 资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；资产现金（8.现金；9.银行；10.第三方支付；）
           name:
-            description: 项目名称
+            description: 账户名称，备用金
+          currency:
+            description: 账户币种：CNY, USD, HKD, JPY 等等，CNY
+          initialValue:
+            description: 账户初始值，56789.56
           comment:
-            description: 项目备注
+            description: 备注信息
         is:
           - responseDesc: 
               desc: 增加成功
           - respWithoutPayload
-    /{projectId}:
+    /{accountId}:
       get:
-        description: 获取项目详情
+        description: 获取账户详情
         is:
           - responseDesc:
-              desc: 返回项目信息
+              desc: 返回账户信息
           - respWithPayload:
               payload: !include samples/generalAccount.sample
       put:
-        description: 更新项目详情
+        description: 更新账户详情
         queryParameters:
+          typeProperty:
+            description: 资产负债分类，1：资产，2：负债
+          typeBasic:
+            description: 基础分类：1.往来；2.资金；3.固定资产；4.库存；5.项目
+          typeDetail:
+            description: 资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；资产现金（8.现金；9.银行；10.第三方支付；）
           name:
-            description: 项目名称
+            description: 账户名称，备用金
+          currency:
+            description: 账户币种：CNY, USD, HKD, JPY 等等，CNY
+          initialValue:
+            description: 账户初始值，56789.56
           comment:
-            description: 项目描述
+            description: 备注信息
         is:
           - responseDesc:
               desc: 更新成功
           - respWithoutPayload
       delete:
-        description: 删除用户权限
+        description: 删除账户
         is:
           - responseDesc:
               desc: 删除成功
