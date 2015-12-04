@@ -674,10 +674,10 @@ traits:
             description: 库房的名称，一号库房
           comment:
             description: 库房备注
-      is:
-        - responseDesc:
-            desc: 库房创建成功
-        - respWithoutPayload
+        is:
+          - responseDesc:
+              desc: 库房创建成功
+          - respWithoutPayload
     /{storageId}:
       get:
         description: 获取库房信息
