@@ -588,8 +588,42 @@ traits:
   /storage/{storageId}/items:
     get:
       description: 获取该仓库的货品列表
+      is:
+        - responseDesc:
+            desc: 返回该仓库的货物列表
+        - respWithPayload:
+            payload: !include samples/inventoryItemList.sample
     post:
       description: 在该仓库中新增货品
+      queryParameters:
+        itemNo:
+          description: 货品的编号，A15101200
+        storageId:
+          description: 仓库ID
+        projectId:
+          description: 项目 ID
+        locationType:
+          description: 货物的位置类型，1：库房，2：项目，关联 storageId，projectId
+        name:
+          description: 货物的名字：充电宝
+        model:
+          description: 货物的型号，手动输入型号
+        unit:
+          description: 货物的单位，个
+        inCount:
+          description: 进库存，货品现有多少个
+        cost:
+          description: 货物的成本
+        referencePrice:
+          description: 货物的参考售价
+        itemType:
+          description: 货物的类别
+        comment:
+          description: 货品备注
+      is:
+        - responseDesc:
+            desc: 添加成功
+        - respWithoutPayload
   /storage/items/{itemId}:
     get:
       description: 获取货品信息

@@ -1,0 +1,42 @@
+  [
+    {
+      "id": 1,
+      "uid": 2,
+      "bookId": 3,
+      "itemNo": "A15101200",
+      "storageId": 4,
+      "projectId": null,
+      "locationType": 1,
+      "name": "充电宝",
+      "model": "XX1",
+      "unit": "个",
+      "inCount": 10,
+      "outCount": 5,
+      "netCount": 5,
+      "cost": 12.4,
+      "referencePrice": 40.3,
+      "itemType": 1,
+      "comment": "货品备注",
+      "creationTime": 2345678567
+    },
+    {
+      "id": 1,
+      "uid": 2,
+      "bookId": 3,
+      "itemNo": "A15101200",
+      "storageId": 4,
+      "projectId": null,
+      "locationType": 1,
+      "name": "充电宝",
+      "model": "XX1",
+      "unit": "个",
+      "inCount": 10,
+      "outCount": 5,
+      "netCount": 5,
+      "cost": 12.4,
+      "referencePrice": 40.3,
+      "itemType": 1,
+      "comment": "货品备注",
+      "creationTime": 2345678567
+    }
+  ]
