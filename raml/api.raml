@@ -924,12 +924,11 @@ traits:
           type: number
         orderNo:
           description: 订单号码
-
       is:
         - responseDesc:
             desc: 返回成本转结历史记录
         - respWithPayload:
-            payload: !include samples/costTransferLog.sample
+            payload: !include samples/inventoryDeliveryManifest.sample
 /books/{bookId}/settings:
   displayName: 其它设置相关的数据
   /people:
