@@ -1093,6 +1093,51 @@ traits:
           - responseDesc:
               desc: 删除成功
           - respWithoutPayload
+  /accounts:
+    /:
+      get:
+        description: 获取我的账户
+        is:
+          - responseDesc:
+              desc: 返回我的账户信息
+          - respWithPayload:
+              payload: !include samples/generalAccounts.sample
+      post:
+        description: 新增账户
+        queryParameters:
+          name:
+            description: 项目名称
+          comment:
+            description: 项目备注
+        is:
+          - responseDesc: 
+              desc: 增加成功
+          - respWithoutPayload
+    /{projectId}:
+      get:
+        description: 获取项目详情
+        is:
+          - responseDesc:
+              desc: 返回项目信息
+          - respWithPayload:
+              payload: !include samples/generalAccount.sample
+      put:
+        description: 更新项目详情
+        queryParameters:
+          name:
+            description: 项目名称
+          comment:
+            description: 项目描述
+        is:
+          - responseDesc:
+              desc: 更新成功
+          - respWithoutPayload
+      delete:
+        description: 删除用户权限
+        is:
+          - responseDesc:
+              desc: 删除成功
+          - respWithoutPayload
   /inoutTypes:
     /:
       get:

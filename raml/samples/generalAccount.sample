@@ -1,0 +1,16 @@
+  {
+    "id": 1,
+    "uid": 2,
+    "bookId": 3,
+    "typeProperty": 1,
+    "typeBasic": 2,
+    "typeDetail": 3,
+    "name": "备用金",
+    "currency": "CNY",
+    "comment": "备注信息",
+    "initialValue": 56789.56,
+    "balance": 45678765.2,
+    "creationTime": 45678765,
+    "updateTime": 45678987,
+    "status": null
+  }
