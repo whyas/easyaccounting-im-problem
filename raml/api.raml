@@ -585,17 +585,16 @@ traits:
             payload: !include samples/transactionSummarize.sample
 /books/{id}/inventory:
   displayName: 库存
-  /items:
-    /:
-      get:
-        description: 获取货品列表
-      post:
-        description: 新增货品
-    /{itemId}:
-      get:
-        description: 获取货品信息
-      put:
-        description: 货物调拨
+  /storage/{storageId}/items:
+    get:
+      description: 获取货品列表
+    post:
+      description: 新增货品
+  /storage/items/{itemId}:
+    get:
+      description: 获取货品信息
+    put:
+      description: 货物调拨
   /storage:
     /:
       get:
