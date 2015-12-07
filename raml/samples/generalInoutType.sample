@@ -1,6 +1,7 @@
   {
     "id": 1,
     "type": 1,
+    "availableAccountTypes": "[6,8,9,10]",
     "name": "进货支出",
     "comment": "一条备注",
     "creationTime": 456789765
