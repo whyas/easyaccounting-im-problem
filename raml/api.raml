@@ -531,10 +531,16 @@ traits:
       get:
         description: 获取一条收支记录 - OK
         is:
-            - responseDesc:
-                desc: 返回收支明细记录
-            - respWithPayload:
-                payload: !include samples/transactionActivity.sample
+          - responseDesc:
+              desc: 返回收支明细记录
+          - respWithPayload:
+              payload: !include samples/transactionActivity.sample
+      delete:
+        description: 删除一条收支记录
+        is:
+          - responseDesc:
+              desc: 删除成功
+          - respWithoutPayload
   /transactionBills:
     get:
       description: 获取往来条目
