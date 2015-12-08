@@ -65,6 +65,11 @@ traits:
           description: 手机号码，18166662727
         password:
           description: 密码
+      is:
+        - responseDesc:
+            desc: 登录成功，返回用户信息
+        - responseWithPayload:
+            payload: !include samples/userInfo.sample
   /register:
     post:
       description: 注册

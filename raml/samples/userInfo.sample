@@ -14,25 +14,5 @@
     "lastLoginIp": "112.112.33.22",
     "creationTime": 456789765,
     "updateTime": 56789876,
-    "status": null,
-    "books": [
-      {
-        "id": 2,
-        "uid": 4,
-        "name": "2015年度账本",
-        "nativeCurrency": "CNY",
-        "financialYear": 2015,
-        "comment": "账本描述",
-        "creationTime": 5678976
-      },
-      {
-        "id": 3,
-        "uid": 4,
-        "name": "2015年度小账本",
-        "nativeCurrency": "CNY",
-        "financialYear": 2015,
-        "comment": "账本描述",
-        "creationTime": 5678976
-      }
-    ]
+    "status": null
   }
