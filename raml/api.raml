@@ -494,38 +494,46 @@ traits:
             desc: 记录成功
         - respWithoutPayload
   /transactionActivities:
-    get:
-      description: 获取收支明细 - OK
-      queryParameters:
-        start:
-          description: 统计开始日期
-          type: number
-        until:
-          description: 统计截至日期
-          type: number
-        accountId:
-          description: 收入账户
-          type: number
-        inoutTypeId:
-          description: 收支类型，是生产成本还是进货成本等类型。由 inoutType 接口统一管理
-          type: number
-        basicType:
-          description: 基础类型，1.收入、2.支出、3.月度预算、4.资金调拨、5.退款、6.对冲、7.初始额度
-          type: number
-        accountType:
-          description: 账户类型，比如应收、应付之类的账户类型。资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；资产现金（8.现金；9.银行；10.第三方支付；）
-          type: number
-        businessUnitId:
-          description: 往来单位 ID
-          type: number
-        staffId: 
-          description: 经办人、员工 ID
-          type: number
+    /:
+      get:
+        description: 获取收支明细 - OK
+        queryParameters:
+          start:
+            description: 统计开始日期
+            type: number
+          until:
+            description: 统计截至日期
+            type: number
+          accountId:
+            description: 收入账户
+            type: number
+          inoutTypeId:
+            description: 收支类型，是生产成本还是进货成本等类型。由 inoutType 接口统一管理
+            type: number
+          basicType:
+            description: 基础类型，1.收入、2.支出、3.月度预算、4.资金调拨、5.退款、6.对冲、7.初始额度
+            type: number
+          accountType:
+            description: 账户类型，比如应收、应付之类的账户类型。资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；资产现金（8.现金；9.银行；10.第三方支付；）
+            type: number
+          businessUnitId:
+            description: 往来单位 ID
+            type: number
+          staffId: 
+            description: 经办人、员工 ID
+            type: number
+        is:
+          - responseDesc:
+              desc: 返回收支明细记录
+          - respWithPayload:
+              payload: !include samples/transactionActivities.sample
+    /transactionActivities/{activityId}:
+      description: 获取一条收支记录 - OK
       is:
-        - responseDesc:
-            desc: 返回收支明细记录
-        - respWithPayload:
-            payload: !include samples/transactionActivities.sample
+          - responseDesc:
+              desc: 返回收支明细记录
+          - respWithPayload:
+              payload: !include samples/transactionActivity.sample
   /transactionBills:
     get:
       description: 获取往来条目

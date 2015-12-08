@@ -1,0 +1,23 @@
+  {
+    "id": 17,
+    "uid": 1,
+    "bookId": 1,
+    "basicType": 1,
+    "inoutTypeId": 4,
+    "accountType": 8,
+    "incomeAccountId": 8,
+    "expenseAccountId": null,
+    "amount": 120,
+    "tradeTime": 1449562962666,
+    "businessUnitId": 1,
+    "projectId": null,
+    "staffId": 3,
+    "departmentId": 1,
+    "receivableId": null,
+    "payableId": null,
+    "comment": "向客户1卖东西",
+    "attachmentUrl": null,
+    "creationTime": 1449571233369,
+    "updateTime": 1449571233369,
+    "status": 0
+  }
