@@ -1,0 +1,34 @@
+  [
+    {
+      "id": 1,
+      "uid": 2,
+      "bookId": 3,
+      "type": 1,
+      "writeOffAmount": 30.5,
+      "totalAmount": 100,
+      "businessUnitId": 3,
+      "projectId": 13,
+      "staffId": 67,
+      "departmentId": 9,
+      "comment": "晓钦买书借钱",
+      "creationTime": 45678765,
+      "updateTime": 45678987,
+      "status": 0
+    },
+    {
+      "id": 2,
+      "uid": 2,
+      "bookId": 3,
+      "type": 1,
+      "writeOffAmount": 30.5,
+      "totalAmount": 100,
+      "businessUnitId": 3,
+      "projectId": 13,
+      "staffId": 67,
+      "departmentId": 9,
+      "comment": "晓钦买书借钱",
+      "creationTime": 45678765,
+      "updateTime": 45678987,
+      "status": 0
+    }
+  ]

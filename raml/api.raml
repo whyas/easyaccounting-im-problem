@@ -487,6 +487,18 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
+  /transactionBills:
+    get:
+      description: 获取往来条目
+      queryParameters:
+        inoutTypeId:
+          type: number
+          description: 具体是什么类别的往来条目，默认不限：资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；
+      is:
+        - responseDesc:
+            desc: 获取往来条目数据项
+        - respWithPayload:
+            payload: !include samples/generalTransactionBiils.sample
 /books/{bookId}/report:
   displayName: 报表
   /income:
