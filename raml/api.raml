@@ -528,12 +528,13 @@ traits:
           - respWithPayload:
               payload: !include samples/transactionActivities.sample
     /transactionActivities/{activityId}:
-      description: 获取一条收支记录 - OK
-      is:
-          - responseDesc:
-              desc: 返回收支明细记录
-          - respWithPayload:
-              payload: !include samples/transactionActivity.sample
+      get:
+        description: 获取一条收支记录 - OK
+        is:
+            - responseDesc:
+                desc: 返回收支明细记录
+            - respWithPayload:
+                payload: !include samples/transactionActivity.sample
   /transactionBills:
     get:
       description: 获取往来条目
