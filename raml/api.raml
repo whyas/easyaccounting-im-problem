@@ -249,6 +249,9 @@ traits:
           description: 交易日期
           type: number
           required: true
+        receivableId: 应收条目
+          description: 收回款项的时候，要表明是哪一条应收项目
+          type: number
         businessUnitId:
           description: 往来单位 ID
           type: number
@@ -288,6 +291,9 @@ traits:
           description: 交易日期
           type: number
           required: true
+        payableId: 应付条目
+          description: 归还借款，支付应付的时候要指定应付条目
+          type: number
         businessUnitId:
           description: 往来单位 ID
           type: number
@@ -403,7 +409,7 @@ traits:
         payableId:
           description: 应付条目 ID
           type: number
-        receivableid:
+        receivableId:
           description: 应收条目 ID
           type: number
         projectId:
