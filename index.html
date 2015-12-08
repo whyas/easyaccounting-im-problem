@@ -349,6 +349,58 @@
   "msg": "正常返回",
   "palyoad": null
 }
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__bookkeeping_transactionActivities"><span class="parent">/books/{bookId}/bookkeeping</span>/transactionActivities</a> <span class="methods"><a href="#books__bookId__bookkeeping_transactionActivities_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books__bookId__bookkeeping_transactionActivities" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__bookkeeping_transactionActivities_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取收支明细</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__bookkeeping_transactionActivities_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/bookkeeping</span>/transactionActivities</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取收支明细</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__bookkeeping_transactionActivities_get_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__bookkeeping_transactionActivities_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__bookkeeping_transactionActivities_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>start</strong>: <em>(number)</em><p>统计开始日期</p></li><li><strong>until</strong>: <em>(number)</em><p>统计截至日期</p></li><li><strong>incomeAccountId</strong>: <em>required (number)</em><p>收入账户</p></li><li><strong>inoutTypeId</strong>: <em>(number)</em><p>收支类型</p></li><li><strong>businessUnitId</strong>: <em>(number)</em><p>往来单位 ID</p></li><li><strong>staffId</strong>: <em>(number)</em><p>经办人、员工 ID</p></li></ul></div><div class="tab-pane" id="books__bookId__bookkeeping_transactionActivities_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回收支明细记录</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "id": 17,
+      "uid": 1,
+      "bookId": 1,
+      "basicType": 1,
+      "inoutTypeId": 4,
+      "accountType": 8,
+      "incomeAccountId": 8,
+      "expenseAccountId": null,
+      "amount": 120,
+      "tradeTime": 1449562962666,
+      "businessUnitId": 1,
+      "projectId": null,
+      "staffId": 3,
+      "departmentId": 1,
+      "receivableId": null,
+      "payableId": null,
+      "comment": "向客户1卖东西",
+      "attachmentUrl": null,
+      "creationTime": 1449571233369,
+      "updateTime": 1449571233369,
+      "status": 0
+    },
+    {
+      "id": 18,
+      "uid": 1,
+      "bookId": 1,
+      "basicType": 1,
+      "inoutTypeId": 4,
+      "accountType": 8,
+      "incomeAccountId": 8,
+      "expenseAccountId": null,
+      "amount": 120,
+      "tradeTime": 1449562962666,
+      "businessUnitId": 1,
+      "projectId": null,
+      "staffId": 3,
+      "departmentId": 1,
+      "receivableId": null,
+      "payableId": null,
+      "comment": "向客户1卖东西",
+      "attachmentUrl": null,
+      "creationTime": 1449571233369,
+      "updateTime": 1449571233369,
+      "status": 0
+    }
+  ]
+}
 </code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__bookkeeping_transactionBills"><span class="parent">/books/{bookId}/bookkeeping</span>/transactionBills</a> <span class="methods"><a href="#books__bookId__bookkeeping_transactionBills_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books__bookId__bookkeeping_transactionBills" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__bookkeeping_transactionBills_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取往来条目</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__bookkeeping_transactionBills_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/bookkeeping</span>/transactionBills</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取往来条目</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__bookkeeping_transactionBills_get_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__bookkeeping_transactionBills_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__bookkeeping_transactionBills_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>inoutTypeId</strong>: <em>(string)</em><p>具体是什么类别的往来条目，请传一个 JSON 数组。默认不限：资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；</p><p><strong>Example</strong>:</p><pre>[8,9,10]</pre></li></ul></div><div class="tab-pane" id="books__bookId__bookkeeping_transactionBills_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>获取往来条目数据项</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
@@ -1347,7 +1399,7 @@
     }
   ]
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__settings_recycleBin__binId_"><span class="parent">/books/{bookId}/settings/recycleBin</span>/{binId}</a> <span class="methods"><a href="#books__bookId__settings_recycleBin__binId__put"><span class="badge badge_put">put</span></a></span></h4></div><div id="panel_books__bookId__settings_recycleBin__binId_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__settings_recycleBin__binId__put'" class="list-group-item"><span class="badge badge_put">put</span><div class="method_description"><p>更新回收站条目</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__settings_recycleBin__binId__put"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_put">put</span> <span class="parent">/books/{bookId}/settings/recycleBin</span>/{binId}</h4></div><div class="modal-body"><div class="alert alert-info"><p>更新回收站条目</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__settings_recycleBin__binId__put_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__settings_recycleBin__binId__put_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__settings_recycleBin__binId__put_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li><li><strong>binId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>action</strong>: <em>(number)</em><p>操作，1：恢复，2：彻底删除</p></li></ul></div><div class="tab-pane" id="books__bookId__settings_recycleBin__binId__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>操作成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__settings_recycleBin__itemId_"><span class="parent">/books/{bookId}/settings/recycleBin</span>/{itemId}</a> <span class="methods"><a href="#books__bookId__settings_recycleBin__itemId__put"><span class="badge badge_put">put</span></a></span></h4></div><div id="panel_books__bookId__settings_recycleBin__itemId_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__settings_recycleBin__itemId__put'" class="list-group-item"><span class="badge badge_put">put</span><div class="method_description"><p>更新回收站条目</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__settings_recycleBin__itemId__put"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_put">put</span> <span class="parent">/books/{bookId}/settings/recycleBin</span>/{itemId}</h4></div><div class="modal-body"><div class="alert alert-info"><p>更新回收站条目</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__settings_recycleBin__itemId__put_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__settings_recycleBin__itemId__put_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__settings_recycleBin__itemId__put_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li><li><strong>itemId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>action</strong>: <em>(number)</em><p>操作，1：恢复，2：彻底删除</p></li></ul></div><div class="tab-pane" id="books__bookId__settings_recycleBin__itemId__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>操作成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
   "palyoad": null

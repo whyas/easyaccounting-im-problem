@@ -493,6 +493,34 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
+  /transactionActivities:
+    get:
+      description: 获取收支明细
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+        incomeAccountId:
+          description: 收入账户
+          type: number
+          required: true
+        inoutTypeId:
+          description: 收支类型
+          type: number
+        businessUnitId:
+          description: 往来单位 ID
+          type: number
+        staffId: 
+          description: 经办人、员工 ID
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回收支明细记录
+        - respWithPayload:
+            payload: !include samples/transactionActivities.sample
   /transactionBills:
     get:
       description: 获取往来条目
@@ -1341,7 +1369,7 @@ traits:
               desc: 返回回收站的条目列表
           - respWithPayload:
               payload: !include samples/generalRecycleBinItems.sample
-    /{binId}:
+    /{itemId}:
       put:
         description: 更新回收站条目
         queryParameters:
