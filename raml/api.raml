@@ -536,16 +536,16 @@ traits:
           - respWithPayload:
               payload: !include samples/transactionActivity.sample
       delete:
-        description: 删除一条收支记录
+        description: 删除一条收支记录 - OK
         is:
           - responseDesc:
               desc: 删除成功
           - respWithoutPayload
   /transactionBills:
     get:
-      description: 获取往来条目
+      description: 获取往来条目 - OK
       queryParameters:
-        inoutTypeId:
+        accountType:
           type: string
           description: 具体是什么类别的往来条目，请传一个 JSON 数组。默认不限：资产往来（1.应收；2.借出；3.预付；)；负债往来（4.借入；5.应付税金；6.应付；7.预收；）；
           example: "[8,9,10]"
