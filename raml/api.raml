@@ -527,7 +527,7 @@ traits:
               desc: 返回收支明细记录
           - respWithPayload:
               payload: !include samples/transactionActivities.sample
-    /transactionActivities/{activityId}:
+    /{activityId}:
       get:
         description: 获取一条收支记录 - OK
         is:
