@@ -608,39 +608,31 @@
   "code": 1000,
   "msg": "正常返回",
   "payload":   {
-    "totalAmount": 600,
-    "start": 1449060138150,
-    "until": 1449060438150,
-    "expense": [
+    "netAsset": 210000,
+    "asset": 250000,
+    "debit": 40000,
+    "accounts": [
       {
-        "typeId": 6,
-        "typeName": "进货成本",
-        "increase": 20000,
-        "decrease": 200,
-        "netValue": 19800
+        "accountId": 1,
+        "accountName": "备用金",
+        "balance": 10000
       },
       {
-        "typeId": 7,
-        "typeName": "运营费用",
-        "increase": 200000,
-        "decrease": 200,
-        "netValue": 199800
+        "accountId": 2,
+        "accountName": "固定资产",
+        "balance": 200000
       }
     ],
-    "income": [
+    "debit": [
       {
-        "typeId": 4,
-        "typeName": "货物销售",
-        "increase": 20000,
-        "decrease": 200,
-        "netValue": 19800
+        "accountId": 3,
+        "accountName": "应付",
+        "balance": 500
       },
       {
-        "typeId": 5,
-        "typeName": "项目交付",
-        "increase": 200000,
-        "decrease": 200,
-        "netValue": 199800
+        "accountId": 4,
+        "accountName": "预收",
+        "balance": 200
       }
     ]
   }
