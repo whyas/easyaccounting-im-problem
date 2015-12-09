@@ -2,6 +2,10 @@
 
 ### Compile & Run & Commit & Push
 
+**You should have [raml2html][raml2html] installed on your system!**
+
 ```
-raml2html -i raml/younion.raml > index.html ; open -a Google\ Chrome ./index.html & git add . && git commit -m "update api doc"; git push
+./bin/run
 ```
+
+[raml2html]: https://github.com/raml2html/raml2html
