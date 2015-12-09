@@ -1308,7 +1308,7 @@ traits:
           - responseDesc:
               desc: 添加成功
           - respWithoutPayload
-  /accessableUsers:
+  /accessibleUsers:
     /:
       get:
         description: 获取该账本的所有可以访问的人
@@ -1316,7 +1316,7 @@ traits:
           - responseDesc:
               desc: 返回可以访问该账本的人的列表
           - respWithPayload:
-              payload: !include samples/generalAccessableUserList.sample
+              payload: !include samples/generalAccessibleUserList.sample
       post:
         description: 设置最新的汇率
         queryParameters:
