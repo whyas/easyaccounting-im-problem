@@ -4,15 +4,15 @@
     "until": 1449060438150,
     "expense": [
       {
-        "typeId": 6,
-        "typeName": "进货成本",
+        "inoutTypeId": 6,
+        "inoutTypeName": "进货成本",
         "increase": 20000,
         "decrease": 200,
         "netValue": 19800
       },
       {
-        "typeId": 7,
-        "typeName": "运营费用",
+        "inoutTypeId": 7,
+        "inoutTypeName": "运营费用",
         "increase": 200000,
         "decrease": 200,
         "netValue": 199800

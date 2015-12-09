@@ -4,15 +4,15 @@
     "until": 1449060438150,
     "income": [
       {
-        "typeId": 4,
-        "typeName": "货物销售",
+        "inoutTypeId": 4,
+        "inoutTypeName": "货物销售",
         "increase": 20000,
         "decrease": 200,
         "netValue": 19800
       },
       {
-        "typeId": 5,
-        "typeName": "项目交付",
+        "inoutTypeId": 5,
+        "inoutTypeName": "项目交付",
         "increase": 200000,
         "decrease": 200,
         "netValue": 199800
