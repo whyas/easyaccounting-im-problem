@@ -1009,7 +1009,7 @@ traits:
   /people:
     /:
       get:
-        description: 获取员工、客户、供应商等列表
+        description: 获取员工、客户、供应商等列表 -OK
         queryParameters:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
@@ -1020,7 +1020,7 @@ traits:
           - respWithPayload:
               payload: !include samples/generalPeople.sample
       post:
-        description: 添加员工、酷虎、供应商等记录
+        description: 添加员工、酷虎、供应商等记录 -OK
         queryParameters:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
@@ -1043,14 +1043,14 @@ traits:
           - respWithoutPayload
     /{uid}:
       get:
-        description: 获取员工、酷虎、供应商等记录
+        description: 获取员工、酷虎、供应商等记录 -OK
         is:
           - responseDesc:
               desc: 返回该对象
           - respWithPayload:
               payload: !include samples/generalPeoplePerson.sample
       put:
-        description: 修改员工、酷虎、供应商等记录
+        description: 修改员工、酷虎、供应商等记录 -OK
         queryParameters:
           type:
             description: 人员类别，1：客户、2：员工、3：供应商
@@ -1072,7 +1072,7 @@ traits:
               desc: 修改成功
           - respWithoutPayload
       delete:
-        description: 删除用户
+        description: 删除用户 -OK
         is:
           - responseDesc:
               desc: 删除成功
@@ -1386,7 +1386,7 @@ traits:
               payload: !include samples/generalRecycleBinItems.sample
     /{itemId}:
       put:
-        description: 更新回收站条目
+        description: 更新回收站条目 -OK
         queryParameters:
           action:
             description: 操作，1：恢复，2：彻底删除
