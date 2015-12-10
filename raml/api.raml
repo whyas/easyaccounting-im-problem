@@ -238,7 +238,7 @@ traits:
           type: number
           description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
           required: true
-        incomeAccountId:
+        accountId:
           description: 收入账户
           type: number
           required: true
@@ -280,7 +280,7 @@ traits:
           type: number
           description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
           required: true
-        expenseAccountId:
+        accountId:
           description: 支出账户
           type: number
           required: true
@@ -322,12 +322,12 @@ traits:
           type: number
           description: 收支类别 ID，是属于哪一个类别的收支？参考 收支类别的 ID
           required: true
-        incomeAccountId:
-          description: 转入账户
+        accountId:
+          description: 转出账户
           type: number
           required: true
-        expenseAccountId:
-          description: 转出账户
+        transferToAccountId:
+          description: 转入账户
           type: number
           required: true
         amount:
@@ -361,7 +361,7 @@ traits:
     post:
       description: 记初始
       queryParameters:
-        incomeAccountId:
+        accountId:
           description: 要初始化的账户
           type: number
           required: true
@@ -855,10 +855,8 @@ traits:
           description: 往来单位
         activityTime:
           description: 活动发生的时间
-        incomeAccountId:
-          description: 收款账户
-        expenseAccountId:
-          description: 付款账户
+        accountId:
+          description: 账户
         storageId:
           description: 仓库 ID
         projectId:
