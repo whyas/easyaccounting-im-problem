@@ -1,7 +1,7 @@
   [
     {
       "id": 1,
-      "type": 2,
+      "category": 2,
       "name": "张三",
       "phone": "18166662727",
       "email": "san@example.com",
@@ -11,7 +11,7 @@
     },
     {
       "id": 1,
-      "type": 2,
+      "category": 2,
       "name": "张四",
       "phone": "18166662727",
       "email": "san@example.com",

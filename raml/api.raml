@@ -1011,7 +1011,7 @@ traits:
       get:
         description: 获取员工、客户、供应商等列表 -OK
         queryParameters:
-          type:
+          category:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
         is:
@@ -1022,7 +1022,7 @@ traits:
       post:
         description: 添加员工、酷虎、供应商等记录 -OK
         queryParameters:
-          type:
+          category:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
           name: 
@@ -1052,7 +1052,7 @@ traits:
       put:
         description: 修改员工、酷虎、供应商等记录 -OK
         queryParameters:
-          type:
+          category:
             description: 人员类别，1：客户、2：员工、3：供应商
             type: number
           name: 
