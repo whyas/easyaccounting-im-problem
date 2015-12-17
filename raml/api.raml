@@ -888,13 +888,13 @@ traits:
           description: 活动发生的时间
         locationType:
           description: 货物的位置类型，1：库房，2：项目，关联 from 和 to
-        fromStorageId:
+        storageId:
           description: 调出库房
-        fromProjectId:
-          description: 调出项目
-        toStorageId:
+        transferToStorage:
           description: 调入库房
-        toProjectId:
+        projectId:
+          description: 调出项目
+        transferToProject:
           description: 调入项目
         staffId:
           description: 经办人、员工 ID
