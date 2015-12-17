@@ -249,7 +249,7 @@ traits:
           description: 交易日期
           type: number
           required: true
-        receivableId:
+        billId:
           description: 应收条目, 收回款项的时候，要表明是哪一条应收项目
           type: number
         businessUnitId:
@@ -1239,6 +1239,10 @@ traits:
     /:
       get:
         description: 获取收入支出分类列表
+        queryParameters:
+          type:
+            description: 收入支出分类，1：收入，2：支出
+            type: number
         is:
           - responseDesc:
               desc: 返回收入支出分类列表
