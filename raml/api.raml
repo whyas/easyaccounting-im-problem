@@ -636,19 +636,7 @@ traits:
             payload: !include samples/reportDebit.sample
   /accountBalance:
     get:
-      description: 获取账户余额报表，参数为筛选条件
-      queryParameters:
-        start:
-          description: 统计开始日期
-          type: number
-        until:
-          description: 统计截至日期
-          type: number
-      is:
-        - responseDesc:
-            desc: 返回账户余额报表
-        - respWithPayload:
-            payload: !include samples/reportAccountBalance.sample
+      description: 获取账户余额报表，参数为筛选条件 - Deprecated, 请使用获取账户列表的接口
   /transactionSummarize:
     get:
       description: 获取 收入、支出、应收、应付、利润总额，首页的报表
