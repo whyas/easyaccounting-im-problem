@@ -1,0 +1,47 @@
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "inoutTypeId": 31,
+        "inoutTypeName": "主营业务收入",
+        "increase": 15300,
+        "decrease": null,
+        "netValue": 15300,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 32,
+        "inoutTypeName": "投资收入",
+        "increase": 300,
+        "decrease": null,
+        "netValue": 300,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 34,
+        "inoutTypeName": "货物销售",
+        "increase": 1000,
+        "decrease": null,
+        "netValue": 1000,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 35,
+        "inoutTypeName": "利息收入",
+        "increase": 500,
+        "decrease": null,
+        "netValue": 500,
+        "processed": false
+      }
+    ]
+  ]

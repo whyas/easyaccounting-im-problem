@@ -622,15 +622,56 @@
     ]
   }
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__report_accountBalance"><span class="parent">/books/{bookId}/report</span>/accountBalance</a> <span class="methods"><a href="#books__bookId__report_accountBalance_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books__bookId__report_accountBalance" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__report_accountBalance_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取账户余额报表，参数为筛选条件 - Deprecated, 请使用获取账户列表的接口</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__report_accountBalance_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/report</span>/accountBalance</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取账户余额报表，参数为筛选条件 - Deprecated, 请使用获取账户列表的接口</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__report_accountBalance_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__report_accountBalance_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__report_transactionSummarize"><span class="parent">/books/{bookId}/report</span>/transactionSummarize</a> <span class="methods"><a href="#books__bookId__report_transactionSummarize_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books__bookId__report_transactionSummarize" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__report_transactionSummarize_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取 收入、支出、应收、应付、利润总额，首页的报表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__report_transactionSummarize_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/report</span>/transactionSummarize</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取 收入、支出、应收、应付、利润总额，首页的报表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__report_transactionSummarize_get_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__report_transactionSummarize_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__report_transactionSummarize_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>start</strong>: <em>(number)</em><p>统计开始日期</p></li><li><strong>until</strong>: <em>(number)</em><p>统计截至日期</p></li></ul></div><div class="tab-pane" id="books__bookId__report_transactionSummarize_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回账户余额报表</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__report_reportMonthly"><span class="parent">/books/{bookId}/report</span>/reportMonthly</a> <span class="methods"><a href="#books__bookId__report_reportMonthly_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books__bookId__report_reportMonthly" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__report_reportMonthly_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取一年的报表，按月分开</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__report_reportMonthly_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/report</span>/reportMonthly</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取一年的报表，按月分开</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__report_reportMonthly_get_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__report_reportMonthly_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__report_reportMonthly_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>year</strong>: <em>(number)</em><p>年份</p></li><li><strong>basicType</strong>: <em>required (number)</em><p>基础类型</p></li></ul></div><div class="tab-pane" id="books__bookId__report_reportMonthly_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回按月分的报表</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
-  "payload":   {
-    "income": 600,
-    "expense": 400,
-    "payable": 600,
-    "receivable": 1000
-  }
+  "payload":   [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "inoutTypeId": 31,
+        "inoutTypeName": "主营业务收入",
+        "increase": 15300,
+        "decrease": null,
+        "netValue": 15300,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 32,
+        "inoutTypeName": "投资收入",
+        "increase": 300,
+        "decrease": null,
+        "netValue": 300,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 34,
+        "inoutTypeName": "货物销售",
+        "increase": 1000,
+        "decrease": null,
+        "netValue": 1000,
+        "processed": false
+      },
+      {
+        "inoutTypeId": 35,
+        "inoutTypeName": "利息收入",
+        "increase": 500,
+        "decrease": null,
+        "netValue": 500,
+        "processed": false
+      }
+    ]
+  ]
 }
 </code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="books__bookId__inventory" class="panel-title">库存</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books__bookId__inventory_storage__storageId__items"><span class="parent">/books/{bookId}/inventory</span>/storage/{storageId}/items</a> <span class="methods"><a href="#books__bookId__inventory_storage__storageId__items_get"><span class="badge badge_get">get</span></a> <a href="#books__bookId__inventory_storage__storageId__items_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_books__bookId__inventory_storage__storageId__items" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__bookId__inventory_storage__storageId__items_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取该仓库的货品列表</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#books__bookId__inventory_storage__storageId__items_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>在该仓库中新增货品</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__bookId__inventory_storage__storageId__items_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/books/{bookId}/inventory</span>/storage/{storageId}/items</h4></div><div class="modal-body"><div class="alert alert-info"><p>获取该仓库的货品列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__bookId__inventory_storage__storageId__items_get_request" data-toggle="tab">Request</a></li><li><a href="#books__bookId__inventory_storage__storageId__items_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__bookId__inventory_storage__storageId__items_get_request"><h3>URI Parameters</h3><ul><li><strong>bookId</strong>: <em>required (string)</em></li><li><strong>storageId</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="books__bookId__inventory_storage__storageId__items_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回该仓库的货物列表</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
