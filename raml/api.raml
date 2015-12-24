@@ -1397,11 +1397,13 @@ traits:
               payload: !include samples/generalRecycleBinItems.sample
     /{itemId}:
       put:
-        description: 更新回收站条目 -OK
-        queryParameters:
-          action:
-            description: 操作，1：恢复，2：彻底删除
-            type: number
+        description: 恢复回收站条目
+        is:
+          - responseDesc:
+              desc: 操作成功
+          - respWithoutPayload
+      delete:
+        description: 删除回收站条目（彻底删除）
         is:
           - responseDesc:
               desc: 操作成功
