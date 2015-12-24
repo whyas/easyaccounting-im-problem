@@ -1235,6 +1235,14 @@ traits:
               desc: 返回基本类型列表
           - respWithPayload:
               payload: !include samples/accountBasicTypes.sample
+    /detailTypes:
+      get:
+        description: 获取详细类型列表
+        is:
+          - responseDesc:
+              desc: 返回详细类型列表
+          - respWithPayload:
+              payload: !include samples/accountDetailTypes.sample
   /inoutTypes:
     /:
       get:
