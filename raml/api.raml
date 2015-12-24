@@ -1227,6 +1227,14 @@ traits:
           - responseDesc:
               desc: 删除成功
           - respWithoutPayload
+    /basicTypes:
+      get:
+        description: 获取基本类型列表
+        is:
+          - responseDesc:
+              desc: 返回基本类型列表
+          - respWithPayload:
+              payload: !include samples/accountBasicTypes.sample
   /inoutTypes:
     /:
       get:
