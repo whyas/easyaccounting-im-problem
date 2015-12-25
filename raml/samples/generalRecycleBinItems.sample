@@ -2,8 +2,8 @@
     {
       "id": 1,
       "uid": 6,
-      "UidName": "张三",
-      "type": 4,
+      "uidName": "张三",
+      "type": "book_people",
       "typeName": "账户",
       "itemId": 5,
       "itemName": "备用金",
@@ -12,8 +12,8 @@
     {
       "id": 2,
       "uid": 6,
-      "UidName": "张三",
-      "type": 4,
+      "uidName": "张三",
+      "type": "book_people",
       "typeName": "账户",
       "itemId": 5,
       "itemName": "现金账户",
