@@ -57,63 +57,82 @@ traits:
           description: <<desc>>
 
 /uc:
-  displayName: 登录注册
+  displayName: 用户中心
   /login:
     post:
       description: 登录
       queryParameters:
-        phone:
-          description: 手机号码，18166662727
+        username:
+          description: 用户名（目前仅支持手机号码）
         password:
-          description: 密码
+          description: 密码（明文）
       is:
         - responseDesc:
-            desc: 登录成功，返回用户信息
+            desc: 登录成功，在payload中放置验证Token
         - respWithPayload:
-            payload: !include samples/userInfo.sample
+            payload: TOKEN字符串
+  /valid4Register:
+    get:
+      description: 判断该手机号是否可以进行注册
+      queryParameters:
+        phone:
+          description: 手机号
+      is:
+        - responseDesc:
+            desc: 返回结果，在payload中展示（true|false）
+        - respWithPayload:
+            payload: true|false
+  /sendSMS4Register:
+    get:
+      description: 请求发送短信（用于注册）
+      queryParameters:
+        phone:
+          description: 手机号
+      is:
+        - responseDesc:
+            desc: 返回TOKEN，client应该在验证短信验证码时候带上此TOKEN
+        - respWithPayload:
+            payload: TOKEN
   /register:
-    post:
-      description: 注册
+    get:
+      description: 完成注册流程
       queryParameters:
-        phone:
-          description: 手机号码，18166662727
+        token:
+          description: /sendSMS4Register返回的token
+        verifyCode:
+          description: 用户输入的验证码
         password:
-          description: 密码
+          description: 用户设定的密码
       is:
         - responseDesc:
-            desc: 删除成功
+            desc: 成功注册
         - respWithoutPayload
-  /sendVerifyCode:
-    post:
-      description: 发送验证码，SMS
+  /sendSMS4ChangePWD:
+    get:
+      description: 请求发送短信（用于修改密码）
       queryParameters:
         phone:
-          description: 手机号码，18166662727
+          description: 手机号
       is:
         - responseDesc:
-            desc: 删除成功
-        - respWithoutPayload
+            desc: 返回TOKEN，client应该在验证短信验证码时候带上此TOKEN
+        - respWithPayload:
+            payload: TOKEN
   /resetPassword:
     post:
       description: 重置密码
       queryParameters:
-        phone:
-          description: 手机号码，系统将重置该手机号的密码，18166662727
-          required: true
-          type: string
+        token:
+          description: /sendSMS4ChangePWD返回的token
         verifyCode:
-          description: 验证码
-          required: true
-          type: string
+          description: 用户输入的验证码
         newPassword:
-          description: 新密码
-          required: true
-          type: string
+          description: 用户设定的新密码
       is:
         - responseDesc:
-            desc: 重置密码成功
+            desc: 成功修改密码
         - respWithoutPayload
-  /users/{id}:
+  /users:
     get:
       description: 获取用户信息
       is:
@@ -150,7 +169,7 @@ traits:
         - respWithoutPayload
   /myDiscountCode:
     get:
-      description: 获取我的优惠码
+      description: 暂时未定
       is:
         - responseDesc:
             desc: 返回我的优惠码
@@ -158,14 +177,14 @@ traits:
             payload: !include samples/myDiscount.sample
   /discounts:
     get:
-      description: 获取我的代金券列表
+      description: 暂时未定
       is:
         - responseDesc:
             desc: 返回我的代金券列表
         - respWithPayload:
             payload: !include samples/discounts.sample
     post:
-      description: 输入优惠券
+      description: 暂时未定
       queryParameters:
         code:
           description: 优惠码
