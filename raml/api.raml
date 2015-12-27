@@ -658,7 +658,7 @@ traits:
             payload: !include samples/reportMonthly.sample
 /books/{bookId}/inventory:
   displayName: 库存
-  /storage/{storageId}/items:
+  /items:
     /:
       get:
         description: 获取该仓库的货品列表
@@ -722,7 +722,7 @@ traits:
           - respWithPayload:
               payload: !include samples/inventoryItem.sample
       put:
-        description: 货物调拨
+        description: 货品信息更新
         queryParameters:
           storageId:
             description: 仓库ID
@@ -734,6 +734,24 @@ traits:
             description: 货物的位置类型，1：库房，2：项目，关联 storageId，projectId
             required: true
             type: number
+          name:
+            description: 商品名
+          model:
+            description: 型号
+          unit:
+            description: 单位
+          cost:
+            description: 进价
+          referencePrice:
+            description: 参考售价
+          itemGroup:
+            description: 分组
+          itemNo:
+            description: 货品编号
+          comment:
+            description: 备注
+          itemStatus:
+            description: 货品状态, 0：正常；1：已停用
         is:
           - responseDesc:
               desc: 货物调拨成功
