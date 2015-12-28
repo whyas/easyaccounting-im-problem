@@ -177,11 +177,25 @@ traits:
           description: 充值VIP多长时间（单位：月）
         discounts:
           description: 使用折扣优惠，先不传的
+        platform:
+          description: 支付平台，wechat|alipay|...
       is:
         - responseDesc:
-            desc: 生成订单成功
+            desc: 预处理成功
         - respWithPayload:
             payload: !include samples/prepay.sample
+  /payStatus:
+    post:
+      description: 查询支付状态信息
+      queryParameters:
+        queryParameters:
+          orderId: 
+            description: 订单ID
+      is:
+        - responseDesc:
+            desc: 返回支付状态
+        - respWithPayload:
+            payload: !include samples/payStatus.sample
   /myDiscountCode:
     get:
       description: 暂时未定
