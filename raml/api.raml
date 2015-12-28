@@ -1312,8 +1312,13 @@ traits:
           type:
             description: 收入支出分类，1：收入，2：支出
             type: number
+            required: true
           name: 
             description: 收入支出的名字，进货支出、设备损坏等
+            required: true
+          parentType:
+            description: 父类型（30种基本类型）
+            required: true
           comment: 
             description: 备注
         is:
