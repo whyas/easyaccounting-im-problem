@@ -167,6 +167,21 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
+  /prepay:
+    post:
+      description: 充值VIP生成订单
+      queryParameters:
+        vipLevel:
+          description: VIP等级
+        duration:
+          description: 充值VIP多长时间（单位：月）
+        discounts:
+          description: 使用折扣优惠，先不传的
+      is:
+        - responseDesc:
+            desc: 生成订单成功
+        - respWithPayload:
+            payload: !include samples/prepay.sample
   /myDiscountCode:
     get:
       description: 暂时未定
