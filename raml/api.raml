@@ -657,6 +657,21 @@ traits:
             desc: 返回利润报表
         - respWithPayload:
             payload: !include samples/reportProfit.sample
+  /projects:
+    get:
+      description: 获取项目报表
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回项目报表
+        - respWithPayload:
+            payload: !include samples/reportProjects.sample
   /cash:
     get:
       description: 获取现金流量报表，参数为筛选条件
