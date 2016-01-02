@@ -1,0 +1,143 @@
+[
+  {
+    "totalAmount": null,
+    "start": null,
+    "until": null,
+      "income": [
+        {
+          "inoutTypeId": 31,
+          "inoutTypeName": "主营业务收入",
+          "increase": 100,
+          "decrease": null,
+          "netValue": 100
+        },
+        {
+          "inoutTypeId": 32,
+          "inoutTypeName": "投资收入",
+          "increase": 1000,
+          "decrease": null,
+          "netValue": 1000
+        }
+      ],
+      "expense": [
+        {
+          "inoutTypeId": 45,
+          "inoutTypeName": "主营成本支出",
+          "increase": -150,
+          "decrease": null,
+          "netValue": -150
+        }
+      ],
+      "profit": [
+        {
+          "inoutTypeId": 31,
+          "inoutTypeName": "主营业务收入",
+          "increase": 100,
+          "decrease": null,
+          "netValue": 100
+        },
+        {
+          "inoutTypeId": 32,
+          "inoutTypeName": "投资收入",
+          "increase": 1000,
+          "decrease": null,
+          "netValue": 1000
+        },
+        {
+          "inoutTypeId": 45,
+          "inoutTypeName": "主营成本支出",
+          "increase": -150,
+          "decrease": null,
+          "netValue": -150
+        }
+      ]
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    },
+    {
+      "totalAmount": null,
+      "start": null,
+      "until": null,
+      "income": [],
+      "expense": [],
+      "profit": []
+    }
+  ]
