@@ -668,7 +668,7 @@ traits:
         - responseDesc:
             desc: 返回利润报表
         - respWithPayload:
-            payload: !include samples/reportProfit.sample
+            payload: !include samples/profitOfYear.sample
   /projects:
     get:
       description: 获取项目报表
@@ -686,6 +686,32 @@ traits:
             payload: !include samples/reportProjects.sample
   /cash:
     get:
+      description: 获取现金流入流出报表，参数为筛选条件, 流入报表请读取 income 字段， 流出为 expense 字段
+      queryParameters:
+        start:
+          description: 统计开始日期
+          type: number
+        until:
+          description: 统计截至日期
+          type: number
+        basicType:
+          description: 基本账户类型, 2：流出，1：流入
+          type: number
+      is:
+        - responseDesc:
+            desc: 返回现金流量报表
+        - respWithPayload:
+            payload: !include samples/reportCashThroughput.sample
+  /inoutBillOfPeriod:
+    get:
+      description: 获取首页当日当月当年收入、支出等概览
+      is:
+        - responseDesc:
+            desc: 返回收支概览
+        - respWithPayload:
+            payload: !include samples/inoutBillOfPeriod.sample
+  /cashThroughput:
+    get:
       description: 获取现金流量报表，参数为筛选条件
       queryParameters:
         start:
@@ -698,7 +724,7 @@ traits:
         - responseDesc:
             desc: 返回现金流量报表
         - respWithPayload:
-            payload: !include samples/reportCash.sample
+            payload: !include samples/reportCashThroughput.sample
   /debit:
     get:
       description: 资产负债报表，参数为筛选条件
