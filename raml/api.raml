@@ -83,7 +83,7 @@ traits:
         - respWithPayload:
             payload: true|false
   /sendSMS4Register:
-    get:
+    post:
       description: 请求发送短信（用于注册）
       queryParameters:
         phone:
@@ -94,7 +94,7 @@ traits:
         - respWithPayload:
             payload: TOKEN
   /register:
-    get:
+    post:
       description: 完成注册流程
       queryParameters:
         token:
@@ -107,8 +107,20 @@ traits:
         - responseDesc:
             desc: 成功注册
         - respWithoutPayload
+  /changePassword:
+    post:
+      description: 修改密码，输入旧密码和新密码完成修改
+      queryParameters:
+        oldPassword:
+          description: 旧密码
+        newPassword:
+          description: 新密码
+      is:
+        - responseDesc:
+            desc: 成功修改密码
+        - respWithoutPayload
   /sendSMS4ChangePWD:
-    get:
+    post:
       description: 请求发送短信（用于修改密码）
       queryParameters:
         phone:
