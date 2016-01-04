@@ -1,0 +1,20 @@
+  {
+    "today": {
+      "cashIncome": null,
+      "cashExpense": null,
+      "billIncome": null,
+      "billExpense": null
+    },
+    "thisYear": {
+      "cashIncome": 6100,
+      "cashExpense": -150,
+      "billIncome": null,
+      "billExpense": null
+    },
+    "thisMonth": {
+      "cashIncome": 6100,
+      "cashExpense": -150,
+      "billIncome": null,
+      "billExpense": null
+    }
+  }
