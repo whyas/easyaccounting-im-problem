@@ -79,7 +79,7 @@ traits:
           description: 手机号
       is:
         - responseDesc:
-            desc: 返回结果，在payload中展示（true|false）
+            desc: 返回结果，在payload中展示（true|false），号码存在，返回 false，号码不存在，返回 true
         - respWithPayload:
             payload: true|false
   /sendSMS4Register:
