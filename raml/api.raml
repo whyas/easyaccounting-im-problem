@@ -1557,3 +1557,13 @@ traits:
           - responseDesc:
               desc: 操作成功
           - respWithoutPayload
+/config:
+  displayName: 配置信息
+  /oss:
+    get:
+      description: 获取 OSS 配置信息
+      is:
+        - responseDesc:
+            desc: 返回 OSS 配置信息
+        - respWithPayload:
+            payload: !include samples/ossConfig.sample
