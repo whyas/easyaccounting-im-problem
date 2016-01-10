@@ -179,34 +179,6 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
-  /prepay:
-    post:
-      description: 充值VIP生成订单
-      queryParameters:
-        vipLevel:
-          description: VIP等级
-        duration:
-          description: 充值VIP多长时间（单位：月）
-        discounts:
-          description: 使用折扣优惠，先不传的
-        platform:
-          description: 支付平台，wechat|alipay|...
-      is:
-        - responseDesc:
-            desc: 预处理成功
-        - respWithPayload:
-            payload: !include samples/prepay.sample
-  /payStatus:
-    post:
-      description: 查询支付状态信息
-      queryParameters:
-        orderId: 
-          description: 订单ID
-      is:
-        - responseDesc:
-            desc: 返回支付状态
-        - respWithPayload:
-            payload: !include samples/payStatus.sample
   /myDiscountCode:
     get:
       description: 暂时未定
@@ -234,6 +206,51 @@ traits:
         - responseDesc:
             desc: 添加成功
         - respWithoutPayload
+/vip:
+  description: VIP相关接口
+  /:
+    get:
+      description: 查询当前用户已支付的VIP充值订单
+      is:
+        - responseDesc:
+            desc: 当前用户已支付的VIP充值订单
+        - respWithPayload:
+            payload: !include samples/paidVipOrders.sample
+  /{id}:
+    get:
+      description: 查询某个VIP充值订单的状态（用于支付后查询支付结果）
+      is:
+        - responseDesc:
+            desc: 当前用户已支付的VIP充值订单
+        - respWithPayload:
+            payload: !include samples/vipInfos.sample
+  /vipInfos:
+    get:
+      description: 查询VIP等级的价格，最大用户数信息
+      is:
+        - responseDesc:
+            desc: 当前用户已支付的VIP充值订单
+        - respWithPayload:
+            payload: !include samples/vipOrder.sample
+  /prepay:
+    post:
+      description: 充值VIP生成订单
+      queryParameters:
+        vipLevel:
+          description: VIP等级
+        duration:
+          description: 充值VIP多长时间（单位：月）
+        discounts:
+          description: 使用折扣优惠，先不传的
+        platform:
+          description: 支付平台，wechat|alipay|...
+        startTime:
+          description: 生效时间毫秒数
+      is:
+        - responseDesc:
+            desc: 预处理成功
+        - respWithPayload:
+            payload: !include samples/prepay.sample
 /books:
   displayName: 账本操作
   /:

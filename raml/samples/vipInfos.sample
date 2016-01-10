@@ -1,0 +1,18 @@
+  [
+    {
+	  "vipLevel": 1,
+	  "priceMonthly": 1000,
+	  "availableUserCount": 3
+    },
+	{
+	  "vipLevel": 2,
+	  "priceMonthly": 2000,
+	  "availableUserCount": 10
+    },
+	{
+	  "vipLevel": 3,
+	  "priceMonthly": 5000,
+	  "availableUserCount": 100
+    }
+  ]
+  
