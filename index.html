@@ -204,34 +204,6 @@
   "msg": "正常返回",
   "palyoad": null
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_uc_prepay"><span class="parent">/uc</span>/prepay</a> <span class="methods"><a href="#uc_prepay_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_uc_prepay" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#uc_prepay_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>充值VIP生成订单</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_prepay_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/uc</span>/prepay</h4></div><div class="modal-body"><div class="alert alert-info"><p>充值VIP生成订单</p></div><ul class="nav nav-tabs"><li class="active"><a href="#uc_prepay_post_request" data-toggle="tab">Request</a></li><li><a href="#uc_prepay_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="uc_prepay_post_request"><h3>Query Parameters</h3><ul><li><strong>vipLevel</strong>: <em>(string)</em><p>VIP等级</p></li><li><strong>duration</strong>: <em>(string)</em><p>充值VIP多长时间（单位：月）</p></li><li><strong>discounts</strong>: <em>(string)</em><p>使用折扣优惠，先不传的</p></li><li><strong>platform</strong>: <em>(string)</em><p>支付平台，wechat|alipay|...</p></li></ul></div><div class="tab-pane" id="uc_prepay_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>预处理成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
-  "code": 1000,
-  "msg": "正常返回",
-  "payload":   {
-    "amount": "金额，单位为分",
-    "orderId": "订单号",
-    "extendParams": {
-      // 扩展参数，对于不同的支付平台，返回的实际字段会不一致
-      "sign": "微信返回的签名",
-      "prepayId": "微信返回的prepay_id",
-      "nonceStr": "微信返回的随机字符串，目前不知道真正触发支付时是否需要这个字符串还是随机生成新的",
-      "codeUrl": "微信返回的生成的二维码的URL",
-      "appId": "微信分配的公众账号ID",
-      "mchId": "微信支付分配的商户号",
-      "timestamp": "当前时间戳"
-    }
-  }
-}
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_uc_payStatus"><span class="parent">/uc</span>/payStatus</a> <span class="methods"><a href="#uc_payStatus_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_uc_payStatus" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#uc_payStatus_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>查询支付状态信息</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_payStatus_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/uc</span>/payStatus</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询支付状态信息</p></div><ul class="nav nav-tabs"><li class="active"><a href="#uc_payStatus_post_request" data-toggle="tab">Request</a></li><li><a href="#uc_payStatus_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="uc_payStatus_post_request"><h3>Query Parameters</h3><ul><li><strong>orderId</strong>: <em>(string)</em><p>订单ID</p></li></ul></div><div class="tab-pane" id="uc_payStatus_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回支付状态</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
-  "code": 1000,
-  "msg": "正常返回",
-  "payload":   {
-    "orderId": "订单号",
-    "amount": "金额，单位为分",
-    "status": "0-未支付，1-支付完成，XXX后序视情况扩充"
-    "字段视情况添加": ""
-  }
-}
 </code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_uc_myDiscountCode"><span class="parent">/uc</span>/myDiscountCode</a> <span class="methods"><a href="#uc_myDiscountCode_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_uc_myDiscountCode" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#uc_myDiscountCode_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>暂时未定</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="uc_myDiscountCode_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/uc</span>/myDiscountCode</h4></div><div class="modal-body"><div class="alert alert-info"><p>暂时未定</p></div><ul class="nav nav-tabs"><li><a href="#uc_myDiscountCode_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="uc_myDiscountCode_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>返回我的优惠码</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
@@ -286,6 +258,95 @@
   "code": 1000,
   "msg": "正常返回",
   "palyoad": null
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="vip" class="panel-title">/vip</h3></div><div class="panel-body"><div class="top-resource-description"><p>VIP相关接口</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_"><span class="parent">/vip</span>/</a> <span class="methods"><a href="#vip__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查询当前用户已支付的VIP充值订单</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询当前用户已支付的VIP充值订单</p></div><ul class="nav nav-tabs"><li><a href="#vip__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="vip__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>当前用户已支付的VIP充值订单</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+	  {
+		"id": "订单ID",
+		"uid": 1,
+		"vipLevel": 1,
+		"startTime": 1234567890,
+		"endTime": 1234567890,
+		"unitPrice": 3000,
+		"duration": 12,
+		"totalPrice": 30000,
+		"discounts": "使用的折扣列表",
+		"status": 1,
+		"creationTime": 1234567890,
+		"payTime": 1234567890
+	  },
+	  {
+		"id": "订单ID",
+		"uid": 1,
+		"vipLevel": 1,
+		"startTime": 1234567890,
+		"endTime": 1234567890,
+		"unitPrice": 3000,
+		"duration": 12,
+		"totalPrice": 30000,
+		"discounts": "使用的折扣列表",
+		"status": 1,
+		"creationTime": 1234567890,
+		"payTime": 1234567890
+	  }
+  ]
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip__id_"><span class="parent">/vip</span>/{id}</a> <span class="methods"><a href="#vip__id__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查询某个VIP充值订单的状态（用于支付后查询支付结果）</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip__id__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/{id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询某个VIP充值订单的状态（用于支付后查询支付结果）</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip__id__get_request" data-toggle="tab">Request</a></li><li><a href="#vip__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="vip__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>当前用户已支付的VIP充值订单</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+	  "vipLevel": 1,
+	  "priceMonthly": 1000,
+	  "availableUserCount": 3
+    },
+	{
+	  "vipLevel": 2,
+	  "priceMonthly": 2000,
+	  "availableUserCount": 10
+    },
+	{
+	  "vipLevel": 3,
+	  "priceMonthly": 5000,
+	  "availableUserCount": 100
+    }
+  ]
+  
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_vipInfos"><span class="parent">/vip</span>/vipInfos</a> <span class="methods"><a href="#vip_vipInfos_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip_vipInfos" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_vipInfos_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查询VIP等级的价格，最大用户数信息</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_vipInfos_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/vipInfos</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询VIP等级的价格，最大用户数信息</p></div><ul class="nav nav-tabs"><li><a href="#vip_vipInfos_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="vip_vipInfos_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>当前用户已支付的VIP充值订单</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   {
+	"id": "订单ID",
+	"uid": 1,
+	"vipLevel": 1,
+	"startTime": 1234567890,
+	"endTime": 1234567890,
+	"unitPrice": 3000,
+	"duration": 12,
+	"totalPrice": 30000,
+	"discounts": "使用的折扣列表",
+	"status": 1, //1代表已经支付，0代表未支付
+	"creationTime": 1234567890,
+	"payTime": 1234567890
+  }
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_prepay"><span class="parent">/vip</span>/prepay</a> <span class="methods"><a href="#vip_prepay_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_vip_prepay" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_prepay_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>充值VIP生成订单</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_prepay_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/vip</span>/prepay</h4></div><div class="modal-body"><div class="alert alert-info"><p>充值VIP生成订单</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip_prepay_post_request" data-toggle="tab">Request</a></li><li><a href="#vip_prepay_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip_prepay_post_request"><h3>Query Parameters</h3><ul><li><strong>vipLevel</strong>: <em>(string)</em><p>VIP等级</p></li><li><strong>duration</strong>: <em>(string)</em><p>充值VIP多长时间（单位：月）</p></li><li><strong>discounts</strong>: <em>(string)</em><p>使用折扣优惠，先不传的</p></li><li><strong>platform</strong>: <em>(string)</em><p>支付平台，wechat|alipay|...</p></li><li><strong>startTime</strong>: <em>(string)</em><p>生效时间毫秒数</p></li></ul></div><div class="tab-pane" id="vip_prepay_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>预处理成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   {
+    "totalPrice": 10000, //金额，单位为分
+    "orderId": "订单号",
+    "extendParams": {
+      // 扩展参数，对于不同的支付平台，返回的实际字段会不一致
+      "prepayId": "微信返回的prepay_id",
+      "appId": "微信分配的公众账号ID",
+      "mchId": "微信支付分配的商户号",
+      "timestamp": "当前时间戳"
+    }
+  }
 }
 </code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="books" class="panel-title">账本操作</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_books_"><span class="parent">/books</span>/</a> <span class="methods"><a href="#books__post"><span class="badge badge_post">post</span></a> <a href="#books__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_books_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#books__post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>添加账本</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#books__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>获取当前用户的账本列表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="books__post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/books</span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>添加账本</p></div><ul class="nav nav-tabs"><li class="active"><a href="#books__post_request" data-toggle="tab">Request</a></li><li><a href="#books__post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="books__post_request"><h3>Query Parameters</h3><ul><li><strong>name</strong>: <em>required (string)</em><p>账本名字</p></li><li><strong>nativeCurrency</strong>: <em>(string)</em><p>账本币种，CNY, USD 等</p></li><li><strong>financialYear</strong>: <em>(number - default: 当前年份)</em><p>财务年度，年份数字，2015、2016等</p></li><li><strong>comment</strong>: <em>(string)</em><p>备注，支持</p></li></ul></div><div class="tab-pane" id="books__post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>添加成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
@@ -1801,4 +1862,4 @@
     "bucket": "oss-cn-shenzhen.aliyuncs.com"
   }
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#uc">用户中心</a></li><li><a href="#books">账本操作</a></li><li><a href="#books__bookId__bookkeeping">记账</a></li><li><a href="#books__bookId__report">报表</a></li><li><a href="#books__bookId__inventory">库存</a></li><li><a href="#books__bookId__settings">设置数据</a></li><li><a href="#config">配置信息</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#uc">用户中心</a></li><li><a href="#vip">/vip</a></li><li><a href="#books">账本操作</a></li><li><a href="#books__bookId__bookkeeping">记账</a></li><li><a href="#books__bookId__report">报表</a></li><li><a href="#books__bookId__inventory">库存</a></li><li><a href="#books__bookId__settings">设置数据</a></li><li><a href="#config">配置信息</a></li></ul></div></div></div></div></body></html>
