@@ -1584,3 +1584,11 @@ traits:
             desc: 返回 OSS 配置信息
         - respWithPayload:
             payload: !include samples/ossConfig.sample
+  /ad:
+    get:
+      description: 获取主页广告信息
+      is:
+        - responseDesc:
+            desc: 主页广告信息
+        - respWithPayload:
+            payload: !include samples/ad.sample

@@ -1,0 +1,16 @@
+  [
+    {
+      "id": 1,
+      "text": "text",
+      "linkUrl": "http://xxx",
+      "imageUrl": "http://xxx",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "text": "text",
+      "linkUrl": "http://xxx",
+      "imageUrl": "http://xxx",
+      "enabled": true
+    },
+  ]
