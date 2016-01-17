@@ -186,7 +186,7 @@ traits:
       description: 查询当前用户持有的优惠券信息
       is:
         - responseDesc:
-          desc: 当前用户持有的代金券信息
+            desc: 当前用户持有的代金券信息
         - respWithPayload:
             payload: !include samples/discounts.sample
   /promoCode:
@@ -199,6 +199,9 @@ traits:
             payload: !include samples/promoCode.sample
     post:
       description: 使用优惠码获取代金券
+      queryParameters:
+        promoCode: 
+          description: 优惠码
       is:
         - responseDesc:
           desc: 获取代金券成功，返回该折扣优惠信息
