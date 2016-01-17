@@ -179,33 +179,31 @@ traits:
         - responseDesc:
             desc: 记录成功
         - respWithoutPayload
-  /myDiscountCode:
+/discount:
+  description: 折扣优惠相关接口
+  /:
     get:
-      description: 暂时未定
+      description: 查询当前用户持有的优惠券信息
       is:
         - responseDesc:
-            desc: 返回我的优惠码
-        - respWithPayload:
-            payload: !include samples/myDiscount.sample
-  /discounts:
-    get:
-      description: 暂时未定
-      is:
-        - responseDesc:
-            desc: 返回我的代金券列表
+          desc: 当前用户持有的代金券信息
         - respWithPayload:
             payload: !include samples/discounts.sample
-    post:
-      description: 暂时未定
-      queryParameters:
-        code:
-          description: 优惠码
-          type: string
-          example: U201501
+  /promoCode:
+    get:
+      description: 查询当前用户的优惠码
       is:
         - responseDesc:
-            desc: 添加成功
-        - respWithoutPayload
+          desc: 查询当前用户的优惠码
+        - respWithPayload:
+            payload: !include samples/promoCode.sample
+    post:
+      description: 使用优惠码获取代金券
+      is:
+        - responseDesc:
+          desc: 获取代金券成功，返回该折扣优惠信息
+        - respWithPayload:
+            payload: !include samples/discount.sample
 /vip:
   description: VIP相关接口
   /:

@@ -1,4 +1,3 @@
-  [
     {
       "id": 2,
       "uid": 1,
@@ -9,19 +8,6 @@
       "createTime": 1453015574000,
       "expireTime": null,
       "useStatus": 1, //1未使用 2已使用 3使用中
-      "usedTime": null,
-      "vipOrderID": null
-    },
-    {
-      "id": 4,
-      "uid": 1,
-      "promoID": 4,
-      "voucherAmount": 500,
-      "supportAccumulate": false,
-      "minOrderPrice": 3000,
-      "createTime": 1453015900000,
-      "expireTime": null,
-      "useStatus": 1,
       "usedTime": null,
       "vipOrderID": null
     }
