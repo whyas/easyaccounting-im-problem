@@ -1,14 +1,13 @@
   {
-	"id": "订单ID",
-	"uid": 1,
-	"vipLevel": 1,
-	"startTime": 1234567890,
-	"endTime": 1234567890,
-	"unitPrice": 3000,
-	"duration": 12,
-	"totalPrice": 30000,
-	"discounts": "使用的折扣列表",
-	"status": 1, //1代表已经支付，0代表未支付
-	"creationTime": 1234567890,
-	"payTime": 1234567890
+    "id": "订单ID",
+    "uid": 1,
+    "vipLevel": 1,
+    "startTime": 1234567890,
+    "endTime": 1234567890,
+    "totalPrice": 30000,
+    "discounts": "使用的折扣列表，以|分割",
+    "status": 2,
+		//1.未支付 2.已支付生效 根据这个去判断是否用户完成支付
+    "creationTime": 1234567890,
+    "payTime": 1234567890
   }

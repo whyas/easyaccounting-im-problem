@@ -1,0 +1,15 @@
+  [
+    {
+      "vipLevel": 1,
+      "availableUserCount": 3 //子用户数量
+      //... 如果有其他特权，会加到此字段下
+    },
+    {
+      "vipLevel": 2,
+      "availableUserCount": 10
+    },
+    {
+      "vipLevel": 3,
+      "availableUserCount": 99
+    }
+  ]

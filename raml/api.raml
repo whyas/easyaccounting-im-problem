@@ -224,15 +224,42 @@ traits:
         - responseDesc:
             desc: 当前用户已支付的VIP充值订单
         - respWithPayload:
-            payload: !include samples/vipInfos.sample
+            payload: !include samples/vipOrder.sample
   /vipInfos:
     get:
-      description: 查询VIP等级的价格，最大用户数信息
+      description: 查看用户的VIP信息（如果只是查询当前用户的VIP等级，用户接口GET /users，里面就有VIP字段）
       is:
         - responseDesc:
-            desc: 当前用户已支付的VIP充值订单
+            desc: 用户的VIP信息
         - respWithPayload:
-            payload: !include samples/vipOrder.sample
+            payload: !include samples/userVipInfos.sample
+  /vipPrivilege:
+    get:
+      description: 各个VIP等级拥有的特权（不返回价格信息，价格调用/calPrice）
+      is:
+        - responseDesc:
+            desc: 各个VIP等级拥有的特权
+        - respWithPayload:
+            payload: !include samples/vipPrivilege.sample
+  /calPrice:
+    post:
+      description: 查询VIP订单价格（客户端可以重复调用此接口，当用户勾选了某个优惠券，可以再次调用此接口刷新价格信息，如果优惠券不满足要求，会返回特定错误码）
+      queryParameters:
+        vipLevel:
+          description: VIP等级
+        duration:
+          description: 充值VIP多长时间（单位：月）
+        discounts:
+          description: 使用折扣优惠，是一个数组
+        platform:
+          description: 支付平台，wechat|alipay|...
+        clientPlateform:
+          description: 客户端平台：android/ios/web
+      is:
+        - responseDesc:
+            desc: 查询VIP价格
+        - respWithPayload:
+            payload: !include samples/calPrice.sample
   /prepay:
     post:
       description: 充值VIP生成订单
@@ -242,11 +269,11 @@ traits:
         duration:
           description: 充值VIP多长时间（单位：月）
         discounts:
-          description: 使用折扣优惠，先不传的
+          description: 使用折扣优惠，是一个数据
         platform:
           description: 支付平台，wechat|alipay|...
-        startTime:
-          description: 生效时间毫秒数
+        clientPlateform:
+          description: 客户端平台：android/ios/web
       is:
         - responseDesc:
             desc: 预处理成功
