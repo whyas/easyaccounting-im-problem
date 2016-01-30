@@ -261,81 +261,122 @@
   "code": 1000,
   "msg": "正常返回",
   "payload":   [
-	  {
-		"id": "订单ID",
-		"uid": 1,
-		"vipLevel": 1,
-		"startTime": 1234567890,
-		"endTime": 1234567890,
-		"unitPrice": 3000,
-		"duration": 12,
-		"totalPrice": 30000,
-		"discounts": "使用的折扣列表",
-		"status": 1,
-		"creationTime": 1234567890,
-		"payTime": 1234567890
-	  },
-	  {
-		"id": "订单ID",
-		"uid": 1,
-		"vipLevel": 1,
-		"startTime": 1234567890,
-		"endTime": 1234567890,
-		"unitPrice": 3000,
-		"duration": 12,
-		"totalPrice": 30000,
-		"discounts": "使用的折扣列表",
-		"status": 1,
-		"creationTime": 1234567890,
-		"payTime": 1234567890
-	  }
+    {
+      "id": "订单ID",
+      "uid": 1,
+      "vipLevel": 1,
+      "startTime": 1234567890,
+      "endTime": 1234567890,
+      "totalPrice": 30000,
+      "discounts": "使用的折扣列表，以|分割",
+      "status": 2, //1.未支付 2.已支付生效
+      "creationTime": 1234567890,
+      "payTime": 1234567890
+    },
+    {
+      "id": "订单ID",
+      "uid": 1,
+      "vipLevel": 1,
+      "startTime": 1234567890,
+      "endTime": 1234567890,
+      "totalPrice": 30000,
+      "discounts": "使用的折扣列表，以|分割",
+      "status": 2, //1.未支付 2.已支付生效
+      "creationTime": 1234567890,
+      "payTime": 1234567890
+    }
   ]
 }
 </code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip__id_"><span class="parent">/vip</span>/{id}</a> <span class="methods"><a href="#vip__id__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查询某个VIP充值订单的状态（用于支付后查询支付结果）</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip__id__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/{id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询某个VIP充值订单的状态（用于支付后查询支付结果）</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip__id__get_request" data-toggle="tab">Request</a></li><li><a href="#vip__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="vip__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>当前用户已支付的VIP充值订单</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
+  "payload":   {
+    "id": "订单ID",
+    "uid": 1,
+    "vipLevel": 1,
+    "startTime": 1234567890,
+    "endTime": 1234567890,
+    "totalPrice": 30000,
+    "discounts": "使用的折扣列表，以|分割",
+    "status": 2,
+		//1.未支付 2.已支付生效 根据这个去判断是否用户完成支付
+    "creationTime": 1234567890,
+    "payTime": 1234567890
+  }
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_vipInfos"><span class="parent">/vip</span>/vipInfos</a> <span class="methods"><a href="#vip_vipInfos_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip_vipInfos" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_vipInfos_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查看用户的VIP信息（如果只是查询当前用户的VIP等级，用户接口GET /users，里面就有VIP字段）</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_vipInfos_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/vipInfos</h4></div><div class="modal-body"><div class="alert alert-info"><p>查看用户的VIP信息（如果只是查询当前用户的VIP等级，用户接口GET /users，里面就有VIP字段）</p></div><ul class="nav nav-tabs"><li><a href="#vip_vipInfos_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="vip_vipInfos_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>用户的VIP信息</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
   "payload":   [
+	/*
+	 同一个用户可能有多个VIP级别，
+	 例如：
+		2016-1-1充值VIP1，12个月，到2017-1-1
+		2016-3-1升级到VIP3，3个月，到2016-6-1
+		那么，3-15查询此接口，应返回两段
+		VIP3 2016-3-15 2016-6-1
+		VIP1 2016-6-1  2017-1-1
+		
+		由于充值VIP不再指定开始时间（当前生效）
+		而且只能往高级别的VIP升级
+		所以，如果存在多个结果，那么时间肯定是连贯，而且VIP等级是减小的
+		
+		考虑做一个表格给用户展示，该用户的VIP到期状态
+		如果仅仅是查当前用户的当前时刻的VIP等级，/users接口即可满足要求
+	 */
     {
-	  "vipLevel": 1,
-	  "priceMonthly": 1000,
-	  "availableUserCount": 3
+      "vipLevel": 3,
+      "startTime": 20160101, //毫秒数
+      "endTIme": 20160201
     },
-	{
-	  "vipLevel": 2,
-	  "priceMonthly": 2000,
-	  "availableUserCount": 10
+    {
+      "vipLevel": 2,
+      "startTime": 20160201,
+      "endTIme": 20160301
     },
-	{
-	  "vipLevel": 3,
-	  "priceMonthly": 5000,
-	  "availableUserCount": 100
+    {
+      "vipLevel": 1,
+      "startTime": 20160301,
+      "endTIme": 20160401
     }
   ]
   
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_vipInfos"><span class="parent">/vip</span>/vipInfos</a> <span class="methods"><a href="#vip_vipInfos_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip_vipInfos" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_vipInfos_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>查询VIP等级的价格，最大用户数信息</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_vipInfos_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/vipInfos</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询VIP等级的价格，最大用户数信息</p></div><ul class="nav nav-tabs"><li><a href="#vip_vipInfos_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="vip_vipInfos_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>当前用户已支付的VIP充值订单</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_vipPrivilege"><span class="parent">/vip</span>/vipPrivilege</a> <span class="methods"><a href="#vip_vipPrivilege_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_vip_vipPrivilege" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_vipPrivilege_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>各个VIP等级拥有的特权（不返回价格信息，价格调用/calPrice）</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_vipPrivilege_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/vip</span>/vipPrivilege</h4></div><div class="modal-body"><div class="alert alert-info"><p>各个VIP等级拥有的特权（不返回价格信息，价格调用/calPrice）</p></div><ul class="nav nav-tabs"><li><a href="#vip_vipPrivilege_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane" id="vip_vipPrivilege_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>各个VIP等级拥有的特权</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "code": 1000,
+  "msg": "正常返回",
+  "payload":   [
+    {
+      "vipLevel": 1,
+      "availableUserCount": 3 //子用户数量
+      //... 如果有其他特权，会加到此字段下
+    },
+    {
+      "vipLevel": 2,
+      "availableUserCount": 10
+    },
+    {
+      "vipLevel": 3,
+      "availableUserCount": 99
+    }
+  ]
+
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_calPrice"><span class="parent">/vip</span>/calPrice</a> <span class="methods"><a href="#vip_calPrice_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_vip_calPrice" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_calPrice_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>查询VIP订单价格（客户端可以重复调用此接口，当用户勾选了某个优惠券，可以再次调用此接口刷新价格信息，如果优惠券不满足要求，会返回特定错误码）</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_calPrice_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/vip</span>/calPrice</h4></div><div class="modal-body"><div class="alert alert-info"><p>查询VIP订单价格（客户端可以重复调用此接口，当用户勾选了某个优惠券，可以再次调用此接口刷新价格信息，如果优惠券不满足要求，会返回特定错误码）</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip_calPrice_post_request" data-toggle="tab">Request</a></li><li><a href="#vip_calPrice_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip_calPrice_post_request"><h3>Query Parameters</h3><ul><li><strong>vipLevel</strong>: <em>(string)</em><p>VIP等级</p></li><li><strong>duration</strong>: <em>(string)</em><p>充值VIP多长时间（单位：月）</p></li><li><strong>discounts</strong>: <em>(string)</em><p>使用折扣优惠，是一个数组</p></li><li><strong>platform</strong>: <em>(string)</em><p>支付平台，wechat|alipay|...</p></li><li><strong>clientPlateform</strong>: <em>(string)</em><p>客户端平台：android/ios/web</p></li></ul></div><div class="tab-pane" id="vip_calPrice_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>查询VIP价格</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
   "payload":   {
-	"id": "订单ID",
-	"uid": 1,
-	"vipLevel": 1,
-	"startTime": 1234567890,
-	"endTime": 1234567890,
-	"unitPrice": 3000,
-	"duration": 12,
-	"totalPrice": 30000,
-	"discounts": "使用的折扣列表",
-	"status": 1, //1代表已经支付，0代表未支付
-	"creationTime": 1234567890,
-	"payTime": 1234567890
+    "totalFee": 2000, //总价格 20块
+    "discount": 500,  //优惠价格
+    "finalFee": 1500  //最终应支付价格
   }
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_prepay"><span class="parent">/vip</span>/prepay</a> <span class="methods"><a href="#vip_prepay_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_vip_prepay" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_prepay_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>充值VIP生成订单</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_prepay_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/vip</span>/prepay</h4></div><div class="modal-body"><div class="alert alert-info"><p>充值VIP生成订单</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip_prepay_post_request" data-toggle="tab">Request</a></li><li><a href="#vip_prepay_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip_prepay_post_request"><h3>Query Parameters</h3><ul><li><strong>vipLevel</strong>: <em>(string)</em><p>VIP等级</p></li><li><strong>duration</strong>: <em>(string)</em><p>充值VIP多长时间（单位：月）</p></li><li><strong>discounts</strong>: <em>(string)</em><p>使用折扣优惠，先不传的</p></li><li><strong>platform</strong>: <em>(string)</em><p>支付平台，wechat|alipay|...</p></li><li><strong>startTime</strong>: <em>(string)</em><p>生效时间毫秒数</p></li></ul></div><div class="tab-pane" id="vip_prepay_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>预处理成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_vip_prepay"><span class="parent">/vip</span>/prepay</a> <span class="methods"><a href="#vip_prepay_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_vip_prepay" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#vip_prepay_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>充值VIP生成订单</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="vip_prepay_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/vip</span>/prepay</h4></div><div class="modal-body"><div class="alert alert-info"><p>充值VIP生成订单</p></div><ul class="nav nav-tabs"><li class="active"><a href="#vip_prepay_post_request" data-toggle="tab">Request</a></li><li><a href="#vip_prepay_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="vip_prepay_post_request"><h3>Query Parameters</h3><ul><li><strong>vipLevel</strong>: <em>(string)</em><p>VIP等级</p></li><li><strong>duration</strong>: <em>(string)</em><p>充值VIP多长时间（单位：月）</p></li><li><strong>discounts</strong>: <em>(string)</em><p>使用折扣优惠，是一个数据</p></li><li><strong>platform</strong>: <em>(string)</em><p>支付平台，wechat|alipay|...</p></li><li><strong>clientPlateform</strong>: <em>(string)</em><p>客户端平台：android/ios/web</p></li></ul></div><div class="tab-pane" id="vip_prepay_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>预处理成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "code": 1000,
   "msg": "正常返回",
   "payload":   {
     "totalPrice": 10000, //金额，单位为分
+		//如果金额为0（使用了优惠券），那么订单会立即生效，无需再走支付流程
     "orderId": "订单号",
     "extendParams": {
       // 扩展参数，对于不同的支付平台，返回的实际字段会不一致
